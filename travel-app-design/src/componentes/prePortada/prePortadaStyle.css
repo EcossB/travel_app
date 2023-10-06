@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
 * {
     margin: 0;
     box-sizing: border-box;
     color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
 }
+
+
+
 
 .preportada {
     width: 100%;
@@ -44,7 +49,7 @@
 }
 
 h1 {
-    font-size: 6em;
+    font-size: 5.5em;
 }
 
 p {
@@ -55,15 +60,16 @@ p {
 /* Estilos para el contenedor de botones */
 .boton-contenedor {
     display: flex;
-    gap: 50px; /* Espacio entre los botones */
+    gap: 20px; /* Espacio entre los botones */
+    margin-right: 250px;
 }
 
 
 .boton {
-    width: 6em;
+    width: 8em;
     height: 2em;
-    border-radius: 0.25em;
-    background-color: rgba(30, 30, 30, 0.75);
+    border-radius: 15px;
+    background-color: rgba(169, 105, 71, 0.75);
     z-index: 1;
     font-size: 2em;
     display: flex;
@@ -82,12 +88,18 @@ p {
     }
 
     h1{
-        font-size: 2.88rem;
+        font-size: 10vmin;
+    }
+
+    .boton-contenedor{
+        margin-right: 4cm;
+        width: 30%;
     }
 
     .boton {
         padding: 30px 46px; 
-        font-size: 20px;
+        font-size: 17px;
         margin-bottom: 300px;
+        width: 35vmin;
     }
 }

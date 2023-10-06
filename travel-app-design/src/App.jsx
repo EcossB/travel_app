@@ -3,7 +3,7 @@ import PrePortada from './componentes/prePortada/PrePortada'
 
 function App() {
   return (
-    //Aquí van sus creaciones (componentes)
+    //Aquí van sus creaciones (componentes).
     <>
     <PrePortada/>
     </>

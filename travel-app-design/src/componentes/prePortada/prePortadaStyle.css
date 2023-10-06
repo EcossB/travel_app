@@ -1,0 +1,93 @@
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+}
+
+.preportada {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    transition: 0.5s;
+}
+
+.video-bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.bg-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.titulo {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 6em;
+}
+
+p {
+    justify-self: flex-end;
+    font-size: 2em;
+}
+
+/* Estilos para el contenedor de botones */
+.boton-contenedor {
+    display: flex;
+    gap: 50px; /* Espacio entre los botones */
+}
+
+
+.boton {
+    width: 6em;
+    height: 2em;
+    border-radius: 0.25em;
+    background-color: rgba(30, 30, 30, 0.75);
+    z-index: 1;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 230px;
+}
+
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 767px) {
+    video {
+        width: 100%; 
+        height: auto; 
+    }
+
+    h1{
+        font-size: 2.88rem;
+    }
+
+    .boton {
+        padding: 30px 46px; 
+        font-size: 20px;
+        margin-bottom: 300px;
+    }
+}

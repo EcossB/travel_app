@@ -6,8 +6,31 @@
     font-family: 'Be Vietnam Pro', sans-serif;
 }
 
+/* .logo-container {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+}
 
+.logo {
+    width: 180px;
+    height: auto; 
+} */
 
+.logo-contenedor{
+    position: absolute;
+    top: 20px; 
+    left: 50px; 
+    z-index: 2;
+}
+
+.logo-titulo{
+    color: #ffff;
+    width: 5%;
+    height: auto; 
+    font-size: 5vmin;
+    text-transform: uppercase;
+}
 
 .preportada {
     width: 100%;
@@ -50,6 +73,7 @@
 
 h1 {
     font-size: 5.5em;
+    margin-top: 5vmin;
 }
 
 p {
@@ -63,7 +87,6 @@ p {
     gap: 20px; /* Espacio entre los botones */
     margin-right: 250px;
 }
-
 
 .boton {
     width: 8em;

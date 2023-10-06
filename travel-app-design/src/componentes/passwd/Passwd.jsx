@@ -1,4 +1,4 @@
-import "./passwdStyle.css"
+import "./passwdStyle.css";
 
 export const Passwd = () => {
   return (

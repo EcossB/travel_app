@@ -7,7 +7,7 @@ export const Login = () => {
     <>
       <Video />
         <header className="logo">
-          <h1>VIAJES</h1>
+          <h1>SOLARIS</h1>
         </header>
         <div className="title">
             <h2>

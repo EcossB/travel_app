@@ -144,13 +144,11 @@ input::placeholder{
     z-index: 0;
 }
 
-/*@media screen and (max-width: 550px){
-    .input-section button{
-        background-color: rgba(30, 30, 30, 0.75);
-        box-shadow: none;
+@media screen and (max-width: 650px){
+    .passwd-p,
+    .input-section button,
+    .register-message,
+    .input-section::placeholder{
+        font-size: .75rem;
     }
-
-    .input-section a{
-        color: rgba(62, 125, 254, 1);
-    }
-}*/
+}

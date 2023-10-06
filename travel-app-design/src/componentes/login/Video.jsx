@@ -1,6 +1,6 @@
 
 import "./loginStyle.css"
-import bgVideo from "../../imgs/bg-login.mp4"
+import bgVideo from "../../imgs/bg-login2.mp4"
 
 export const Video = () => {
   return (

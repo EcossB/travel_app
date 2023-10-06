@@ -1,0 +1,156 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --font: font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
+
+body{
+    margin: 45px;
+    background-color: rgb(35, 33, 33);
+}
+
+.logo h1{
+    color: #FFF;
+    font-size: 4vmin;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.title{
+    margin-top: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h2{
+    text-align: center;
+    color: #FFF;
+    font-size: 6vmin;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.input-section{
+    margin-top: 75px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input{
+    margin-bottom: 30px;
+    padding: 20px;
+    border-radius: 25px;
+    width: 30em; 
+    box-sizing: border-box;
+    font-size: 2vmin; 
+    outline: none;
+    border: none;
+}
+
+input::placeholder{
+    color: rgba(60, 60, 67, 0.50);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 15px; /*2vmin;*/ 
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px; /* 91.667% */
+    letter-spacing: -0.408px;
+}
+
+.input-section button{
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: rgba(169, 105, 71, 0.75);
+    padding: 15px;
+    width: 15em; 
+    color: #FFF;
+    font-size: 2vmin;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.input-section button:hover{
+    background-color: rgba(186, 116, 78, 0.75);
+    box-shadow: 0px 2px 15px rgb(42, 42, 107);
+}
+.register-message,
+.input-section a{
+    margin-top: 35px;
+    color: #FFF;
+    font-size: 2vmin;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+}
+
+.input-section a{
+    color: #FF9F6A;
+}
+
+.input-section a:hover{
+    color: #FF9F6A;
+    text-decoration: none;
+}
+
+.passwd-p{
+    /*text-align: left;*/
+    font-size: 2vmin;
+    margin-bottom: 25px;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.passwd-p:hover{
+    border-bottom: solid 2px #FFF;
+}
+
+.video-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+  
+  .video-background video {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+.video-background::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Cambia el valor de alpha para ajustar la opacidad */
+    z-index: 0;
+}
+
+/*@media screen and (max-width: 550px){
+    .input-section button{
+        background-color: rgba(30, 30, 30, 0.75);
+        box-shadow: none;
+    }
+
+    .input-section a{
+        color: rgba(62, 125, 254, 1);
+    }
+}*/

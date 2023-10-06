@@ -18,7 +18,7 @@ export const Login = () => {
         </div>
         <div className="input-section">
           <InputLogin/>
-          <button>Iniciar Sesión</button>
+          <button>Iniciar sesión</button>
           <p className="register-message">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
         </div>
     </>

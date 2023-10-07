@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
+* {
+    margin: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: 'Be Vietnam Pro', sans-serif;
+}
+
+/* .logo-container {
+    position: absolute;
+    top: 20px; 
+    left: 20px; 
+}
+
+.logo {
+    width: 180px;
+    height: auto; 
+} */
+
+.logo-contenedor{
+    position: absolute;
+    top: 20px; 
+    left: 50px; 
+    z-index: 2;
+}
+
+.logo-titulo{
+    color: #ffff;
+    width: 5%;
+    height: auto; 
+    font-size: 5vmin;
+    text-transform: uppercase;
+}
+
+.preportada {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    position: relative;
+    transition: 0.5s;
+}
+
+.video-bg {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    z-index: -1;
+    object-fit: cover;
+}
+
+.bg-overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    z-index: 0;
+}
+
+.titulo {
+    width: 70%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 2;
+}
+
+h1 {
+    font-size: 5.5em;
+    margin-top: 5vmin;
+}
+
+p {
+    justify-self: flex-end;
+    font-size: 2em;
+}
+
+/* Estilos para el contenedor de botones */
+.boton-contenedor {
+    display: flex;
+    gap: 20px; /* Espacio entre los botones */
+    margin-right: 250px;
+}
+
+.boton {
+    width: 8em;
+    height: 2em;
+    border-radius: 15px;
+    background-color: rgba(169, 105, 71, 0.75);
+    z-index: 1;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    margin-bottom: 230px;
+}
+
+
+/* Estilo para dispositivos móviles */
+@media (max-width: 767px) {
+    video {
+        width: 100%; 
+        height: auto; 
+    }
+
+    h1{
+        font-size: 10vmin;
+    }
+
+    .boton-contenedor{
+        margin-right: 4cm;
+        width: 30%;
+    }
+
+    .boton {
+        padding: 30px 46px; 
+        font-size: 17px;
+        margin-bottom: 300px;
+        width: 35vmin;
+    }
+}

@@ -2,7 +2,7 @@
 import { FormLogin } from "./FormLogin";
 import { Video } from "./Video";
 import loginVideo from "../../medio/bg-login2.mp4";
-import logoIcon from "../../medio/logo-icon.png";
+import logoIcon from "../../medio/logo.png";
 import "./loginStyle.css";
 
 export const Login = () => {

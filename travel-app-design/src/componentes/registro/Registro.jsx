@@ -2,7 +2,7 @@ import "../login/loginStyle.css";
 import { FormRegistro } from "./FormRegistro";
 import { Video } from "../login/Video";
 import videoRegistro from "../../medio/bg-registro.mp4";
-import logoIcon from "../../medio/logo-icon.png";
+import logoIcon from "../../medio/logo.png";
 
 export const Registro = () => {
   return (

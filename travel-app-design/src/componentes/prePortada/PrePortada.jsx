@@ -1,7 +1,7 @@
 import "./prePortadaStyle.css";
 import "../login/loginStyle.css";
 import BgVideo from '../../medio/fondo-nubes.mp4';
-import logoIcon from "../../medio/logo-icon.png";
+import logoIcon from "../../medio/logo.png";
 import { Video } from "../login/Video";
 import { Link } from "react-router-dom";
 

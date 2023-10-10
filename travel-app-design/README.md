@@ -1,8 +1,17 @@
-# React + Vite
+TUSITEO
+---------------
+Vite + React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Para ejecutar la aplicación, solo debe seguir estos 3 pasos (asegúrese de tener instalado Node.js):
 
-Currently, two official plugins are available:
+Acceda a su consola y realice lo siguiente:
+1) Instalar Vite si aún no lo tiene: npm install vite
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2) Acceder a la carpeta del proyecto: cd travel-app-design
+
+3) Ejecutar la aplicación: npm run dev
+
+Al ejecutar la aplicación tendrá acceso a un link que deberá pegar en el navegador para visualizar Turisteo
+
+¡Y listo!
+

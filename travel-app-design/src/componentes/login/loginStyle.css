@@ -1,25 +1,25 @@
-
-:root{
-    --font: font-family: 'Be Vietnam Pro', sans-serif;
-    font-family: 'Belanosima', sans-serif;
-    font-family: 'PT Sans', sans-serif;
-}
-
 body{
-    margin: 45px;
     background-color: rgb(35, 33, 33);
 }
 
-.logo h1{
+.login-container{
+    margin: 45px;
+}
+
+/*.logo h1{
     color: #FFF;
     font-size: 4vmin;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
+}*/
+
+.logo img{
+    width: 12vw;
 }
 
 .title{
-    margin-top: 95px;
+    margin-top: 55px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -34,8 +34,8 @@ body{
     line-height: normal;
 }
 
-.input-section{
-    margin-top: 75px;
+.form-section{
+    margin-top: 5px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -43,7 +43,7 @@ body{
 }
 
 input{
-    margin-bottom: 30px;
+    margin-bottom: 20px; /*30px*/
     padding: 20px;
     border-radius: 25px;
     width: 30em; 
@@ -51,6 +51,10 @@ input{
     font-size: 2vmin; 
     outline: none;
     border: none;
+}
+
+.password-input input{
+    margin-bottom: 5px;
 }
 
 input::placeholder{
@@ -63,8 +67,16 @@ input::placeholder{
     letter-spacing: -0.408px;
 }
 
-.input-section button{
-    margin-top: 25px;
+/*.form-section input{
+    display: inline-flex;
+    height: 48.713px;
+    padding: 13px 40px 13.713px 27px;
+    align-items: center;
+    flex-shrink: 0;
+}*/
+
+.form-section button{
+    margin-top: 15px;
     border-radius: 10px;
     background-color: rgba(169, 105, 71, 0.75);
     padding: 15px;
@@ -77,57 +89,62 @@ input::placeholder{
     border: none;
 }
 
-.input-section button:hover{
+.form-section button:hover{
     background-color: rgba(186, 116, 78, 0.75);
-    box-shadow: 0px 2px 15px rgb(42, 42, 107);
+    box-shadow: 0px 2px 15px rgb(33, 33, 43);
 }
+
 .register-message,
-.input-section a{
-    margin-top: 35px;
+.form-section a{
+    margin-top: 25px;
     color: #FFF;
     font-size: 2vmin;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
+    text-align: center;
 }
 
-.input-section a{
+.form-section a{
     color: #FF9F6A;
 }
 
-.input-section a:hover{
+.form-section a:hover{
     color: #FF9F6A;
     text-decoration: none;
 }
 
-.passwd-p{
+
+.passwd-p .link{
     /*text-align: left;*/
     font-size: 2vmin;
-    margin-bottom: 25px;
+    /*margin-bottom: 5px;*/
+    /*margin-top: 5px;*/
     color: #FFF;
     font-style: normal;
     font-weight: 600;
     line-height: normal;
 }
 
-.passwd-p:hover{
-    border-bottom: solid 2px #FFF;
+.passwd-p .link:hover{
+    text-decoration: none;
+    color: #FFF;
 }
 
 .video-background {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
     z-index: -1;
-  }
+}
   
-  .video-background video {
+.video-background video {
     object-fit: cover;
     width: 100%;
     height: 100%;
-  }
+}
 
 .video-background::after {
     content: '';
@@ -140,11 +157,40 @@ input::placeholder{
     z-index: 0;
 }
 
+.password-input {
+    position: relative;
+}
+
+  
+.password-input input {
+    padding-right: 40px;
+}
+
+.password-input .passwd-icon {
+    position: absolute;
+    top: 25%;
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.passwd-linkk{
+    text-align: right;
+}
+
+
+/* Estilo para dispositivos móviles */
 @media screen and (max-width: 650px){
-    .passwd-p,
-    .input-section button,
+    .passwd-p .link,
+    .register-message a,
+    .form-section button,
+    .buttons-section button,
     .register-message,
-    .input-section::placeholder{
+    .form-section::placeholder{
         font-size: .75rem;
+    }
+
+    .logo img{
+        width: 28vw;
     }
 }

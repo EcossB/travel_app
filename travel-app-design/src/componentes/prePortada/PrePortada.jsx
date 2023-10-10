@@ -1,33 +1,33 @@
 import "./prePortadaStyle.css";
+import "../login/loginStyle.css";
 import BgVideo from '../../medio/fondo-nubes.mp4';
-// import Logo from '../../assets/logo.png'; 
+import logoIcon from "../../medio/logo-icon.png";
+import { Video } from "../login/Video";
+import { Link } from "react-router-dom";
 
-const PrePortada = () => {
+export const PrePortada = () => {
     return (
-        <div className="preportada">
-
-            <div className="logo-contenedor">
-                <h1 className="logo-titulo">Solaria</h1>
+        <div className="portrait-container">
+            <Video sourceVideo={BgVideo} />
+            <header className="logo">
+                {/*<h1>TURISTEO</h1>*/}
+                <img src={logoIcon}/>
+            </header>
+            <div className="portrait-title">
+            <h2>
+                Descubre las diferentes 
+                <br/>
+                maravillas del mundo
+            </h2>
             </div>
-            {/* <div className="logo-container">
-                <img src={Logo} alt="Logo de la empresa" className="logo" />
-            </div> */}
-            
-            <video src={BgVideo} autoPlay muted loop className="video-bg" />
-            <div className="bg-overlay"></div>
-            <div className="titulo">
-                <h1>Descubre las diferentes maravillas del mundo</h1>
-            </div>
-
-            <div className="boton-contenedor">
-                <div className="boton">Iniciar sesión</div>
-                <div className="boton">Registro</div>
+            <div className="buttons-section">
+                <button><Link className="login-link" to="/login">Iniciar sesión</Link></button>
+                <button className="register-btn"><Link className="login-link" to="/registro">Registro</Link></button>
             </div>
         </div>
     );
 };
 
-export default PrePortada;
 
 
 

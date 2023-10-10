@@ -1,26 +1,28 @@
-import { InputLogin } from "./InputLogin"
-import { Video } from "./Video"
-import "./loginStyle.css"
+
+import { FormLogin } from "./FormLogin";
+import { Video } from "./Video";
+import loginVideo from "../../medio/bg-login2.mp4";
+import logoIcon from "../../medio/logo-icon.png";
+import "./loginStyle.css";
 
 export const Login = () => {
   return (
-    <>
-      <Video />
+    <div className="login-container">
+      <Video sourceVideo={loginVideo}/>
         <header className="logo">
-          <h1>SOLARIS</h1>
+          <img src={logoIcon}/>
         </header>
+
         <div className="title">
             <h2>
             ¡Gracias por volver!
-                <br/>
+            <br/>
             ¿Listo para otra aventura?
             </h2>
         </div>
-        <div className="input-section">
-          <InputLogin/>
-          <button>Iniciar sesión</button>
-          <p className="register-message">¿No tienes una cuenta? <a href="#">Regístrate aquí</a></p>
-        </div>
-    </>
-  )
+
+        {/*Formulario*/}
+          <FormLogin/>
+    </div>
+  );
 }

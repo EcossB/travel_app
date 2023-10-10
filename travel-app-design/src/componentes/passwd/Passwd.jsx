@@ -1,16 +1,19 @@
-import { Video } from "../login/Video"
-import { InputPasswd } from "./InputPasswd"
-import "./passwdStyle.css"
-import "../login/loginStyle.css"
+import { Video } from "../login/Video";
+import videoPasswd from "../../medio/bg-login2.mp4";
+import { FormPasswd } from "./FormPasswd";
+import logoIcon from "../../medio/logo-icon.png";
+import "./passwdStyle.css";
+import "../login/loginStyle.css";
 
 export const Passwd = () => {
   return (
-    <>
-      <>
-      <Video />
+    <div className="passwd-container">
+      <Video sourceVideo={videoPasswd}/>
+
         <header className="logo">
-          <h1>SOLARIS</h1>
+          <img src={logoIcon}/>
         </header>
+
         <div className="title">
             <h2>
             ¡No te preocupes, 
@@ -18,11 +21,9 @@ export const Passwd = () => {
             actualiza tu contraseña <span className="title-passwd">AQUÍ</span>
             </h2>
         </div>
-        <div className="input-section">
-          <InputPasswd/>
-          <button>Actualizar</button>
-        </div>
-    </>
-    </>
-  )
+
+        {/*Formulario*/}
+        <FormPasswd/>
+    </div>
+  );
 }

@@ -1,13 +1,18 @@
-import "./loginStyle.css"
-import bgVideo from "../../imgs/bg-login2.mp4"
+import "./loginStyle.css";
+import PropTypes from 'prop-types';
 
-export const Video = () => {
+//import bgVideo from "../../medio/bg-login2.mp4"
+export const Video = ({sourceVideo}) => {
   return (
     <div className="video-background">
     <video autoPlay loop muted>
-      <source src={bgVideo} type="video/mp4" />
+      <source src = {sourceVideo} type="video/mp4" />
       Tu navegador no soporta la reproducción de videos.
     </video>
   </div>
-  )
+  );
 }
+
+Video.propTypes = {
+  sourceVideo: PropTypes.any.isRequired
+};

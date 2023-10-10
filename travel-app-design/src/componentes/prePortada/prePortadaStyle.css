@@ -1,128 +1,68 @@
-@import url('https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro&display=swap');
-* {
-    margin: 0;
-    box-sizing: border-box;
-    color: white;
-    font-family: 'Be Vietnam Pro', sans-serif;
+.portrait-container{
+    margin: 45px;
 }
 
-/* .logo-container {
-    position: absolute;
-    top: 20px; 
-    left: 20px; 
-}
-
-.logo {
-    width: 180px;
-    height: auto; 
-} */
-
-.logo-contenedor{
-    position: absolute;
-    top: 20px; 
-    left: 50px; 
-    z-index: 2;
-}
-
-.logo-titulo{
-    color: #ffff;
-    width: 5%;
-    height: auto; 
-    font-size: 5vmin;
-    text-transform: uppercase;
-}
-
-.preportada {
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    position: relative;
-    transition: 0.5s;
-}
-
-.video-bg {
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    top: 0;
-    z-index: -1;
-    object-fit: cover;
-}
-
-.bg-overlay {
-    height: 100%;
-    width: 100%;
-    background-color: rgba(0,0,0,0.5);
-    position: absolute;
-    top: 0;
-    z-index: 0;
-}
-
-.titulo {
-    width: 70%;
-    height: 60%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
-    z-index: 2;
-}
-
-h1 {
-    font-size: 5.5em;
-    margin-top: 5vmin;
-}
-
-p {
-    justify-self: flex-end;
-    font-size: 2em;
-}
-
-/* Estilos para el contenedor de botones */
-.boton-contenedor {
-    display: flex;
-    gap: 20px; /* Espacio entre los botones */
-    margin-right: 250px;
-}
-
-.boton {
-    width: 8em;
-    height: 2em;
-    border-radius: 15px;
-    background-color: rgba(169, 105, 71, 0.75);
-    z-index: 1;
-    font-size: 2em;
+.buttons-section{
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
-    margin-bottom: 230px;
+    margin-top: 15px;
+}
+
+.buttons-section button{
+   /*margin-left: 20px;*/
+    border-radius: 5px;
+    background-color: rgba(169, 105, 71, 0.75);
+    padding: 20px;
+    width: 25vmin; /*10em*/
+    color: #FFF;
+    font-size: 3vmin;
+    font-style: normal;
+    text-align: center;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.register-btn{
+    margin-left: 15px;
+}
+
+.login-link{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.buttons-section button:hover{
+    background-color: rgba(186, 116, 78, 0.75);
+    box-shadow: 0px 2px 15px rgb(33, 33, 43);
+}
+
+.portrait-title{
+    margin-top: 95px;
+    display: flex;
+    align-items: center;
+    justify-content: center;   
+}
+
+.portrait-title h2{
+    /*text-align: center;*/
+    color: #FFF;
+    font-size: 8vmin;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
 }
 
 
-/* Estilo para dispositivos móviles */
-@media (max-width: 767px) {
-    video {
-        width: 100%; 
-        height: auto; 
+@media screen and (max-width: 650px){
+    .portrait-title,
+    .buttons-section{
+        justify-content: left;
+        align-items: left;
     }
 
-    h1{
-        font-size: 10vmin;
-    }
-
-    .boton-contenedor{
-        margin-right: 4cm;
-        width: 30%;
-    }
-
-    .boton {
-        padding: 30px 46px; 
-        font-size: 17px;
-        margin-bottom: 300px;
-        width: 35vmin;
-    }
+    /*.buttons-section button{
+        margin-left: 5px;
+    }*/
 }

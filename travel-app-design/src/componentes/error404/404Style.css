@@ -1,0 +1,52 @@
+.error-container{
+    margin: 45px;
+}
+
+.error-icon{
+    width: 60vw;
+}
+
+button{
+    margin-top: 25px;
+    border-radius: 10px;
+    background-color: rgba(169, 105, 71, 0.75);
+    padding: 15px;
+    width: 15em; 
+    color: #FFF;
+    font-size: 2vmin;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+button:hover{
+    background-color: rgba(186, 116, 78, 0.75);
+    box-shadow: 0px 2px 15px rgb(42, 42, 107);
+}
+
+.return-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mobile-icon{
+    display: none;
+}
+
+@media screen and (max-width: 650px){
+    .error-icon{
+        width: 80vw;
+    }
+
+    .mobile-icon{
+        margin: auto;
+        margin-top: 45px;
+        width: 75vw;
+    }
+
+    .mobile-icon{
+        display: block;
+    }
+}

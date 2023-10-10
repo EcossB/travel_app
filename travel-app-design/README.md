@@ -1,4 +1,4 @@
-TUSITEO
+TURISTEO
 ---------------
 Vite + React
 

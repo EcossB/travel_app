@@ -1,4 +1,4 @@
-import "./loginStyle.css";
+import "./videoStyle.css";
 import PropTypes from 'prop-types';
 
 //import bgVideo from "../../medio/bg-login2.mp4"

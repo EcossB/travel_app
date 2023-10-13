@@ -10,13 +10,13 @@
 }
 
 .buttons-section button{
-   /*margin-left: 20px;*/
     border-radius: 5px;
     background-color: rgba(169, 105, 71, 0.75);
-    padding: 20px;
+    padding: 10px 20px;
     width: 25vmin; /*10em*/
     color: #FFF;
-    font-size: 3vmin;
+    font-size: 3vmin; /*3vmin*/
+    white-space: nowrap;
     font-style: normal;
     text-align: center;
     font-weight: 600;
@@ -46,7 +46,6 @@
 }
 
 .portrait-title h2{
-    /*text-align: center;*/
     color: #FFF;
     font-size: 8vmin;
     font-style: normal;
@@ -56,13 +55,24 @@
 
 
 @media screen and (max-width: 650px){
-    .portrait-title,
     .buttons-section{
         justify-content: left;
         align-items: left;
     }
-
-    /*.buttons-section button{
-        margin-left: 5px;
-    }*/
+    .buttons-section button{
+        font-size: 3vmin;
+        padding: 8px 10px;
+    }
 }
+
+@media screen and (width: 640px){
+    .buttons-section{
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+
+
+
+

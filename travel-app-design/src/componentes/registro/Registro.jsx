@@ -1,19 +1,14 @@
 import "../login/loginStyle.css";
 import { FormRegistro } from "./FormRegistro";
-import { Video } from "../login/Video";
+import { Video } from "../background/Video";
 import videoRegistro from "../../medio/bg-registro.mp4";
-import logoIcon from "../../medio/logo.png";
+import { Logo } from "../logo/Logo";
 
 export const Registro = () => {
   return (
     <div className="registro-container">
       <Video sourceVideo={videoRegistro}/>
-
-      <header className="logo">
-          {/*<h1>TURISTEO</h1>*/}
-          <img src={logoIcon}/>
-        </header>
-
+      <Logo/>
         <div className="title">
             <h2>
             ¿Listo para empezar la aventura?
@@ -21,7 +16,6 @@ export const Registro = () => {
             ¡Regístrate!
             </h2>
         </div>
-
         {/*Formulario*/}
         <FormRegistro />
     </div>

@@ -1,18 +1,15 @@
 import "./prePortadaStyle.css";
 import "../login/loginStyle.css";
 import BgVideo from '../../medio/fondo-nubes.mp4';
-import logoIcon from "../../medio/logo.png";
-import { Video } from "../login/Video";
+import { Video } from "../background/Video";
 import { Link } from "react-router-dom";
+import { Logo } from "../logo/Logo";
 
 export const PrePortada = () => {
     return (
         <div className="portrait-container">
             <Video sourceVideo={BgVideo} />
-            <header className="logo">
-                {/*<h1>TURISTEO</h1>*/}
-                <img src={logoIcon}/>
-            </header>
+            <Logo/>
             <div className="portrait-title">
             <h2>
                 Descubre las diferentes 
@@ -21,8 +18,8 @@ export const PrePortada = () => {
             </h2>
             </div>
             <div className="buttons-section">
-                <button><Link className="login-link" to="/login">Iniciar sesión</Link></button>
-                <button className="register-btn"><Link className="login-link" to="/registro">Registro</Link></button>
+                <Link className="login-link" to="/login"><button>Iniciar sesión</button></Link>
+                <Link className="login-link" to="/registro"><button className="register-btn">Registro</button></Link>
             </div>
         </div>
     );

@@ -1,0 +1,32 @@
+
+/*Menu style*/
+#menu{
+    margin: 28px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+}
+
+.logout-btn{
+    color: #FFF;
+    background-color: #3F7BFD;
+    border-radius: 35px;
+    width: 10em;
+    font-size: 1.5vmin;
+    white-space: nowrap;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+li{
+    color: #FFF;
+}
+
+.logout-btn:hover{
+    background-color: #386ad5;
+}
+

@@ -6,5 +6,5 @@ export const MainHome = () => {
     <div>
       <Menu />
     </div>
-  )
+  );
 }

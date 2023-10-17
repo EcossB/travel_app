@@ -31,7 +31,7 @@ export const FormLogin = () => {
       </div>
 
       <div className="form-section">
-        <button>Iniciar sesión</button>
+        <Link to="/home"><button>Iniciar sesión</button></Link>
         <p className="register-message">¿No tienes una cuenta? <Link to="/registro">Regístrate aquí</Link></p>
       </div>
     </form>

@@ -1,16 +1,17 @@
-
 /*Menu style*/
 #menu{
-    margin: 28px;
+    margin: 18px;
     display: flex;
     justify-content: space-between;
-    font-size: 1.2rem;
+    font-size: 2.3vmin;
 }
 
 .logout-btn{
     color: #FFF;
+    margin-top: -2px;
     background-color: #3F7BFD;
     border-radius: 35px;
+    padding: 10px 20px;
     width: 10em;
     font-size: 1.5vmin;
     white-space: nowrap;
@@ -22,11 +23,47 @@ ul{
     gap: 2rem;
 }
 
+.links-info a,
 li{
+    text-decoration: none;
     color: #FFF;
+    white-space: nowrap;
+}
+
+.link-menu:hover,
+.active-link{
+    border-bottom: 2px solid #386ad5;
 }
 
 .logout-btn:hover{
     background-color: #386ad5;
 }
+
+.user-icon{
+    margin-right: 10px;
+}
+
+.burger-menu{
+    display: none;
+    color: #FFF;
+    width: 25px;
+}
+
+/*.links-info,
+.user-info ul{
+    display: none;
+}*/
+
+@media screen and (max-width: 850px){
+    .links-info,
+    .user-info ul{
+        display: none;
+    }
+
+    .burger-menu{
+        display: block;
+        /*width: 28vw;*/
+    }
+}
+
 

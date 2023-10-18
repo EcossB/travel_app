@@ -1,5 +1,5 @@
 .portrait-container{
-    margin: 45px;
+    margin: 15px;
 }
 
 .buttons-section{
@@ -55,22 +55,22 @@
 
 
 @media screen and (max-width: 650px){
-    .buttons-section{
+    /*.buttons-section{
         justify-content: left;
         align-items: left;
-    }
+    }*/
     .buttons-section button{
         font-size: 3vmin;
         padding: 8px 10px;
     }
 }
 
-@media screen and (width: 640px){
+/*@media screen and (width: 640px){
     .buttons-section{
         justify-content: center;
         align-items: center;
     }
-}
+}*/
 
 
 

@@ -3,7 +3,7 @@ body{
 }
 
 .login-container{
-    margin: 45px;
+    margin: 15px;
 }
 
 .title{
@@ -56,7 +56,7 @@ input::placeholder{
 }
 
 .form-section button{
-    margin-top: 15px;
+    margin-top: 5px;
     border-radius: 10px;
     background-color: rgba(169, 105, 71, 0.75);
     padding: 15px;

@@ -9,7 +9,7 @@ export const Registro = () => {
     <div className="registro-container">
       <Video sourceVideo={videoRegistro}/>
       <Logo/>
-        <div className="title">
+        <div className="title register-title">
             <h2>
             ¿Listo para empezar la aventura?
                 <br/>

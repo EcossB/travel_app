@@ -1,10 +1,10 @@
-import { Menu } from "./Menu";
+import { Carousel } from "./Carousel";
 import "./homeStyle.css";
 
 export const MainHome = () => {
   return (
     <div>
-      <Menu />
+      <Carousel />
     </div>
   )
 }

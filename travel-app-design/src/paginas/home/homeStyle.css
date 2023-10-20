@@ -173,4 +173,47 @@ li{
     }
 }
 
+/*Barra de búsqueda*/
+.bar-container{
+    display: flex;
+    width: 100%;
+    height: 57px;
+    flex-shrink: 0;
+    border-radius: 35px;
+    background: rgba(87, 105, 117, 0.72);
+    backdrop-filter: blur(10px);
+}
 
+.country-searchBar{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    width: auto;
+    flex: 1;
+}
+
+.country-searchBar::marker{
+    border: none;
+}
+
+.search-container{
+    display: flex;
+    overflow: hidden;
+    padding: 0 10px;
+}
+
+.country-searchBar::placeholder{
+    color: #FFF;
+    font-size: 2vmin;
+    padding: 7px;
+    border-bottom: 2px solid #FFF;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.search-icon{
+    color: #FFF;
+    position: relative; /* Permite ajustar la posición del icono */
+    left: -30px; /
+    
+}

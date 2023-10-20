@@ -209,6 +209,7 @@ main {
     text-shadow: 0 4px 4px rgba(0,0,0,0.75);
 }
 
+/* Responsive del banner */
 @media screen and (max-width: 650px) {
     .banner__img{
         width: 85%;

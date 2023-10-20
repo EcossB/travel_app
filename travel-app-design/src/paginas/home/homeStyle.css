@@ -176,3 +176,50 @@ main {
     justify-content: space-between;
     padding: 5px 5%;
     height: 45px;}
+
+
+
+    /* estilos para el banner - portrait */
+.banner{
+    position: relative;
+}
+
+.banner__img{
+    width: 95%;
+    height: 80vmin;
+    background-image: url("../../medio/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 35px;
+    margin-left: 5vmin;
+    margin-top: 15vmin;
+}
+
+.banner__titulo{
+    text-transform: uppercase;
+    font-size: 8vmin;
+    position: absolute;
+    text-align: center;
+    color: #f5f0ed;
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 4px 4px rgba(0,0,0,0.75);
+}
+
+@media screen and (max-width: 650px) {
+    .banner__img{
+        width: 85%;
+        height: 80vmin;
+        margin-left: 7vmin;
+        margin-top: 15vmin;
+    }
+
+    .banner__titulo{ 
+        font-size: 7vmin;
+        width: 80%;
+    }
+}
+

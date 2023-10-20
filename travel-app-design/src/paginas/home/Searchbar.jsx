@@ -11,5 +11,5 @@ export const Searchbar = () => {
           <FaSearch className="search-icon"/>
       </div>
     </div>
-  );
+  )
 }

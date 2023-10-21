@@ -1,0 +1,205 @@
+/*Menu style*/
+#menu{
+    margin: 18px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 2vmin;
+}
+
+.logout-btn{
+    color: #FFF;
+    margin-top: -2px;
+    background-color: #3F7BFD;
+    border-radius: 35px;
+    padding: 10px 20px;
+    width: 10em;
+    text-align: center;
+    font-size: 1.5vmin;
+    white-space: nowrap;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+.links-info a,
+li{
+    text-decoration: none;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.link-menu:hover,
+.active-link{
+    border-bottom: 2px solid #386ad5;
+}
+
+.logout-btn:hover{
+    background-color: #386ad5;
+}
+
+.user-icon{
+    margin-right: 10px;
+}
+
+.burger-menu{
+    display: none;
+    color: #FFF;
+    font-size: 4vmin;
+    margin-top: 10px;
+    animation: openMenu 0.3s;
+    /*animation: showSidebar 0.4s ease;*/
+}
+
+
+/*.menu-logo{
+    display: flex;
+    justify-content: space-between;
+}*/
+
+.menu-logo img{
+    width: 152px;
+}
+
+
+.mobile-user{
+    margin-top: 25px;
+    color: #FFF;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-responsive{
+    margin-bottom: 12px;
+}
+
+.responsive-menu{
+    display: none;
+    white-space: nowrap;
+    background: rgba(9, 30, 49, 0.85);
+    padding: 20px;
+    width: 35vw;
+    height: 932px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+.menu-reponsive-ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.close-icon{
+    color: #FFF;
+    text-align: right;
+    font-size: 4vmin;
+    animation: closeMenu 0.3s;
+}
+
+.close:hover{
+    text-shadow: 0px 2px 25px rgb(146, 31, 31);
+}
+
+/* Animación para abrir el menú */
+@keyframes openMenu {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  
+/* Animación para cerrar el menú */
+@keyframes closeMenu {
+    from {
+      transform: rotate(10deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.menus-info{
+    margin-top: 15px;
+}
+
+.menu-reponsive-ul p{
+    color: #FFF;
+    border-bottom: solid 2px #FFF;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+
+.menu-reponsive-ul a{
+    text-decoration: none;
+}
+
+.menu-reponsive-ul p:hover{
+    text-shadow: 0px 2px 12px rgb(181, 203, 212);
+}
+
+.menu-icon{
+    margin-right: 7px;
+}
+
+.inactive{
+    display: none;
+}
+
+ /*PORTRAIT*/
+.portrait-container {
+background-image: url('../../medio/PortraitPhoto.jpg'); 
+background-size: cover;
+background-position: center;
+height: 250px;
+border-radius: 15px; 
+text-align: left;
+color: #fff; 
+padding: 50px;
+font-size: 25px; 
+
+}
+
+    @media screen and (max-width: 768px) {
+        .portrait-container {
+        background-image: url('../../medio/PortraitPhoto.jpg'); 
+        background-size: cover;
+        height: 200px; 
+        font-size: 14px;; 
+    }
+
+    @media screen and (max-width: 576px) {
+        .portrait-container {
+        font-size: 12px;
+        }
+    }
+
+
+    @media screen and (max-width: 850px){
+        .links-info,
+        .user-info ul{
+            display: none;
+        }
+
+        .burger-menu{
+            display: block;
+            /*font-size: 28vmin;*/
+    }
+
+    .menu-logo img{
+        width: 28vw;
+    }
+
+    .responsive-menu{
+        display: flex;
+        flex-direction: column;
+        }
+    }
+
+}

@@ -152,15 +152,44 @@ li{
     display: none;
 }
 
-@media screen and (max-width: 850px){
-    .links-info,
-    .user-info ul{
-        display: none;
+ /*PORTRAIT*/
+.portrait-container {
+background-image: url('../../medio/PortraitPhoto.jpg'); 
+background-size: cover;
+background-position: center;
+height: 250px;
+border-radius: 15px; 
+text-align: left;
+color: #fff; 
+padding: 50px;
+font-size: 25px; 
+
+}
+
+    @media screen and (max-width: 768px) {
+        .portrait-container {
+        background-image: url('../../medio/PortraitPhoto.jpg'); 
+        background-size: cover;
+        height: 200px; 
+        font-size: 14px;; 
     }
 
-    .burger-menu{
-        display: block;
-        /*font-size: 28vmin;*/
+    @media screen and (max-width: 576px) {
+        .portrait-container {
+        font-size: 12px;
+        }
+    }
+
+
+    @media screen and (max-width: 850px){
+        .links-info,
+        .user-info ul{
+            display: none;
+        }
+
+        .burger-menu{
+            display: block;
+            /*font-size: 28vmin;*/
     }
 
     .menu-logo img{
@@ -170,7 +199,7 @@ li{
     .responsive-menu{
         display: flex;
         flex-direction: column;
+        }
     }
+
 }
-
-

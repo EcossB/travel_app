@@ -1,0 +1,113 @@
+.container {
+    display: flex;
+    background-color: #091F31; 
+    padding: 20px;
+  }
+  
+  .left-side {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6rem;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-inline: 2rem;
+    
+  }
+  
+  .input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    width: 34rem;
+
+  }
+
+  .input-container-consulta{
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    border: none; 
+    outline: none;
+
+
+  }
+  
+  .custom-input {
+    border-radius: 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+    border: none;
+    padding-left: 2rem;
+    margin-top: 2rem;
+    height: 3.8rem;
+    outline: none; 
+
+
+
+  }
+  .custom-textarea {
+    border-radius: 20px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    font-weight: normal;
+    padding: 10px;
+    border: none; 
+    height: 18rem; 
+    width: 100%;
+    resize: none; 
+    padding-left: 2rem;
+    padding-bottom: 15rem;
+    padding-top: 1.3rem;
+    margin-top: 2rem;
+    outline: none; 
+
+  }
+  
+  .custom-button {
+    margin-top: 1rem;
+    border-radius: 22px;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 18px;
+    font-weight: bold; 
+    color: white;
+    text-align: center;
+    padding-right: 2rem;
+    width: 120px;
+    padding: 0.5rem;
+    background-color: #3F7BFD; 
+    border-style: none;
+    transition: 0.8s;
+  }
+
+  .custom-button:hover{
+    background-color: #1c48a7;
+  }
+  
+
+  .right-side{
+    margin-right: 5rem;
+    margin-left: 2rem;
+  }
+  
+  .custom-image {
+    width: 88%;
+    height: auto;
+    
+  }
+  
+  .default-thanks-text {
+    margin-top: 4rem;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+    font-size: 18px;
+  }
+  

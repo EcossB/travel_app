@@ -3,7 +3,7 @@ body{
 }
 
 .login-container{
-    margin: 45px;
+    margin: 15px;
 }
 
 .title{
@@ -42,7 +42,7 @@ input{
 }
 
 .password-input input{
-    margin-bottom: 5px;
+    margin-bottom: 8px;
 }
 
 input::placeholder{
@@ -56,11 +56,11 @@ input::placeholder{
 }
 
 .form-section button{
-    margin-top: 15px;
+    margin-top: 5px;
     border-radius: 10px;
     background-color: rgba(169, 105, 71, 0.75);
     padding: 15px;
-    width: 15em; 
+    width: 15em;
     color: #FFF;
     font-size: 2vmin;
     font-style: normal;
@@ -128,6 +128,9 @@ input::placeholder{
     text-align: right;
 }
 
+.passwd-field{
+    margin-top: 5px;
+}
 
 /* Estilo para dispositivos móviles */
 @media screen and (max-width: 650px){
@@ -135,8 +138,20 @@ input::placeholder{
     .register-message a,
     .form-section button,
     .buttons-section button,
-    .register-message,
-    .form-section::placeholder{
+    .register-message{
         font-size: .75rem;
     }
+
+    input::placeholder{
+        font-size: .65rem;
+    }
+
+    .openEye-icon,
+    .closeEye-icon{
+        width: 3vmin;
+    }
+
+    input{
+        padding: 15px;
+    }   
 }

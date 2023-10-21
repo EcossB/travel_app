@@ -1,4 +1,4 @@
-import { Menu } from "./Menu";
+import { Carousel } from "./Carousel";
 import Portrait from "./Portrait";
 import "./homeStyle.css";
 

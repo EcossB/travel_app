@@ -1,10 +1,10 @@
 import { useState } from "react";
 
 export const usePasswd = (initialValue) => {
- const [showPasswd1, setPasswd1] = useState(initialValue);
- const [showPasswd2, setPasswd2] = useState(initialValue);
+  const [showPasswd1, setPasswd1] = useState(initialValue);
+  const [showPasswd2, setPasswd2] = useState(initialValue);
 
- const togglePassword1 = () => {
+const togglePassword1 = () => {
     setPasswd1(!showPasswd1);
   }
 
@@ -12,7 +12,7 @@ export const usePasswd = (initialValue) => {
     setPasswd2(!showPasswd2);
   }
 
-  return [
+return [
     showPasswd1,
     togglePassword1,
     showPasswd2,

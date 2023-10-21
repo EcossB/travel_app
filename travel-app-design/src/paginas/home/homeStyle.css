@@ -202,4 +202,227 @@ font-size: 25px;
         }
     }
 
+}h1{
+    color: #fff;
+    font-size: 8vmin;
 }
+
+main section{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    bottom: 20px;
+    color: #fff;
+}
+
+main section .cards{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-top: 10px ;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+}
+
+main section .cards::-webkit-scrollbar{
+    display: none;
+}
+
+main section .cards .card{
+    position: relative;
+    min-width: 175px;
+    height: 245px;
+    border-radius: 8px;
+    margin-right: 5px;
+    background: #000;
+    transition: .3s linear;
+}
+
+main section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+main section .cards .card:hover {
+    min-width: 390px;
+    overflow: hidden;
+}
+
+main section .cards .card .rest_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+main section .cards .card .rest_card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+    
+}
+
+main section .cards .card .rest_card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+}
+
+main section .cards .card .rest_card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+main section .cards .card .rest_card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 90%;
+}
+
+main section .cards .card .rest_card .cont .sub p{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7);
+    text-decoration: none;
+}
+
+main section .cards .card .rest_card .cont .sub h3{
+    color:#fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+main section .cards .card .rest_card .cont .sub span{
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px ;
+    text-decoration: none;
+    
+}
+
+main section .cards .card .rest_card .cont .sub h3 i{
+    margin-right: 3px ;
+}
+
+main section .cards .card:hover .rest_card {
+    opacity: 1 ;
+}
+
+main section .arrow-icon-left,
+.arrow-icon-right{
+    position: absolute;
+    top: 50%;
+    left: -1.5%;
+    width: 50px;
+    height: 50px;
+    background:rgb(255, 255, 255, .3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    transition: .3s linear ;
+    z-index: 999999999;
+
+}
+
+main section .arrow-icon-right{
+    left: unset;
+    right: -1.5%;
+}
+
+main  .arrow-icon {
+    font-size: 24vmin;
+    cursor: pointer; 
+    margin-top: 10vmin;
+}
+
+.arrow-icon:hover{
+    background-color: rgba(169, 105, 71, 0.75);
+}
+
+.star{
+    color:yellow;
+    font-size: 2vmin;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    height: 45px;}
+
+ /* estilos para el banner - portrait */
+.banner{
+    position: relative;
+}
+
+.banner__img{
+    width: 95%;
+    height: 80vmin;
+    background-image: url("../../medio/banner.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 35px;
+    margin-left: 5vmin;
+    margin-top: 15vmin;
+}
+
+.banner__titulo{
+    text-transform: uppercase;
+    font-size: 8vmin;
+    position: absolute;
+    text-align: center;
+    color: #f5f0ed;
+    width: 100%;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    text-shadow: 0 4px 4px rgba(0,0,0,0.75);
+}
+
+/* Responsive del banner */
+@media screen and (max-width: 650px) {
+    .banner__img{
+        width: 85%;
+        height: 80vmin;
+        margin-left: 7vmin;
+        margin-top: 15vmin;
+    }
+
+    .banner__titulo{ 
+        font-size: 7vmin;
+        width: 80%;
+    }
+}
+

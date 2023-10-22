@@ -1,15 +1,15 @@
-import React from 'react'
-import ImgDiv from './ImageDiv/ImgDiv'
-import Form from './SecondDiv/Form'
+//import ImgDiv from './ImageDiv/ImgDiv'
+import Form from './Form'
 
-export const contact = () => {
+function Contact () {
   return (
     <div>
-        <ImgDiv/>
-        <Form/>
+        {/*<ImgDiv/>*/}
+        <Form />
 
     </div>
-  )
+  );
 }
 
-export default contact
+export default Contact;
+

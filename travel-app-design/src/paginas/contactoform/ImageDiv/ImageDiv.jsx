@@ -1,5 +1,4 @@
-import React from 'react';
-import ImgDivStyles from '../ImageDiv/ImgDivStyles.css';
+import './ImageDivStyles.css';
 import Canoa from '.../.../medio/Canoa.png'; //arreglar esto. 
 
 export const ImgDiv = () => {

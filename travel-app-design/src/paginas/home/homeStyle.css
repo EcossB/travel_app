@@ -1,6 +1,11 @@
-/*Menu style*/
+/*Menu*/
 #menu{
+    position: sticky;
+    top: 0;
     margin: 18px;
+    background-color:#091F31;
+    border-radius: 15px;
+    padding: 0px 8px;
     display: flex;
     justify-content: space-between;
     font-size: 2vmin;
@@ -31,7 +36,29 @@ li{
     white-space: nowrap;
 }
 
-.link-menu:hover,
+.link-menu {
+    color: #333; /* Color de texto normal */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    position: relative; /* Permite posicionar el pseudo-elemento */
+  }
+  
+
+.link-menu::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: #386ad5; 
+    transition: width 0.3s; 
+  }
+  
+.link-menu:hover::before {
+    width: 100%; 
+  }
+
+
 .active-link{
     border-bottom: 2px solid #386ad5;
 }
@@ -48,7 +75,7 @@ li{
     display: none;
     color: #FFF;
     font-size: 4vmin;
-    margin-top: 10px;
+    margin-top: 15px;
     animation: openMenu 0.3s;
     /*animation: showSidebar 0.4s ease;*/
 }
@@ -62,7 +89,6 @@ li{
 .menu-logo img{
     width: 152px;
 }
-
 
 .mobile-user{
     margin-top: 25px;
@@ -152,44 +178,80 @@ li{
     display: none;
 }
 
- /*PORTRAIT*/
-.portrait-container {
-background-image: url('../../medio/PortraitPhoto.jpg'); 
-background-size: cover;
-background-position: center;
-height: 250px;
-border-radius: 15px; 
-text-align: left;
-color: #fff; 
-padding: 50px;
-font-size: 25px; 
+ /*Banner*/
+.portrait-container2 {
+    background-image: url('../../medio/PortraitPhoto.jpg'); 
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; 
+    color: #fff; 
+    padding: 50px;
+}
+
+.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+
+.portrait-container2 h1{
+    font-size: 8vmin; 
+    text-align: center; 
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content button{
+    font-size: 2vmin;
+    white-space: nowrap;
+    background-color: #3F7BFD;
+    padding: 2px;
+}
+
+.travelTitle-container p{
+    text-align: center;
+}
+
+.globe-icon{
+    margin-right: 8px;
+    font-size: 2vmin;
+}
+
+@media screen and (max-width: 650px){
+    .portrait-container2{
+        height: 20vh;
+    }
+
+    .portrait-container2 h1{
+        font-size: 5vmin;
+    }
 
 }
 
-    @media screen and (max-width: 768px) {
-        .portrait-container {
-        background-image: url('../../medio/PortraitPhoto.jpg'); 
-        background-size: cover;
-        height: 200px; 
-        font-size: 14px;; 
+
+/*Menu responsive*/
+@media screen and (max-width: 850px){
+    .links-info,
+    .user-info ul{
+    display: none;
     }
 
-    @media screen and (max-width: 576px) {
-        .portrait-container {
-        font-size: 12px;
-        }
-    }
-
-
-    @media screen and (max-width: 850px){
-        .links-info,
-        .user-info ul{
-            display: none;
-        }
-
-        .burger-menu{
-            display: block;
-            /*font-size: 28vmin;*/
+    .burger-menu{
+    display: block;
     }
 
     .menu-logo img{
@@ -202,11 +264,12 @@ font-size: 25px;
         }
     }
 
-}h1{
+h1{
     color: #fff;
     font-size: 8vmin;
 }
 
+/*Carousel*/
 main section{
     position: absolute;
     width: 90%;
@@ -214,6 +277,12 @@ main section{
     bottom: 20px;
     color: #fff;
 }
+
+main section h1{
+    text-align: center;
+}
+
+
 
 main section .cards{
     position: relative;
@@ -347,7 +416,7 @@ main section .arrow-icon-left,
     align-items: center;
     justify-content: center;
     border-radius: 50%;
-    font-size: 20px;
+    font-size: 5vmin;/*20px*/
     cursor: pointer;
     transition: .3s linear ;
     z-index: 999999999;
@@ -360,7 +429,7 @@ main section .arrow-icon-right{
 }
 
 main  .arrow-icon {
-    font-size: 24vmin;
+    font-size: 14vmin;
     cursor: pointer; 
     margin-top: 10vmin;
 }
@@ -381,48 +450,124 @@ main {
     padding: 5px 5%;
     height: 45px;}
 
- /* estilos para el banner - portrait */
-.banner{
-    position: relative;
-}
-
-.banner__img{
-    width: 95%;
-    height: 80vmin;
-    background-image: url("../../medio/banner.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 35px;
-    margin-left: 5vmin;
-    margin-top: 15vmin;
-}
-
-.banner__titulo{
-    text-transform: uppercase;
-    font-size: 8vmin;
-    position: absolute;
+/*Estilos para información del home*/
+.home-info{
     text-align: center;
-    color: #f5f0ed;
-    width: 100%;
-    left: 50%;
-    top: 30%;
-    transform: translate(-50%, -50%);
-    text-shadow: 0 4px 4px rgba(0,0,0,0.75);
 }
 
-/* Responsive del banner */
-@media screen and (max-width: 650px) {
-    .banner__img{
-        width: 85%;
-        height: 80vmin;
-        margin-left: 7vmin;
-        margin-top: 15vmin;
-    }
-
-    .banner__titulo{ 
-        font-size: 7vmin;
-        width: 80%;
-    }
+.home-info h2{
+    font-size: 7vmin;
+    margin-bottom: 2px;
 }
 
+.home-info p{
+    font-size: 2.3vmin;
+}
+
+.homeinfo-container{
+    margin-top: 35px;
+}
+
+.turisteo-info-container{
+    color: #FFF;
+    margin: 4rem 6rem;
+}
+
+.turisteo-info-container h2{
+    text-align: center;
+    font-size: 7vmin;
+}
+
+.title-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.information{
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.information h3{
+    padding-bottom: 1rem;
+}
+
+.images-information{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+}
+
+.images-information img{
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgb(0,0,0,0.19);
+}
+
+.palm{
+    position: relative;
+    width: 2vmin;
+}
+
+.images-information img:nth-child(2){
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+.map-container{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map-container img{
+    width: 60vw;
+}
+
+.mapinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapinfo h3{
+    font-size: 4vmin;
+}
+
+
+@media screen and (max-width: 850px){
+    .turisteo-info-container{
+        margin: 4rem 2rem;
+    }
+
+    .title-img-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2.5rem;
+    }
+
+    .information{
+        width: 100%;
+    }
+
+    .images-information{
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .images-information img{
+        height: 250px;
+    }
+
+
+}

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
-import '../SecondDiv/FormStyles.css';
-import FormImg from '../images/formimg.png';
+import { useState } from 'react';
+import './FormStyles.css';
+import FormImg from '../../medio/formimg.png';
 
 export const Form = () => {
   const initialFormData = {

@@ -32,7 +32,7 @@ export const Menu = () => {
         <ul>
           <li>
             <FaUserAlt  className="user-icon"/>
-            Emily Smith
+            Cristal Tavárez
           </li>
           <Link to="/login"><button className="logout-btn">Cerrar sesión</button></Link>
         </ul>

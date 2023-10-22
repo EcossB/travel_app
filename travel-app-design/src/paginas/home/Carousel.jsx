@@ -48,7 +48,7 @@ export const Carousel = () => {
     return (
         <main>
             <section>
-                <h1>Lugares TOP que debes visitar</h1>
+                {/*<h1>Lugares TOP que debes visitar</h1>*/}
                 
                 <i onClick={handleScrollLeft}>
                     <BsArrowLeftCircle className="arrow-icon arrow-icon-left" />

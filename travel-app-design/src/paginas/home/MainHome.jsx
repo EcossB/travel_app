@@ -1,3 +1,4 @@
+import { Carousel } from "./Carousel";
 import { DescvDiv } from "./DescvDiv";
 //import { MapDiv } from "./MapDiv";
 import { Menu } from "./Menu";
@@ -11,10 +12,18 @@ export const MainHome = () => {
   return (
     <div>
       <Menu />
-      <Portrait />
-      <div className="homeinfo-container">
-        <DescvDiv />
-        
+      <Portrait
+        bannerClass="portrait-container2"
+        title="Encuentra la mejor opción para tu viaje"
+        className="content"
+      />
+      <div className="d">
+        <div className="homeinfo-container">
+          <DescvDiv />
+        </div>
+        <div className="carouse-container">
+          <Carousel />
+        </div>
       </div>
     </div>
   );

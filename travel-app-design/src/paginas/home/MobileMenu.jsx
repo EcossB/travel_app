@@ -6,7 +6,7 @@ import { FaTimes, FaUserAlt, FaTools, FaPhone, FaPlane, FaPencilRuler, FaWindowC
 
 export const MobileMenu = ({ closeSideBar }) => {
   return (
-    <div className="responsive-menu">
+    <div className="responsive-menu animate__animated animate__fadeInRight">
         <div className="close-icon">
             <FaTimes  onClick={closeSideBar} className="close"/>  
         </div>

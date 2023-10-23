@@ -21,9 +21,9 @@ import BahiaAguila from "../../medio/bahia.jpg";
 import AguilaBahia from "../../medio/bahiaAguila.jpg";
 import ColonZona from "../../medio/Colon.webp";
 import ZonaColon from "../../medio/Zona.jpg";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
-
-import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
+//import { FaAngleLeft, FaAngleRight } from 'react-icons/bs';
 import {AiFillStar} from 'react-icons/ai';
 
 
@@ -31,7 +31,7 @@ export const Carousel = () => {
     const [scrollLeft, setScrollLeft] = useState(0);
     const carouselRef = useRef(null);
     // const numOfItems = 1; 
-    const itemsPerPage = 10; // Cantidad de elementos a mostrar a la vez
+    const itemsPerPage = 6; // Cantidad de elementos a mostrar a la vez
 
     const handleScrollLeft = () => {
         const carouselWidth = carouselRef.current.clientWidth;
@@ -48,14 +48,23 @@ export const Carousel = () => {
     return (
         <main>
             <section>
-                {/*<h1>Lugares TOP que debes visitar</h1>*/}
-                
+                <h2>Lugares TOP que debes visitar</h2>
+
                 <i onClick={handleScrollLeft}>
-                    <BsArrowLeftCircle className="arrow-icon arrow-icon-left" />
+                    <FaAngleLeft className="arrow-icon arrow-icon-left a"/>
                 </i>
+
                 <i onClick={handleScrollRight}>
-                    <BsArrowRightCircle className="arrow-icon arrow-icon-right" />
+                    <FaAngleRight className="arrow-icon arrow-icon-right" />
                 </i>
+                
+                {/*<i onClick={handleScrollLeft}>
+                    <BsArrowLeftCircle className="arrow-icon arrow-icon-left" />
+                </i>*/}
+
+                {/*<i onClick={handleScrollRight}>
+                    <BsArrowRightCircle className="arrow-icon arrow-icon-right" />
+                </i>*/}
 
                 <div className="cards" ref={carouselRef}>
                     {/* CARD 1 */}

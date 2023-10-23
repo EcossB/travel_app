@@ -1,5 +1,6 @@
 body{
     background-color: #091F31;
+    user-select: none;
 }
 
 :root{

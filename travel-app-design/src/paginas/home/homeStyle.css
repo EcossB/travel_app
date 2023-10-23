@@ -9,6 +9,7 @@
     display: flex;
     justify-content: space-between;
     font-size: 2vmin;
+    z-index: 1;
 }
 
 .logout-btn{
@@ -77,14 +78,7 @@ li{
     font-size: 4vmin;
     margin-top: 15px;
     animation: openMenu 0.3s;
-    /*animation: showSidebar 0.4s ease;*/
 }
-
-
-/*.menu-logo{
-    display: flex;
-    justify-content: space-between;
-}*/
 
 .menu-logo img{
     width: 152px;
@@ -181,6 +175,7 @@ li{
  /*Banner*/
 .portrait-container2 {
     background-image: url('../../medio/PortraitPhoto.jpg'); 
+    
     background-size: cover;
     background-position: center;
     height: 50vh;
@@ -192,7 +187,7 @@ li{
     padding: 50px;
 }
 
-.banner-background {
+/*.banner-background {
     position: absolute;
     top: 0;
     left: 0;
@@ -200,12 +195,11 @@ li{
     height: 100%;
     object-fit: cover;
     z-index: -1;
-}
-
+}*/
 
 .portrait-container2 h1{
     font-size: 8vmin; 
-    text-align: center; 
+    text-align: center;
 }
 
 .content{
@@ -270,11 +264,19 @@ h1{
 }
 
 /*Carousel*/
+/*section{
+    background-image: url('https://clipart-library.com/new_gallery/835_clouds-png.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}*/
+
 main section{
     position: absolute;
     width: 90%;
     height: auto;
-    bottom: 20px;
+    /*bottom: 20px;*/
+    
     color: #fff;
 }
 
@@ -428,14 +430,18 @@ main section .arrow-icon-right{
     right: -1.5%;
 }
 
-main  .arrow-icon {
+main .arrow-icon {
     font-size: 14vmin;
     cursor: pointer; 
-    margin-top: 10vmin;
+    margin-top: 8vmin;
 }
 
+.carouse-container{
+    margin-top: 180px;
+}
 .arrow-icon:hover{
-    background-color: rgba(169, 105, 71, 0.75);
+    /*background-color: rgba(169, 105, 71, 0.75);*/
+    background-color: rgba(114, 109, 107, 0.75);
 }
 
 .star{
@@ -469,13 +475,21 @@ main {
 }
 
 .turisteo-info-container{
-    color: #FFF;
+    color: #f8efec;
     margin: 4rem 6rem;
 }
 
-.turisteo-info-container h2{
+/*.d{
+    background-image: url('https://clipart-library.com/new_gallery/835_clouds-png.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}*/
+.turisteo-info-container h2,
+main section h2{
+    color: #f8efec;
     text-align: center;
-    font-size: 7vmin;
+    font-size: 5.5vmin;
 }
 
 .title-img-container{
@@ -494,6 +508,7 @@ main {
 
 .information h3{
     padding-bottom: 1rem;
+    /*text-shadow: 2px 5px 15px #1dc1c8;*/
 }
 
 .images-information{

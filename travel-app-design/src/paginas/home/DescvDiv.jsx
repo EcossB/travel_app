@@ -7,9 +7,9 @@ import palmera from "../../medio/palmera.png";
 export const DescvDiv = () => {
   return (
     <div className="turisteo-info-container">
-            <h2>
+            {/*<h2>
                 Destinos populares
-            </h2>
+            </h2> */}
         <div className="title-img-container">
             <div className="information">
                 <h3>¿Qué país te gustaría conocer?</h3>

@@ -10,6 +10,7 @@
 }
 
 .buttons-section button{
+    margin-top: 2px;
     border-radius: 5px;
     background-color: rgba(169, 105, 71, 0.75);
     padding: 10px 20px;

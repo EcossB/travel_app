@@ -1,6 +1,11 @@
 /*Menu*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
 #menu{
     position: sticky;
+    font-weight: 400;
     top: 0;
     margin: 18px;
     background-color:#091F31;
@@ -8,7 +13,7 @@
     padding: 0px 8px;
     display: flex;
     justify-content: space-between;
-    font-size: 2vmin;
+    font-size: 1.7vmin;
     z-index: 1;
 }
 
@@ -29,6 +34,12 @@ ul{
     display: flex;
     gap: 2rem;
 }
+
+/*.links-info{
+    position: relative;
+    left: 5%;
+}*/
+
 
 .links-info a,
 li{
@@ -98,6 +109,8 @@ li{
 
 .responsive-menu{
     display: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
     white-space: nowrap;
     background: rgba(9, 30, 49, 0.85);
     padding: 20px;
@@ -276,7 +289,6 @@ main section{
     width: 90%;
     height: auto;
     /*bottom: 20px;*/
-    
     color: #fff;
 }
 
@@ -437,8 +449,9 @@ main .arrow-icon {
 }
 
 .carouse-container{
-    margin-top: 180px;
+    margin-top: 190px;
 }
+
 .arrow-icon:hover{
     /*background-color: rgba(169, 105, 71, 0.75);*/
     background-color: rgba(114, 109, 107, 0.75);
@@ -471,7 +484,7 @@ main {
 }
 
 .homeinfo-container{
-    margin-top: 35px;
+    margin-top: 100px;
 }
 
 .turisteo-info-container{
@@ -508,6 +521,7 @@ main section h2{
 
 .information h3{
     padding-bottom: 1rem;
+    font-size: 3.4vmin;
     /*text-shadow: 2px 5px 15px #1dc1c8;*/
 }
 

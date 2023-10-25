@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Initial backend Commit." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -81,8 +81,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698246598451</updated>
-      <workItem from="1698246601304" duration="2482000" />
+      <workItem from="1698246601304" duration="2811000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial backend Commit.">
+      <option name="closed" value="true" />
+      <created>1698249436486</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698249436486</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -110,5 +119,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial backend Commit." />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial backend Commit." />
   </component>
 </project>

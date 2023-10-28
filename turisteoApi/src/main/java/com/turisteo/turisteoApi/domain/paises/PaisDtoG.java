@@ -19,4 +19,8 @@ public record PaisDtoG(
 
 
 ) {
+
+    public PaisDtoG(PaisEntity pais){
+        this(pais.getPais_id(), pais.getNombre(), pais.getDescripcion(), pais.getContinente() , pais.getBandera(), pais.getImagen1(), pais.getImagen2());
+    }
 }

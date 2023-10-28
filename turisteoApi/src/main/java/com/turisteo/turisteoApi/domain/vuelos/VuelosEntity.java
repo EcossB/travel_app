@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.domain.vuelos;
 
 
+import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -17,11 +18,9 @@ public class VuelosEntity {
     private long id;
     private String link_vuelos;
 
-    /*
-    TODO
     @ManyToOne
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
-     */
+
 
 }

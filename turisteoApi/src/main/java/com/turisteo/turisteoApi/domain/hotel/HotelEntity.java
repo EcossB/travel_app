@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.domain.hotel;
 
 
+import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,10 +21,8 @@ public class HotelEntity {
     private float valoracion;
     private String imagen_hotel;
 
-    /*
-    TODO
     @ManyToOne
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
-     */
+
 }

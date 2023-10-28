@@ -1,6 +1,8 @@
 package com.turisteo.turisteoApi.domain.gastronomia;
 
 
+
+import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -20,11 +22,9 @@ public class GastronomiaEntity {
     private String nombre_plato;
     private String imagen;
 
-    /*
-    TODO
     @ManyToOne
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
-     */
+
 
 }

@@ -2,6 +2,7 @@ package com.turisteo.turisteoApi.domain.LugaresFamosos;
 
 
 
+import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
 

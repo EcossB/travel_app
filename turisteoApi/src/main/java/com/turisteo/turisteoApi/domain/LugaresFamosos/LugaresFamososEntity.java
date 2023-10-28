@@ -23,11 +23,11 @@ public class LugaresFamososEntity {
     private String descripcion;
     private String imagen;
 
-    /*
-    TODO
+
+
     @ManyToOne
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
-     */
+
 
 }

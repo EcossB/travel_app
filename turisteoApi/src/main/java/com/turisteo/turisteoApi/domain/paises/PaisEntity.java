@@ -1,7 +1,14 @@
 package com.turisteo.turisteoApi.domain.paises;
 
+
+import com.turisteo.turisteoApi.domain.LugaresFamosos.LugaresFamososEntity;
+import com.turisteo.turisteoApi.domain.gastronomia.GastronomiaEntity;
+import com.turisteo.turisteoApi.domain.hotel.HotelEntity;
+import com.turisteo.turisteoApi.domain.vuelos.VuelosEntity;
 import jakarta.persistence.*;
 import lombok.*;
+
+import java.util.List;
 
 @Entity
 @Table(name = "paises")

@@ -4,26 +4,20 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Creacion de Entidad y DTO para los datos de Lugares famosos">
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/sqldialects.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososDtoG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoG.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V1__create-table-paises.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V2__create-table-lugaresfamosos.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V3__create-table-gastronomia.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V4__alter-table-gastronomia.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V5__create-table-vuelos.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V6__create-table-hoteles.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Creating files controllers.">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoP.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoPut.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/ClasePrueba.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoG.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoG.java" afterDir="false" />
     </list>
-    <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
+    <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles">
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +30,9 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
+        <option value="Interface" />
         <option value="Class" />
+        <option value="AnnotationType" />
         <option value="Record" />
       </list>
     </option>
@@ -90,6 +86,9 @@
   }
 }]]></component>
   <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="com.turisteo.turisteoApi.controller" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\erwin\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\travel_app" />
       <recent name="C:\Users\erwin\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\travel_app\turisteoApi\src\main\java" />
@@ -118,7 +117,7 @@
       <option name="presentableId" value="Default" />
       <updated>1698246598451</updated>
       <workItem from="1698246601304" duration="6638000" />
-      <workItem from="1698331135163" duration="10982000" />
+      <workItem from="1698331135163" duration="24161000" />
     </task>
     <task id="LOCAL-00001" summary="Initial backend Commit.">
       <option name="closed" value="true" />
@@ -200,7 +199,87 @@
       <option name="project" value="LOCAL" />
       <updated>1698342099159</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Creacion de Entidad y DTO para los datos de Lugares famosos">
+      <option name="closed" value="true" />
+      <created>1698342248294</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1698342248294</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Creacion de Entidad y DTO para los datos de vuelos">
+      <option name="closed" value="true" />
+      <created>1698342295169</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698342295169</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Migracion de los datos con flyway">
+      <option name="closed" value="true" />
+      <created>1698342321944</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698342321944</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Cambio de URL del jdbc">
+      <option name="closed" value="true" />
+      <created>1698342387183</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1698342387183</updated>
+    </task>
+    <task id="LOCAL-00015" summary="IdeaFiles">
+      <option name="closed" value="true" />
+      <created>1698342472128</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698342472128</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Data migration altering tables">
+      <option name="closed" value="true" />
+      <created>1698462270511</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1698462270511</updated>
+    </task>
+    <task id="LOCAL-00017" summary="relationship with other entities, construct for post and mehtod for put.">
+      <option name="closed" value="true" />
+      <created>1698466387688</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1698466387688</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Repositories created.">
+      <option name="closed" value="true" />
+      <created>1698466468959</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1698466468959</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Adding relationShip for table paises.">
+      <option name="closed" value="true" />
+      <created>1698466519753</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1698466519753</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Creating files controllers.">
+      <option name="closed" value="true" />
+      <created>1698466613565</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1698466613565</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -235,10 +314,19 @@
     <MESSAGE value="DTO para el get de Paises" />
     <MESSAGE value="Enum de continenter para el enum de Paises" />
     <MESSAGE value="Entidad y DTO para los datos de gastronomia" />
-    <MESSAGE value="Entidad y Dto para los datos de Hoteles" />
     <MESSAGE value=" DTO para los datos de hoteles" />
     <MESSAGE value="Creacion de Entidad y DTO para los datos de Lugares famosos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Creacion de Entidad y DTO para los datos de Lugares famosos" />
+    <MESSAGE value="Creacion de Entidad y DTO para los datos de vuelos" />
+    <MESSAGE value="Migracion de los datos con flyway" />
+    <MESSAGE value="Cambio de URL del jdbc" />
+    <MESSAGE value="IdeaFiles" />
+    <MESSAGE value="Data migration altering tables" />
+    <MESSAGE value="relationship with other entities, construct for post and mehtod for put." />
+    <MESSAGE value="Repositories created." />
+    <MESSAGE value="Adding relationShip for table paises." />
+    <MESSAGE value="Entidad y Dto para los datos de Hoteles" />
+    <MESSAGE value="Creating files controllers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Creating files controllers." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -1,4 +1,5 @@
 import "./registroStyle.css";
+import swal from "sweetalert";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -10,6 +11,12 @@ export const FormRegistro = () => {
   const handleSubmit = (values, { resetForm }) => {
     console.log(values);
     resetForm();
+    swal({
+        title: "Gracias por registrarse",
+        text: "Usuario creado con éxito",
+        icon: "success",
+        button: "Aceptar"
+    });
   }
 
   const formValidate = (values) => {

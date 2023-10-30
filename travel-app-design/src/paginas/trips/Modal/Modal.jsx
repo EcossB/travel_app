@@ -9,7 +9,6 @@ export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }
   return (
     <div className="modal-container">
         {/*
-        
                 <button onClick={openModal}>
                 Open Modal
             </button>
@@ -33,7 +32,7 @@ export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }
   );
 }
 
-Modal.propTypes = {
+Modall.propTypes = {
     modalTitle: PropTypes.any.isRequired,
     modalInfo: PropTypes.any.isRequired,
     isOpen: PropTypes.any.isRequired,

@@ -1,0 +1,45 @@
+
+
+
+.imgDestino__title{
+    color: #ffff;
+    padding-top: 75vmin;
+    padding-right: 120vmin;
+}
+
+
+.imgDestino__container{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    margin: 10vmin auto; 
+    padding: 2vmin 0;
+    justify-content: center;
+    
+}
+
+.imgDestino__container--box{
+    width: 45vmin;
+    box-shadow: 0 0 2vmin rgba(0,0,0,0.6);
+    margin: 0 20px;
+    transition: 1s
+}
+
+.imgDestino__container--box img{
+    width: 40vmin;
+    height: 30vmin;
+    border-radius: 2vmin;
+    display: block; 
+}
+
+.imgDestino__container--box:hover{
+    transform: scale(1.3);
+    z-index: 2;
+}
+
+
+
+
+
+
+

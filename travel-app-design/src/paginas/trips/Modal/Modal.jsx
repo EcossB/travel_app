@@ -8,17 +8,12 @@ export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }
   //const [openModal] = useModal(false);
   return (
     <div className="modal-container">
-        {/*
-                <button onClick={openModal}>
-                Open Modal
-            </button>
-        */}
         <Modal
             isOpen={isOpen}
             onRequestClose={onRequestClose}
             contentLabel="Example Modal"
             overlayClassName="modal-overlay"
-            className="modal-content"
+            className="modal-content animate__animated animate__pulse"
         >
             <div className="modalInfo">
                 <h2>{modalTitle}</h2>

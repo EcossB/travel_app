@@ -30,12 +30,13 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 import {AiFillStar} from 'react-icons/ai';
 import { Modall } from '../trips/Modal/Modal';
 
+//Array que contiene las informaciones del cuadro modal
 const information = {
     title: {
       place1: 'Parque nacional los Haitises',
       place2: 'San gimignano',
       place3: 'Monte Nemrut',
-      place4: 'Pabellon Dorado',
+      place4: 'Pabellón Dorado',
       place5: 'Torre Eiffel',
       place6: 'Santorini',
       place7: 'Cartagena',

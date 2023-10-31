@@ -27,4 +27,15 @@ public class GastronomiaEntity {
     private PaisEntity paisEntity;
 
 
+    public GastronomiaEntity(GastronomiaDtoP datosGastronomia) {
+        this.nombre_plato = datosGastronomia.nombrePlato();
+        this.imagen = datosGastronomia.linkImagen();
+        this.paisEntity = datosGastronomia.paisId();
+    }
+
+    public void actualizarDatos(GastronomiaDtoPut datosActualizarGastronomia) {
+        this.nombre_plato = datosActualizarGastronomia.nombrePlato();
+        this.imagen = datosActualizarGastronomia.linkImagen();
+        this.paisEntity = datosActualizarGastronomia.paisId();
+    }
 }

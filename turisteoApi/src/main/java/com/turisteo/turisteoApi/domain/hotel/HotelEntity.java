@@ -12,6 +12,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
+
 public class HotelEntity {
 
     @Id
@@ -25,4 +26,18 @@ public class HotelEntity {
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
 
+
+    public HotelEntity(HotelDtoP hotelDtoP){
+        this.nombre_hotel = hotelDtoP.nombre_hotel();
+        this.valoracion = hotelDtoP.valoracion();
+        this.imagen_hotel = hotelDtoP.imagen_hotel();
+        this.paisEntity = hotelDtoP.paisId();
+    }
+
+    public void actualizarHoteles(HotelDtoPut hotelDtoPut){
+        this.nombre_hotel = hotelDtoPut.nombre_hotel();
+        this.valoracion = hotelDtoPut.valoracion();
+        this.imagen_hotel = hotelDtoPut.imagen_hotel();
+        this.paisEntity = hotelDtoPut.paisId();
+    }
 }

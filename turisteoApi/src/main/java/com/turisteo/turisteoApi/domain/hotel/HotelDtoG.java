@@ -7,4 +7,8 @@ public record HotelDtoG(
         String imagen_hotel,
         Long pais_id
 ) {
+
+    public HotelDtoG(HotelEntity hotel){
+        this(hotel.getId(), hotel.getNombre_hotel(), hotel.getValoracion(), hotel.getImagen_hotel(), hotel.getPaisEntity());
+    }
 }

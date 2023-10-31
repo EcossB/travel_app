@@ -23,11 +23,22 @@ public class LugaresFamososEntity {
     private String descripcion;
     private String imagen;
 
-
-
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pais_id")
     private PaisEntity paisEntity;
 
+    public LugaresFamososEntity(LugaresFamososDtoP lugaresFamososDtoP){
+        this.nombre = lugaresFamososDtoP.nombre();
+        this.descripcion = lugaresFamososDtoP.descripcion();
+        this.imagen = lugaresFamososDtoP.imagen();
+        // No necesitas buscar la entidad PaisEntity aquí
+        // porque ya lo estás haciendo en tu servicio
+    }
 
+    public void actualizarLugaresFamosos(LugaresFamososDtoPut lugaresFamososDtoPut, Long paisEntity){
+        this.nombre = lugaresFamososDtoPut.nombre();
+        this.descripcion = lugaresFamososDtoPut.descripcion();
+        this.imagen = lugaresFamososDtoPut.imagen();
+        this.paisEntity = paisEntity;
+    }
 }

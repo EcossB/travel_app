@@ -23,4 +23,13 @@ public class VuelosEntity {
     private PaisEntity paisEntity;
 
 
+    public VuelosEntity(VuelosDtoP vuelosDtoP) {
+        this.link_vuelos = vuelosDtoP.linkVuelo();
+        this.paisEntity = vuelosDtoP.paisId();
+    }
+
+    public void actualizarVuelos(VuelosDtoPut vuelosDtoPut){
+        this.link_vuelos = vuelosDtoPut.linkVuelo();
+        this.paisEntity = vuelosDtoPut.PaisId();
+    }
 }

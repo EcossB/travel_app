@@ -32,7 +32,7 @@ public class PaisEntity {
     private String imagen1;
     private String imagen2;
 
-    @OneToMany(mappedBy = "paisEntity")
+    @OneToMany(mappedBy = "paisEntity" , fetch = FetchType.LAZY)
     private List<LugaresFamososEntity> lugaresFamosos;
 
     @OneToMany(mappedBy = "paisEntity")

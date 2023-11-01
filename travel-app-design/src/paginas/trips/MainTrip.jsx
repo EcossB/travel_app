@@ -1,8 +1,9 @@
+import FoodC from "./FoodComp/FoodC";
+
 export const MainTrip = () => {
   return (
     <div>
-    {/*Aquí llaman sus componentes para visualizarlos */}
-        MainTrip
+      <FoodC />
     </div>
-  )
+  );
 }

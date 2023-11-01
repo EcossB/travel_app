@@ -1,3 +1,6 @@
+import { Menu } from "../home/Menu";
+import { Trips } from "./Trips";
+
 import DescubreMas from "./DescubreMas"
 
 export const MainTrip = () => {
@@ -27,5 +30,5 @@ export const MainTrip = () => {
 
     una flor para ti cuchurrumín que lees esto */}
     </div>
-  )
+  );
 }

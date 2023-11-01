@@ -1,0 +1,58 @@
+.title-container {
+    color: white; 
+}
+
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.food-item {
+    width: 18%; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 2vmin; 
+    padding: 2vmin;
+    background-size: contain; 
+    background-position: center;
+    color: #fff;
+    height: 30vmin; 
+}
+
+.food-item img {
+    max-width: 100%;
+    height: 100%;
+    
+}
+
+.food-name {
+    text-align: center;
+    margin-top: 4vmin;
+  
+}
+
+
+  
+@media (max-width: 768px) {
+    .food-item {
+        width: 100%;
+        display: flex; 
+        align-items: center; 
+        margin-top: 10vmin; 
+    }
+
+    .food-item img {
+        width: 50%; 
+        height: auto; 
+    }
+
+    .food-name {
+        text-align: left;
+        background-color: transparent;
+        margin-left: 30vmax;
+        margin-top: -12vmin; 
+    }
+    
+}

@@ -26,8 +26,6 @@ const FoodC = () => {
   ];
 
   return (
-    <div className="title-container">
-     <h2>Deliciosos platillos</h2>
       <div className="food-container">
       {foods.map((food, index) => (
         <div key={index} className="food-item">
@@ -38,7 +36,6 @@ const FoodC = () => {
         </div>
       ))}
     </div>
-  </div>
   );  
 };
 

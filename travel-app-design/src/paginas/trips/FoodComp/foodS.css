@@ -1,7 +1,3 @@
-.title-container {
-    color: white; 
-}
-
 .food-container {
     display: flex;
     flex-wrap: wrap;
@@ -33,7 +29,6 @@
   
 }
 
-
   
 @media (max-width: 768px) {
     .food-item {
@@ -44,15 +39,18 @@
     }
 
     .food-item img {
-        width: 50%; 
-        height: auto; 
+        width: 50%;
+        height:auto;
+        
     }
+    
 
     .food-name {
         text-align: left;
         background-color: transparent;
-        margin-left: 30vmax;
-        margin-top: -12vmin; 
+        margin-left: 20vmax;
+        margin-top: -17vmin;
+        font-size: 5vmin 
     }
     
 }

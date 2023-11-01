@@ -1,0 +1,23 @@
+.infoP-container p{
+    color: #fff;
+    font-size: 2vmin;
+}
+
+.titleP-container h2{
+    color: #fff;
+    font-size: 3.5vmin;
+}
+
+.titleP-container{
+    margin-top: 35px;
+}
+
+@media screen and (max-width: 650px){
+    .infoP-container p{
+        font-size: 2.5vmin;
+    }
+    
+    .titleP-container h2{
+        font-size: 4vmin;
+    }
+}

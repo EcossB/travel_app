@@ -1,4 +1,6 @@
 import "./registroStyle.css";
+import swal from "sweetalert";
+import icon from "../../medio/travel-icon.png";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
@@ -10,6 +12,18 @@ export const FormRegistro = () => {
   const handleSubmit = (values, { resetForm }) => {
     console.log(values);
     resetForm();
+    swal({
+        title: "¡Gracias por registrarse!",
+        text: "Usuario creado con éxito",
+        content: {
+            element: "img",
+            attributes: {
+              src: icon,
+              style: "width: 100px; height: 100px;"
+            },
+          },
+        button: "Aceptar"
+    });
   }
 
   const formValidate = (values) => {

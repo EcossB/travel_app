@@ -32,7 +32,6 @@ export const Trips = () => {
           {/*<ImgDestino />*/}
           <FoodC />
           <DescubreMas />
-          
           <TitleP title="Hoteles"/>
           <div className="hotels">
            <HotelCarousel />

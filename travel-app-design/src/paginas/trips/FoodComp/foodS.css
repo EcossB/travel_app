@@ -39,7 +39,7 @@
   @media screen and (max-width: 650px) {
 
     .food-container{
-      background-image: url('https://o.remove.bg/downloads/547006e2-307d-4d37-81c6-069711fc4631/cc307fec7dce8929bd73e817e50d2d9a-removebg-preview.png');
+      background-image: url('../../../medio/wallpaperfood.png');
       background-repeat: no-repeat;
       background-size: cover;
     }

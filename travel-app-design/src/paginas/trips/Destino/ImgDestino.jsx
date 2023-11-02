@@ -11,9 +11,8 @@ import PabellonKioto from"../../../medio/Pabellon-Dorado-Kioto.jpg";
 
 export const ImgDestino = () => {
     return (
-        <main>
-            <section >
-                <h2 className='imgDestino__title'>¡Destinos imperdibles!</h2>
+        
+            <section className='imgDestino__section'>
                 <div className='imgDestino__container'>
                     <div className='imgDestino__container--box'>
                         <img src={samanaHaiteses} alt='' className='imgDestino__img'/>
@@ -32,6 +31,6 @@ export const ImgDestino = () => {
                     </div>
                 </div>
             </section>
-        </main>
+        
     );
 }

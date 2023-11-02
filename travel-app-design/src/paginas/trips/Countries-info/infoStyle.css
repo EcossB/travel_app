@@ -1,3 +1,7 @@
+.infoP-container{
+    padding: 5px;
+}
+
 .infoP-container p{
     color: #fff;
     font-size: 2vmin;
@@ -5,12 +9,15 @@
 
 .titleP-container h2{
     color: #fff;
+    margin-left: 5px;
     font-size: 3.5vmin;
 }
 
 .titleP-container{
     margin-top: 35px;
+    text-align: center;
 }
+
 
 @media screen and (max-width: 650px){
     .infoP-container p{

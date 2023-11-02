@@ -1,3 +1,4 @@
+
 .CountryBannerBg{
     /*background-image: url('https://images7.alphacoders.com/458/458518.jpg');*/
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url('../../medio/ItalyImg.jpg'), lightgray 50% / cover no-repeat;
@@ -6,6 +7,13 @@
     height: 15vh;
 }
 
+.hotels{
+    margin-top: 125px;
+}
+
+.trips__container{
+    margin-top: 55px;
+}
 @media screen and (max-width: 650px){
     .CountryBannerBg {
         height: 5vh;

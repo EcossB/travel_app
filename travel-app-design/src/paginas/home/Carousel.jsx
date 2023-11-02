@@ -24,6 +24,7 @@ import BahiaAguila from "../../medio/bahia.jpg";
 import AguilaBahia from "../../medio/bahiaAguila.jpg";
 import ColonZona from "../../medio/Colon.webp";
 import ZonaColon from "../../medio/Zona.jpg";
+import Kinkakuji from "../../medio/kinkajujiImg.jpg";
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 //import { FaAngleLeft, FaAngleRight } from 'react-icons/bs';
@@ -61,7 +62,7 @@ const information = {
         img1: haitisesSamana,
         img2: SanGimignano,
         img3: MonteNemrut,
-        img4: PabellonKioto,
+        img4: Kinkakuji,
         img5: TorreEi,
         img6: GreciaSantorini,
         img7: CartagenaColombia,

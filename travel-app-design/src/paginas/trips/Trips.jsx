@@ -1,6 +1,10 @@
 import Portrait from "../home/Portrait";
+import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
 import { InfoP } from "./Countries-info/InfoP";
 import { TitleP } from "./Countries-info/titleP";
+import { DescubreMas } from "./DescubreMas";
+//import { ImgDestino } from "../trips/Destino/ImgDestino";
+import FoodC from "./FoodComp/FoodC";
 import "./tripsStyle.css";
 
 export const Trips = () => {
@@ -22,9 +26,18 @@ export const Trips = () => {
             teatro, literatura y música, en particular, la ópera.
             "
         />
-        <TitleP title="¡Destinos imperdibles!"/>
-        <TitleP title="Deliciosos platillos"/>
-        <TitleP title="Hoteles"/>
+        <div className="trips__container">
+          <TitleP title="Deliciosos platillos"/>
+          {/*<TitleP title="¡Destinos imperdibles!"/>*/}
+          {/*<ImgDestino />*/}
+          <FoodC />
+          <DescubreMas />
+          
+          <TitleP title="Hoteles"/>
+          <div className="hotels">
+           <HotelCarousel />
+          </div>
+        </div>
     </div>
   )
 }

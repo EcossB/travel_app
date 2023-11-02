@@ -1,56 +1,82 @@
 .food-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-}
-
-.food-item {
-    width: 18%; 
+    justify-content:space-between;  
+  }
+  
+  .food-item {
+    /*width: 18%;*/
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 2vmin; 
-    padding: 2vmin;
-    background-size: contain; 
-    background-position: center;
+    /*margin-bottom: 2vmin;*/
+    /*padding: 2vmin;*/
+    /*background-size: contain;*/
+    /*background-position: center;*/
     color: #fff;
-    height: 30vmin; 
-}
-
-.food-item img {
-    max-width: 100%;
-    height: 100%;
-    
-}
-
-.food-name {
-    text-align: center;
-    margin-top: 4vmin;
+    /*height: 30vmin;*/
+    /*text-align: center;*/ /* Centra el texto */
+  }
   
-}
-
+  /*.food-image {
+    width: 100%; 
+    height: 60%; 
+  }*/
   
-@media (max-width: 768px) {
+  .food-item img {
+    width: 15vw;
+    height: auto;
+  }
+  
+  .food-name {
+    font-weight: 00;
+    /*margin-top: 4vmin;*/
+    font-size: 2vmin; 
+    text-shadow: 4px -5px 2px rgba(24,4,4,0.6);
+
+  }
+  
+  @media screen and (max-width: 650px) {
+
+    .food-container{
+      background-image: url('https://o.remove.bg/downloads/547006e2-307d-4d37-81c6-069711fc4631/cc307fec7dce8929bd73e817e50d2d9a-removebg-preview.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .food-icon{
+      display: flex;
+    }
+
     .food-item {
-        width: 100%;
-        display: flex; 
-        align-items: center; 
-        margin-top: 10vmin; 
+      width: 100%;
+      /*align-items: center;*/
+      /*flex-direction: row;*/
+      /*display: flex;*/
+      /*align-items: center;*/
+      /*margin-top: 10px;*/
     }
 
-    .food-item img {
-        width: 50%;
-        height:auto;
-        
+    .food-image img{
+        width: 25vw;
     }
-    
+  
+    /*.food-image {
+      width: 50%;
+      height: auto;
+    }*/
 
+    /*.food-image{
+        height: auto;
+    }*/
+  
     .food-name {
-        text-align: left;
-        background-color: transparent;
-        margin-left: 20vmax;
-        margin-top: -17vmin;
-        font-size: 5vmin 
-    }
-    
-}
+       /* text-align: left;*/
+        /*background-color: transparent;*/
+        /*margin-left: 0;*/ /* Elimina el margen izquierdo */
+        /*margin-top: 0;*/ /* Elimina el margen superior */
+        font-size: 3vmin; /* Tamaño de fuente ajustado */
+        margin-left: 15px;
+      }
+  }
+  

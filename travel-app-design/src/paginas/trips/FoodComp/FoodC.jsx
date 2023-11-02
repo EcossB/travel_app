@@ -1,4 +1,3 @@
-import React from 'react';
 import risottoImage from '../../../medio/risotto_prev_ui.png';
 import pizzaImage from '../../../medio/pizza_prev_ui.png';
 import pastaImage from '../../../medio/pasta_prev_ui.png';
@@ -26,11 +25,11 @@ const FoodC = () => {
   ];
 
   return (
-      <div className="food-container">
+    <div className="food-container">
       {foods.map((food, index) => (
         <div key={index} className="food-item">
           <div className="food-image">
-            <img src={food.image} alt={food.name} />
+            <img src={food.image} alt={food.name} className="animate__animated animate__pulse animate__repeat-3"/>
           </div>
           <p className="food-name">{food.name}</p>
         </div>

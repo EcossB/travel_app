@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Creating files controllers.">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoP.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoPut.java" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Fixing JPA relationShip between tables.">
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoG.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoG.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" afterDir="false" />
     </list>
-    <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles">
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/LugaresFamosos/LugaresFamososEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" afterDir="false" />
-    </list>
+    <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,10 +34,24 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="Back-erwing-0.1" />
+        <entry key="$PROJECT_DIR$" value="72683d1eff48f0cd16ff09319f01cf2b5a725832" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "EcossB"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="daaa1291-e255-46cc-884d-83dbb1d7726c" />
+        <option name="url" value="https://github.com/EcossB/travel_app.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -73,7 +81,10 @@
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -118,6 +129,11 @@
       <updated>1698246598451</updated>
       <workItem from="1698246601304" duration="6638000" />
       <workItem from="1698331135163" duration="24161000" />
+      <workItem from="1698848648432" duration="6061000" />
+      <workItem from="1698969126704" duration="1266000" />
+      <workItem from="1698970458677" duration="1368000" />
+      <workItem from="1698971882508" duration="994000" />
+      <workItem from="1699412113968" duration="1337000" />
     </task>
     <task id="LOCAL-00001" summary="Initial backend Commit.">
       <option name="closed" value="true" />
@@ -279,7 +295,55 @@
       <option name="project" value="LOCAL" />
       <updated>1698466613565</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="Fixing JPA relationShip between tables.">
+      <option name="closed" value="true" />
+      <created>1699412426851</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1699412426851</updated>
+    </task>
+    <task id="LOCAL-00022" summary="Deleted">
+      <option name="closed" value="true" />
+      <created>1699412882526</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1699412882526</updated>
+    </task>
+    <task id="LOCAL-00023" summary="fixing type of pais_id">
+      <option name="closed" value="true" />
+      <created>1699413155922</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413155922</updated>
+    </task>
+    <task id="LOCAL-00024" summary="fixing validations">
+      <option name="closed" value="true" />
+      <created>1699413298186</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413298186</updated>
+    </task>
+    <task id="LOCAL-00025" summary="fixing type of pais_id">
+      <option name="closed" value="true" />
+      <created>1699413340629</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413340629</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Fixing JPA relationShip between tables.">
+      <option name="closed" value="true" />
+      <created>1699413354898</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413354898</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -296,7 +360,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="master" />
+                        <option value="back-develop" />
                       </list>
                     </value>
                   </entry>
@@ -326,7 +390,11 @@
     <MESSAGE value="Adding relationShip for table paises." />
     <MESSAGE value="Entidad y Dto para los datos de Hoteles" />
     <MESSAGE value="Creating files controllers." />
-    <option name="LAST_COMMIT_MESSAGE" value="Creating files controllers." />
+    <MESSAGE value="Deleted" />
+    <MESSAGE value="fixing validations" />
+    <MESSAGE value="fixing type of pais_id" />
+    <MESSAGE value="Fixing JPA relationShip between tables." />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing JPA relationShip between tables." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

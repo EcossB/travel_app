@@ -16,6 +16,6 @@ public record LugaresFamososDtoP(
         String imagen,
         
         @NotNull
-        Long paisId
+        PaisEntity paisId
 ) {
 }

@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record LugaresFamososDtoPut(
 
-        @NotBlank
+        @NotNull
         Long id,
         @NotBlank
         String nombre,
@@ -15,6 +15,6 @@ public record LugaresFamososDtoPut(
         @NotBlank
         String imagen,
         @NotNull
-        Long paisId
+        PaisEntity paisId
 ) {
 }

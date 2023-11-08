@@ -40,10 +40,10 @@ public class LugaresController {
     }
     @PutMapping
     @Transactional
-    public ResponseEntity actualizarLugaresFamosos(@RequestBody @Valid LugaresFamososDtoPut actualizarLugaresFamosos, Long id){
+    public ResponseEntity actualizarLugaresFamosos(@RequestBody @Valid LugaresFamososDtoPut actualizarLugaresFamosos){
 
         LugaresFamososEntity lugaresFamosos = lugaresRepository.getReferenceById(actualizarLugaresFamosos.id());
-        lugaresFamosos.actualizarLugaresFamosos(actualizarLugaresFamosos, id);
+        lugaresFamosos.actualizarLugaresFamosos(actualizarLugaresFamosos);
 
         return ResponseEntity.ok(new LugaresFamososDtoG(lugaresFamosos.getId(),
                 lugaresFamosos.getNombre(), lugaresFamosos.getDescripcion(), lugaresFamosos.getImagen(), lugaresFamosos.getPaisEntity()));

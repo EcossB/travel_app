@@ -1,11 +1,13 @@
 package com.turisteo.turisteoApi.domain.hotel;
 
+import com.turisteo.turisteoApi.domain.paises.PaisEntity;
+
 public record HotelDtoG(
         Long id,
         String nombre_hotel,
         Float valoracion,
         String imagen_hotel,
-        Long pais_id
+        PaisEntity pais_id
 ) {
 
     public HotelDtoG(HotelEntity hotel){

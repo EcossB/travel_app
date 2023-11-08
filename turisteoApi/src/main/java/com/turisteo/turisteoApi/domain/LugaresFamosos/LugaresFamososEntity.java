@@ -2,6 +2,7 @@ package com.turisteo.turisteoApi.domain.LugaresFamosos;
 
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -25,20 +26,20 @@ public class LugaresFamososEntity {
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pais_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private PaisEntity paisEntity;
 
     public LugaresFamososEntity(LugaresFamososDtoP lugaresFamososDtoP){
         this.nombre = lugaresFamososDtoP.nombre();
         this.descripcion = lugaresFamososDtoP.descripcion();
         this.imagen = lugaresFamososDtoP.imagen();
-        // No necesitas buscar la entidad PaisEntity aquí
-        // porque ya lo estás haciendo en tu servicio
+        this.paisEntity = lugaresFamososDtoP.paisId();
     }
 
-    public void actualizarLugaresFamosos(LugaresFamososDtoPut lugaresFamososDtoPut, Long paisEntity){
+    public void actualizarLugaresFamosos(LugaresFamososDtoPut lugaresFamososDtoPut){
         this.nombre = lugaresFamososDtoPut.nombre();
         this.descripcion = lugaresFamososDtoPut.descripcion();
         this.imagen = lugaresFamososDtoPut.imagen();
-        this.paisEntity = paisEntity;
+        this.paisEntity = lugaresFamososDtoPut.paisId();
     }
 }

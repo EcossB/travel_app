@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.domain.vuelos;
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -18,8 +19,9 @@ public class VuelosEntity {
     private long id;
     private String link_vuelos;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pais_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private PaisEntity paisEntity;
 
 

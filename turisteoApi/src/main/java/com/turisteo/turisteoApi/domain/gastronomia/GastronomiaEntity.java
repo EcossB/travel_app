@@ -2,6 +2,7 @@ package com.turisteo.turisteoApi.domain.gastronomia;
 
 
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import com.turisteo.turisteoApi.domain.paises.PaisEntity;
 import jakarta.persistence.*;
 import lombok.*;
@@ -14,6 +15,7 @@ import lombok.*;
 @NoArgsConstructor
 @EqualsAndHashCode(of = "id")
 
+
 public class GastronomiaEntity {
 
     @Id
@@ -22,8 +24,9 @@ public class GastronomiaEntity {
     private String nombre_plato;
     private String imagen;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "pais_id")
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private PaisEntity paisEntity;
 
 

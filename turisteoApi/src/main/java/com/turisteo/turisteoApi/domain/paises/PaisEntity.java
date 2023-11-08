@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.domain.paises;
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.turisteo.turisteoApi.domain.LugaresFamosos.LugaresFamososEntity;
 import com.turisteo.turisteoApi.domain.gastronomia.GastronomiaEntity;
 import com.turisteo.turisteoApi.domain.hotel.HotelEntity;
@@ -8,6 +9,7 @@ import com.turisteo.turisteoApi.domain.vuelos.VuelosEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -17,6 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 @NoArgsConstructor
 @EqualsAndHashCode(of = "pais_id")
+@JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class PaisEntity {
 
     @Id
@@ -32,11 +35,11 @@ public class PaisEntity {
     private String imagen1;
     private String imagen2;
 
-    @OneToMany(mappedBy = "paisEntity" , fetch = FetchType.LAZY)
-    private List<LugaresFamososEntity> lugaresFamosos;
+    @OneToMany(mappedBy = "paisEntity" , cascade = CascadeType.ALL)
+    private List<LugaresFamososEntity> lugaresFamosos = new ArrayList<>();
 
-    @OneToMany(mappedBy = "paisEntity")
-    private List<GastronomiaEntity> gastronomia;
+    @OneToMany(mappedBy = "paisEntity", cascade = CascadeType.ALL)
+    private List<GastronomiaEntity> gastronomia = new ArrayList<>();
 
     @OneToMany(mappedBy = "paisEntity")
     private List<HotelEntity> hotel;

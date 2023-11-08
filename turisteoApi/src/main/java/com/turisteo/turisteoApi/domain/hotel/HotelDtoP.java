@@ -8,7 +8,7 @@ public record HotelDtoP(
         @NotBlank
         String nombre_hotel,
 
-        @NotBlank
+        @NotNull
         float valoracion,
 
         @NotBlank

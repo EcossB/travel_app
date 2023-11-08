@@ -6,13 +6,13 @@ import jakarta.validation.constraints.NotNull;
 
 public record HotelDtoPut(
 
-        @NotBlank
+        @NotNull
         long id,
 
         @NotBlank
         String nombre_hotel,
 
-        @NotBlank
+        @NotNull
         float valoracion,
 
         @NotBlank

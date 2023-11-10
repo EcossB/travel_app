@@ -80,4 +80,13 @@ public class PaisController {
     }
 
 
+    @GetMapping("/{nombre}")
+    public ResponseEntity ObtenerPaisPorNombre(@PathVariable String nombre, @PageableDefault(size = 10) Pageable page){
+
+        PaisEntity pais = paisRepository.findByNombre(nombre);
+
+        return ResponseEntity.ok(pais);
+    }
+
+
 }

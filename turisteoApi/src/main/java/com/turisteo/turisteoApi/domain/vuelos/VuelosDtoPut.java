@@ -6,7 +6,7 @@ import jakarta.validation.constraints.NotNull;
 
 public record VuelosDtoPut(
 
-        @NotBlank
+        @NotNull
         Long id,
         @NotBlank
         String linkVuelo,

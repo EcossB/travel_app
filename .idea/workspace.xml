@@ -4,11 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Fixing JPA relationShip between tables.">
-      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment=".idea files">
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoAll.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" afterDir="false" />
     </list>
     <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
@@ -19,6 +19,9 @@
   </component>
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+  </component>
+  <component name="EndpointsView">
+    <option name="showSidePanel" value="false" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -39,12 +42,12 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "EcossB"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;EcossB&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -84,7 +87,7 @@
     "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "reference.settingsdialog.IDE.editor.colors.Color Scheme Font",
+    "settings.editor.selected.configurable": "advanced.settings",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -133,7 +136,8 @@
       <workItem from="1698969126704" duration="1266000" />
       <workItem from="1698970458677" duration="1368000" />
       <workItem from="1698971882508" duration="994000" />
-      <workItem from="1699412113968" duration="1337000" />
+      <workItem from="1699412113968" duration="4995000" />
+      <workItem from="1699562996153" duration="2517000" />
     </task>
     <task id="LOCAL-00001" summary="Initial backend Commit.">
       <option name="closed" value="true" />
@@ -343,7 +347,23 @@
       <option name="project" value="LOCAL" />
       <updated>1699413354898</updated>
     </task>
-    <option name="localTasksCounter" value="27" />
+    <task id="LOCAL-00027" summary="Fixing put method">
+      <option name="closed" value="true" />
+      <created>1699413933335</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413933335</updated>
+    </task>
+    <task id="LOCAL-00028" summary=".idea files">
+      <option name="closed" value="true" />
+      <created>1699413958022</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1699413958022</updated>
+    </task>
+    <option name="localTasksCounter" value="29" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -394,7 +414,9 @@
     <MESSAGE value="fixing validations" />
     <MESSAGE value="fixing type of pais_id" />
     <MESSAGE value="Fixing JPA relationShip between tables." />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing JPA relationShip between tables." />
+    <MESSAGE value="Fixing put method" />
+    <MESSAGE value=".idea files" />
+    <option name="LAST_COMMIT_MESSAGE" value=".idea files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -54,18 +54,10 @@ export const HotelCarousel = () => {
                 <i onClick={handleScrollRight}>
                     <FaAngleRight className="arrow-icon arrow-icon-rightHotel" />
                 </i>
-                
-                {/*<i onClick={handleScrollLeft}>
-                    <BsArrowLeftCircle className="arrow-icon arrow-icon-left" />
-                </i>*/}
-
-                {/*<i onClick={handleScrollRight}>
-                    <BsArrowRightCircle className="arrow-icon arrow-icon-right" />
-                </i>*/}
 
                 <div className="cards" ref={carouselRef}>
                     {/* CARD 1 */}
-                    <a href="#" className="card"  style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div className="card"  style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={samanaHaiteses} alt="" className="poster " />
                         <div className="rest_card">
                             <img src={haitisesSamana} alt="samana" />
@@ -79,11 +71,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
                 
-
                     {/* CARD 2 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={SanGimignano} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={sanGimignano} alt="" />
@@ -97,11 +88,11 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
 
                     {/* CARD 3 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={Monteturquia} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={MonteNemrut} alt="" />
@@ -115,10 +106,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/*CARD 4 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={PabellonDorado} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={PabellonKioto} alt="" />
@@ -132,10 +123,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 5 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={TorreE} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={TorreEi} alt="" />
@@ -149,10 +140,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 6 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={GreciaArena} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={GreciaSantorini} alt="" />
@@ -166,10 +157,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 7 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={Cartagena} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={CartagenaC} alt="" />
@@ -183,10 +174,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 8 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={SenderoCacao} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={CacaoSendero} alt="" />
@@ -200,10 +191,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 9 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={BahiaAguila} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={AguilaBahia} alt="" />
@@ -217,10 +208,10 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>
+                    </div>
 
                     {/* CARD 10 */}
-                    <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
+                    <div href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }}>
                         <img src={ColonZona} alt="" className="poster" />
                         <div className="rest_card">
                             <img src={ZonaColon} alt="" />
@@ -234,8 +225,7 @@ export const HotelCarousel = () => {
                                 </div>
                             </div>
                         </div>
-                    </a>                   
-
+                    </div>                   
                     </div>
             </section>
         </main>

@@ -24,6 +24,10 @@
   }*/
   
   .food-item img {
+    /*background-image: url('../../../medio/lines.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
     width: 15vw;
     height: auto;
   }
@@ -37,12 +41,12 @@
   }
   
   @media screen and (max-width: 650px) {
-
-    .food-container{
+    /*.food-container{
       background-image: url('../../../medio/wallpaperfood.png');
       background-repeat: no-repeat;
       background-size: cover;
-    }
+    }*/
+    
 
     .food-icon{
       display: flex;

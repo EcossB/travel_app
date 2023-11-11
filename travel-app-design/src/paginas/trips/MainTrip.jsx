@@ -1,7 +1,6 @@
 import { Menu } from "../home/Menu";
+import { TripSearch } from "./Search/TripSearch";
 import { Trips } from "./Trips";
-//import DescubreMas from "./DescubreMas"
-//import FoodC from "./FoodComp/FoodC";
 
 export const MainTrip = () => {
   return (
@@ -12,26 +11,7 @@ export const MainTrip = () => {
     <ImgDestino />
     <DescubreMas/>*/}
     <Menu />
-    <Trips />
-    
-    {/*  ,
-     /\^/`\
-    | \/   |
-    | |    |
-    \ \    /
-     '\\//'
-       ||
-       ||
-       ||
-       ||  ,
-   |\  ||  |\
-   | | ||  | |
-   | | || / /
-    \ \||/ /
-     `\\//`
-    ^^^^^^^^ 
-
-    una flor para ti cuchurrumín que lees esto */}
+    <TripSearch />
     </div>
   );
 }

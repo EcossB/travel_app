@@ -31,7 +31,7 @@ export const MobileMenu = ({ closeSideBar }) => {
                     </p>
                 </Link>
 
-                <Link>
+                <Link to="/trips">
                     <p>
                         <FaPlane className="menu-icon"/>
                         Trips

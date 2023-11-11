@@ -1,9 +1,7 @@
-//import { Logo } from "../../componentes/logo/Logo";
 import logoImg from "../../medio/logo.png";
 import { NavLink, Link } from "react-router-dom";
 import { FaUserAlt, FaBars } from "react-icons/fa";
 import { MobileMenu } from "./MobileMenu";
-//import { useMenu } from "../../hooks/useMenu";
 import { useState } from "react";
 export const Menu = () => {
   const [sideBar, setSideBar] = useState(false); 

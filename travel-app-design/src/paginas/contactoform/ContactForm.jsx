@@ -3,10 +3,14 @@ import "../../componentes/login/loginStyle.css";
 import contactImg from "../../medio/formimg.png";
 import { Formik, Form, Field } from "formik";
 import { FaCheck } from "react-icons/fa";
-import { useState } from 'react';
+import { useState, useRef } from 'react';
+import emailjs from '@emailjs/browser';
+
 
 export const ContactForm = () => {
+  const form = useRef();
   const [message, setMessage] = useState(false);
+
   const handleClick = (values, { resetForm }) => {
     console.log(values);
     setMessage(true);
@@ -14,9 +18,18 @@ export const ContactForm = () => {
 
     setTimeout(() => {
         setMessage(false)
-    },1000);
+    },2000);
+
+    emailjs.sendForm('service_3xedm7q', 'template_3u6ivy7', form.current, 'lbG2--i5BFw66Hs5T')
+      .then((result) => {
+          console.log(result.text);
+      }, (error) => {
+          console.log(error.text);
+      });
 
     return values;
+
+    
   }
 
   return (
@@ -25,12 +38,11 @@ export const ContactForm = () => {
         onSubmit={handleClick}
     >
     {({values}) => 
-    
-    <Form className='contactForm'>
+    <Form className='contactForm' ref={form}>
         <div className="contactform-container">
         <p className={message ?  'contactMessage' : 'invisible'}> 
             <FaCheck className='checkIcon-contact'/>
-            Gracias por su mensaje. Pronto nos contactaremos.
+            Hemos recibido su mensaje. Pronto nos contactaremos.
         </p>
             <Field 
                 type="text" 

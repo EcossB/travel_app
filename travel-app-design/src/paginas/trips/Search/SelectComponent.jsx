@@ -1,15 +1,82 @@
+import * as React from 'react';
 import Box from '@mui/material/Box';
-import { useState } from 'react';
-//import InputLabel from '@mui/material/InputLabel';
+import Button from '@mui/material/Button';
+import Dialog from '@mui/material/Dialog';
+import DialogActions from '@mui/material/DialogActions';
+import DialogContent from '@mui/material/DialogContent';
+import DialogTitle from '@mui/material/DialogTitle';
+import OutlinedInput from '@mui/material/OutlinedInput';
 import FormControl from '@mui/material/FormControl';
-import NativeSelect from '@mui/material/NativeSelect';
+import Select from '@mui/material/Select';
+import { FaMapMarkedAlt } from "react-icons/fa";
+import "./searchStyle.css";
+
+export default function SelectComponent() {
+  const [open, setOpen] = React.useState(false);
+  const [country, setCountry] = React.useState('');
+
+  const handleChange = (event) => {
+    setCountry(Number(event.target.value) || '');
+  };
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const handleClose = (event, reason) => {
+    if (reason !== 'backdropClick') {
+      setOpen(false);
+    }
+  };
+
+  return (
+    <div>
+      <Button onClick={handleClickOpen} 
+      sx={{
+        fontSize: '2vmin', 
+        color: '#fffaf2',
+        '@media (max-width: 650px)': {
+          fontSize: '3vmin',
+      },}}>
+        <FaMapMarkedAlt className='map-icon'/>
+        Continente
+      </Button>
+
+      <Dialog disableEscapeKeyDown open={open} onClose={handleClose} sx={{backdropFilter: 'blur(10px)'}}>
+        <DialogTitle sx={{textAlign:'center', color: '#004068'}}>¡Explora por continente!</DialogTitle>
+        <DialogContent >
+          <Box component="form" sx={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center'}}>
+            <FormControl sx={{ m: 1, minWidth: 200}}>
+              <Select
+                native
+                value={country}
+                onChange={handleChange}
+                input={<OutlinedInput label="Age" id="demo-dialog-native" />}
+              >
+                <option aria-label="None" value="">Continente</option>
+                <option value={10}>América</option>
+                <option value={20}>Europa</option>
+                <option value={30}>África</option>
+                <option value={40}>Asia</option>
+                <option value={50}>Europa</option>
+              </Select>
+            </FormControl>
+          </Box>
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleClose} sx={{color: '#004068'}}>Cancelar</Button>
+          <Button onClick={handleClose} sx={{color: '#004068'}}>Aceptar</Button>
+        </DialogActions>
+      </Dialog>
+    </div>
+  );
+}
+
+
+
+
+
 /*
-
-<InputLabel variant="standard" htmlFor="uncontrolled-native">
-          Continente
-        </InputLabel>
-
-*/
 export default function SelectComponent() {
   const [selectedContinent, setSelectedContinent] = useState('');
   
@@ -38,7 +105,7 @@ export default function SelectComponent() {
       </FormControl>
     </Box>
   );
-}
+}*/
 
 
 

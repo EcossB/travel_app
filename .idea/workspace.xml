@@ -4,13 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment=".idea files">
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisDtoAll.java" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Fixing dto put vuelos">
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuarioDtoLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/AdminRepository.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminDtoLogin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminEntity.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V8__create-table-usuarios.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V9__create-table-usuarios_admin.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/vuelos/VuelosDtoPut.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/pom.xml" afterDir="false" />
     </list>
+    <list id="bebd527e-6b23-4957-a183-1f9c9ca602f6" name="Changes by Baljeet" comment="" />
     <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,10 +33,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Enum" />
-        <option value="Interface" />
-        <option value="Class" />
         <option value="AnnotationType" />
+        <option value="Class" />
         <option value="Record" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -67,41 +73,45 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "back-develop",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "advanced.settings",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;back-develop&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/erwin/OneDrive - Instituto Tecnológico de Las Américas (ITLA)/travel_app/turisteoApi/src/main/resources/db/migration&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
     ],
-    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
-      "MySQL"
+    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
+      &quot;MySQL&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.turisteo.turisteoApi.controller" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\erwin\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\travel_app\turisteoApi\src\main\resources\db\migration" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\erwin\OneDrive - Instituto Tecnológico de Las Américas (ITLA)\travel_app" />
@@ -137,7 +147,10 @@
       <workItem from="1698970458677" duration="1368000" />
       <workItem from="1698971882508" duration="994000" />
       <workItem from="1699412113968" duration="4995000" />
-      <workItem from="1699562996153" duration="2517000" />
+      <workItem from="1699562996153" duration="3514000" />
+      <workItem from="1699886829168" duration="4126000" />
+      <workItem from="1699993825449" duration="6024000" />
+      <workItem from="1700066997204" duration="1489000" />
     </task>
     <task id="LOCAL-00001" summary="Initial backend Commit.">
       <option name="closed" value="true" />
@@ -363,7 +376,47 @@
       <option name="project" value="LOCAL" />
       <updated>1699413958022</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Adding a new endpoint">
+      <option name="closed" value="true" />
+      <created>1699580751903</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580751903</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Creating DTO for all the data">
+      <option name="closed" value="true" />
+      <created>1699580767905</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580767905</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Creating a new method">
+      <option name="closed" value="true" />
+      <created>1699580786321</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580786321</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Creating a new method">
+      <option name="closed" value="true" />
+      <created>1699580798674</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580798674</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Fixing dto put vuelos">
+      <option name="closed" value="true" />
+      <created>1699580932395</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1699580932395</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -393,8 +446,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Initial backend Commit." />
-    <MESSAGE value="Entidad pais JPA" />
     <MESSAGE value="DTO para el get de Paises" />
     <MESSAGE value="Enum de continenter para el enum de Paises" />
     <MESSAGE value="Entidad y DTO para los datos de gastronomia" />
@@ -416,7 +467,11 @@
     <MESSAGE value="Fixing JPA relationShip between tables." />
     <MESSAGE value="Fixing put method" />
     <MESSAGE value=".idea files" />
-    <option name="LAST_COMMIT_MESSAGE" value=".idea files" />
+    <MESSAGE value="Adding a new endpoint" />
+    <MESSAGE value="Creating DTO for all the data" />
+    <MESSAGE value="Creating a new method" />
+    <MESSAGE value="Fixing dto put vuelos" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixing dto put vuelos" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

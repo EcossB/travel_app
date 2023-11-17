@@ -4,19 +4,28 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment="Fixing dto put vuelos">
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuarioDtoLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/AdminRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminDtoLogin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminEntity.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V8__create-table-usuarios.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/db/migration/V9__create-table-usuarios_admin.sql" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment=".Idea Files">
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/AutenticacionController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/SignUpController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuarioSignUpDto.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/AutenticacionService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/DatosJWTtoken.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityConfigurations.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityFilter.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/TokenService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turisteoApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/VueloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/VueloController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/AdminRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminDtoLogin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/ClasePrueba.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" afterDir="false" />
     </list>
-    <list id="bebd527e-6b23-4957-a183-1f9c9ca602f6" name="Changes by Baljeet" comment="" />
     <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,9 +43,9 @@
       <list>
         <option value="Enum" />
         <option value="AnnotationType" />
+        <option value="Interface" />
         <option value="Class" />
         <option value="Record" />
-        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -94,7 +103,7 @@
     &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
     &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
     &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -150,7 +159,8 @@
       <workItem from="1699562996153" duration="3514000" />
       <workItem from="1699886829168" duration="4126000" />
       <workItem from="1699993825449" duration="6024000" />
-      <workItem from="1700066997204" duration="1489000" />
+      <workItem from="1700066997204" duration="11469000" />
+      <workItem from="1700154014190" duration="9554000" />
     </task>
     <task id="LOCAL-00001" summary="Initial backend Commit.">
       <option name="closed" value="true" />
@@ -416,7 +426,47 @@
       <option name="project" value="LOCAL" />
       <updated>1699580932395</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Creating new migrations!">
+      <option name="closed" value="true" />
+      <created>1700068909995</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068909995</updated>
+    </task>
+    <task id="LOCAL-00035" summary="Creating users DTO, ENTITY &amp; Repository">
+      <option name="closed" value="true" />
+      <created>1700068942633</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068942633</updated>
+    </task>
+    <task id="LOCAL-00036" summary="Creating UserAdmin DTO, ENTITY &amp; Repository">
+      <option name="closed" value="true" />
+      <created>1700068957478</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068957478</updated>
+    </task>
+    <task id="LOCAL-00037" summary="Adding new dependecies">
+      <option name="closed" value="true" />
+      <created>1700068976215</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068976215</updated>
+    </task>
+    <task id="LOCAL-00038" summary=".Idea Files">
+      <option name="closed" value="true" />
+      <created>1700068986359</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1700068986359</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -446,11 +496,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="DTO para el get de Paises" />
-    <MESSAGE value="Enum de continenter para el enum de Paises" />
-    <MESSAGE value="Entidad y DTO para los datos de gastronomia" />
-    <MESSAGE value=" DTO para los datos de hoteles" />
-    <MESSAGE value="Creacion de Entidad y DTO para los datos de Lugares famosos" />
     <MESSAGE value="Creacion de Entidad y DTO para los datos de vuelos" />
     <MESSAGE value="Migracion de los datos con flyway" />
     <MESSAGE value="Cambio de URL del jdbc" />
@@ -471,7 +516,12 @@
     <MESSAGE value="Creating DTO for all the data" />
     <MESSAGE value="Creating a new method" />
     <MESSAGE value="Fixing dto put vuelos" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixing dto put vuelos" />
+    <MESSAGE value="Creating new migrations!" />
+    <MESSAGE value="Creating users DTO, ENTITY &amp; Repository" />
+    <MESSAGE value="Creating UserAdmin DTO, ENTITY &amp; Repository" />
+    <MESSAGE value="Adding new dependecies" />
+    <MESSAGE value=".Idea Files" />
+    <option name="LAST_COMMIT_MESSAGE" value=".Idea Files" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

@@ -8,6 +8,8 @@ import com.turisteo.turisteoApi.domain.hotel.HotelEntity;
 import com.turisteo.turisteoApi.domain.vuelos.VuelosEntity;
 import jakarta.persistence.*;
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -21,6 +23,7 @@ import java.util.List;
 @EqualsAndHashCode(of = "pais_id")
 @JsonIgnoreProperties({"hibernateLazyInitializer"})
 public class PaisEntity {
+
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

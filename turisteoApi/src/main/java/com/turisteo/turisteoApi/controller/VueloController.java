@@ -2,6 +2,7 @@ package com.turisteo.turisteoApi.controller;
 
 
 import com.turisteo.turisteoApi.domain.vuelos.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +10,7 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.web.PageableDefault;
 import org.springframework.http.ResponseEntity;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
@@ -16,6 +18,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/vuelos")
+@SecurityRequirement(name = "bearer-key")
 public class VueloController {
 
     @Autowired
@@ -39,6 +42,7 @@ public class VueloController {
     }
 
     @GetMapping
+    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<Page<VuelosDtoG>> listadoVuelos(@PageableDefault(size = 10) Pageable pageable) {
 
         //mandando respuesta modificada con response Entity

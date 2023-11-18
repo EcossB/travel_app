@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.controller;
 
 import com.turisteo.turisteoApi.domain.hotel.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -16,6 +17,7 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/hotel")
+@SecurityRequirement(name = "bearer-key")
 public class HotelController {
 
     @Autowired

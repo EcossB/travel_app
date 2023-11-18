@@ -2,6 +2,7 @@ package com.turisteo.turisteoApi.controller;
 
 import com.turisteo.turisteoApi.domain.LugaresFamosos.*;
 import com.turisteo.turisteoApi.domain.paises.PaisEntity;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
@@ -16,6 +17,7 @@ import java.net.URI;
 import java.util.Optional;
 @RestController
 @RequestMapping("/lugaresfamosos")
+@SecurityRequirement(name = "bearer-key")
 public class LugaresController {
 
     @Autowired

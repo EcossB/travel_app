@@ -1,6 +1,7 @@
 package com.turisteo.turisteoApi.controller;
 
 import com.turisteo.turisteoApi.domain.gastronomia.*;
+import io.swagger.v3.oas.annotations.security.SecurityRequirement;
 import jakarta.transaction.Transactional;
 import jakarta.validation.Valid;
 import org.apache.coyote.Response;
@@ -16,6 +17,7 @@ import java.net.URI;
 
 @RestController
 @RequestMapping("/gastronomia")
+@SecurityRequirement(name = "bearer-key")
 public class GastronomiaController {
 
     @Autowired

@@ -38,9 +38,41 @@ public class SecurityConfigurations {
         return httpSecurity.csrf( csrf -> csrf.disable()).sessionManagement( sess ->
                 sess.sessionCreationPolicy(SessionCreationPolicy.STATELESS))
                 .authorizeHttpRequests( auth -> auth.requestMatchers(HttpMethod.POST, "/login").permitAll()
+                        //Permisos para que todos los usuarios puedan utilizar el metodo Get
                         .requestMatchers(HttpMethod.POST, "/signup").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/paises").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/vuelos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/paises").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/paises/pais/{nombre}").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers(HttpMethod.GET, "/paises/continentes/{continente}").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers(HttpMethod.GET, "/vuelos").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/hotel").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/lugaresfamosos").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/gastronomia").permitAll()
+
+                        //Permisos ADMIN paises
+                        .requestMatchers(HttpMethod.POST, "/paises").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/paises").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/paises/{id}").hasRole("ADMIN")
+
+                        //Permisos ADMIN vuelos
+                        .requestMatchers(HttpMethod.POST, "/vuelos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/vuelos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/vuelos/{id}").hasRole("ADMIN")
+
+                        //Permisos ADMIN hotel
+                        .requestMatchers(HttpMethod.POST, "/hotel").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/hotel").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/hotel/{id}").hasRole("ADMIN")
+
+                        //Permisos ADMIN gastronomia
+                        .requestMatchers(HttpMethod.POST, "/gastronomia").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/gastronomia").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/gastronomia/{id}").hasRole("ADMIN")
+
+                        //Permisos ADMIN Lugares
+                        .requestMatchers(HttpMethod.POST, "/lugaresfamosos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/lugaresfamosos").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/lugaresfamosos/{id}").hasRole("ADMIN")
+
                         .anyRequest().authenticated())
                 .addFilterBefore(securityFilter, UsernamePasswordAuthenticationFilter.class)
                 .build();

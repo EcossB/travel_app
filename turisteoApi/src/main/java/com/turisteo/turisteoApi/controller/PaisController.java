@@ -15,6 +15,8 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
 
 import java.net.URI;
+import java.util.List;
+import java.util.Locale;
 import java.util.Optional;
 
 @RestController
@@ -33,7 +35,6 @@ public class PaisController {
 
 
     @PostMapping
-    @PreAuthorize("hasRole('ADMIN')")
     public ResponseEntity<PaisDtoG> guardarPais(@RequestBody @Valid PaisDtoP paisDtoP , UriComponentsBuilder builder){
         System.out.println("El post fue correcto");
 
@@ -83,12 +84,19 @@ public class PaisController {
     }
 
 
-    @GetMapping("/{nombre}")
-    public ResponseEntity ObtenerPaisPorNombre(@PathVariable String nombre, @PageableDefault(size = 10) Pageable page){
+    @GetMapping(path = "pais/{nombre}")
+    public ResponseEntity ObtenerPaisPorNombre(@PathVariable("nombre") String nombre, @PageableDefault(size = 10) Pageable page){
 
         PaisEntity pais = paisRepository.findByNombre(nombre);
 
         return ResponseEntity.ok(pais);
+    }
+
+    @GetMapping(path = "continentes/{continente}")
+    public ResponseEntity<List<PaisEntity>> obtenerPaisPorContinente(@PathVariable("continente") Continentes continente, @PageableDefault(size = 2) Pageable page){
+
+        return ResponseEntity.ok(paisRepository.findByContinente(continente));
+
     }
 
 

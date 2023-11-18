@@ -4,27 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment=".Idea Files">
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/AutenticacionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/SignUpController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuarioSignUpDto.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/AutenticacionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/DatosJWTtoken.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityConfigurations.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/TokenService.java" afterDir="false" />
+    <list default="true" id="16d8f160-a42b-47b3-b837-85db6ad622ac" name="Changes" comment=".ideaFiles">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turisteoApi/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/PaisController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/VueloController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/VueloController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuario/UsuariosRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/AdminRepository.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminDtoLogin.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/usuarioAdmin/UsuarioAdminEntity.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/ClasePrueba.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/domain/paises/PaisRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/errores/ClasePrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/errores/TratadorDeErrores.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/springdoc/ClasePrueba.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/springdoc/SpringDocConfig.java" afterDir="false" />
+    </list>
+    <list id="1dd6bc10-bc8d-423f-b593-deb8794d4447" name="Changes by Baljeet" comment="">
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/GastronomiaController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/GastronomiaController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/HotelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/HotelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/controller/LugaresController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityConfigurations.java" beforeDir="false" afterPath="$PROJECT_DIR$/turisteoApi/src/main/java/com/turisteo/turisteoApi/infra/security/SecurityConfigurations.java" afterDir="false" />
     </list>
     <list id="e6dbf337-e9f8-44f4-a070-6569183f53e4" name="Changes by USER" comment="Entidad y Dto para los datos de Hoteles" />
     <option name="SHOW_DIALOG" value="false" />
@@ -82,39 +74,40 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
-    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
-    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
-    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;back-develop&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/erwin/OneDrive - Instituto Tecnológico de Las Américas (ITLA)/travel_app/turisteoApi/src/main/resources/db/migration&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "codeWithMe.voiceChat.enabledByDefault": "false",
+    "git-widget-placeholder": "back-develop",
+    "last_opened_file_path": "C:/Users/erwin/OneDrive - Instituto Tecnológico de Las Américas (ITLA)/travel_app/turisteoApi/src/main/resources/db/migration",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Project",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.0",
+    "service.view.auto.scroll.to.source": "true",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;mysql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql"
     ],
-    &quot;com.intellij.ide.scratch.LRUPopupBuilder$1/&quot;: [
-      &quot;MySQL&quot;
+    "com.intellij.ide.scratch.LRUPopupBuilder$1/": [
+      "MySQL"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
       <recent name="com.turisteo.turisteoApi.controller" />
@@ -131,7 +124,10 @@
       <recent name="com.turisteo.turisteoApi.infra.errores" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Spring Boot.TuristeoApiApplication">
+    <configuration name="All in generated-requests" type="HttpClient.HttpRequestRunConfigurationType" factoryName="HTTP Request" temporary="true" path="$APPLICATION_CONFIG_DIR$/scratches/generated-requests.http">
+      <method v="2" />
+    </configuration>
     <configuration name="TuristeoApiApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
       <option name="FRAME_DEACTIVATION_UPDATE_POLICY" value="UpdateClassesAndResources" />
       <module name="turisteoApi" />
@@ -140,6 +136,11 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="HTTP Request.All in generated-requests" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -160,55 +161,8 @@
       <workItem from="1699886829168" duration="4126000" />
       <workItem from="1699993825449" duration="6024000" />
       <workItem from="1700066997204" duration="11469000" />
-      <workItem from="1700154014190" duration="9554000" />
-    </task>
-    <task id="LOCAL-00001" summary="Initial backend Commit.">
-      <option name="closed" value="true" />
-      <created>1698249436486</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698249436486</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Initial backend Commit.">
-      <option name="closed" value="true" />
-      <created>1698249654241</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698249654241</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Initial backend Commit.">
-      <option name="closed" value="true" />
-      <created>1698249812428</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698249812428</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Initial backend Commit.">
-      <option name="closed" value="true" />
-      <created>1698249971057</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698249971057</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Entidad pais JPA">
-      <option name="closed" value="true" />
-      <created>1698341760984</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698341760985</updated>
-    </task>
-    <task id="LOCAL-00006" summary="DTO para el get de Paises">
-      <option name="closed" value="true" />
-      <created>1698341876628</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698341876628</updated>
+      <workItem from="1700154014190" duration="12824000" />
+      <workItem from="1700247151502" duration="10054000" />
     </task>
     <task id="LOCAL-00007" summary="Enum de continenter para el enum de Paises">
       <option name="closed" value="true" />
@@ -466,7 +420,143 @@
       <option name="project" value="LOCAL" />
       <updated>1700068986359</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="SecurityConfigurations, this class has the filter-chain and password encrypted methods. important to delegate the different roles in the app.">
+      <option name="closed" value="true" />
+      <created>1700186079016</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186079016</updated>
+    </task>
+    <task id="LOCAL-00040" summary="SecurityFilter, this class does the authorization with the JWT.">
+      <option name="closed" value="true" />
+      <created>1700186144498</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186144498</updated>
+    </task>
+    <task id="LOCAL-00041" summary="This class generate the JWT and also get the subject to verify the JWT.">
+      <option name="closed" value="true" />
+      <created>1700186199572</created>
+      <option name="number" value="00041" />
+      <option name="presentableId" value="LOCAL-00041" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186199572</updated>
+    </task>
+    <task id="LOCAL-00042" summary="Adding an var enviroment to create the JWT">
+      <option name="closed" value="true" />
+      <created>1700186240439</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186240439</updated>
+    </task>
+    <task id="LOCAL-00043" summary="Deleting files">
+      <option name="closed" value="true" />
+      <created>1700186276025</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186276025</updated>
+    </task>
+    <task id="LOCAL-00044" summary="Deleting files">
+      <option name="closed" value="true" />
+      <created>1700186282892</created>
+      <option name="number" value="00044" />
+      <option name="presentableId" value="LOCAL-00044" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186282892</updated>
+    </task>
+    <task id="LOCAL-00045" summary="This class has the authentication method for the users.">
+      <option name="closed" value="true" />
+      <created>1700186314438</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186314438</updated>
+    </task>
+    <task id="LOCAL-00046" summary="DTO to send the token when the users Login.">
+      <option name="closed" value="true" />
+      <created>1700186337651</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186337651</updated>
+    </task>
+    <task id="LOCAL-00047" summary="New Controller, this one has the route /login.">
+      <option name="closed" value="true" />
+      <created>1700186379674</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186379674</updated>
+    </task>
+    <task id="LOCAL-00048" summary="Adding Security requirement, an annotation for bearer token">
+      <option name="closed" value="true" />
+      <created>1700186422314</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186422314</updated>
+    </task>
+    <task id="LOCAL-00049" summary="Nothing new">
+      <option name="closed" value="true" />
+      <created>1700186450095</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186450095</updated>
+    </task>
+    <task id="LOCAL-00050" summary="Adding new dependecies, Auth0 and SpringSecurity">
+      <option name="closed" value="true" />
+      <created>1700186477507</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186477508</updated>
+    </task>
+    <task id="LOCAL-00051" summary="User Entity, JPA representation of the table user.">
+      <option name="closed" value="true" />
+      <created>1700186526339</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186526339</updated>
+    </task>
+    <task id="LOCAL-00052" summary="DTO and Repository for the users entity.">
+      <option name="closed" value="true" />
+      <created>1700186551972</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186551972</updated>
+    </task>
+    <task id="LOCAL-00053" summary="New controller, this one has the route /signup. to signup new users in the app.">
+      <option name="closed" value="true" />
+      <created>1700186590878</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186590878</updated>
+    </task>
+    <task id="LOCAL-00054" summary="Adding security Requirement for JWT">
+      <option name="closed" value="true" />
+      <created>1700186616783</created>
+      <option name="number" value="00054" />
+      <option name="presentableId" value="LOCAL-00054" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186616784</updated>
+    </task>
+    <task id="LOCAL-00055" summary=".ideaFiles">
+      <option name="closed" value="true" />
+      <created>1700186627834</created>
+      <option name="number" value="00055" />
+      <option name="presentableId" value="LOCAL-00055" />
+      <option name="project" value="LOCAL" />
+      <updated>1700186627834</updated>
+    </task>
+    <option name="localTasksCounter" value="56" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -496,22 +586,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Creacion de Entidad y DTO para los datos de vuelos" />
-    <MESSAGE value="Migracion de los datos con flyway" />
-    <MESSAGE value="Cambio de URL del jdbc" />
-    <MESSAGE value="IdeaFiles" />
-    <MESSAGE value="Data migration altering tables" />
-    <MESSAGE value="relationship with other entities, construct for post and mehtod for put." />
-    <MESSAGE value="Repositories created." />
-    <MESSAGE value="Adding relationShip for table paises." />
-    <MESSAGE value="Entidad y Dto para los datos de Hoteles" />
-    <MESSAGE value="Creating files controllers." />
-    <MESSAGE value="Deleted" />
-    <MESSAGE value="fixing validations" />
-    <MESSAGE value="fixing type of pais_id" />
-    <MESSAGE value="Fixing JPA relationShip between tables." />
-    <MESSAGE value="Fixing put method" />
-    <MESSAGE value=".idea files" />
     <MESSAGE value="Adding a new endpoint" />
     <MESSAGE value="Creating DTO for all the data" />
     <MESSAGE value="Creating a new method" />
@@ -521,7 +595,23 @@
     <MESSAGE value="Creating UserAdmin DTO, ENTITY &amp; Repository" />
     <MESSAGE value="Adding new dependecies" />
     <MESSAGE value=".Idea Files" />
-    <option name="LAST_COMMIT_MESSAGE" value=".Idea Files" />
+    <MESSAGE value="SecurityConfigurations, this class has the filter-chain and password encrypted methods. important to delegate the different roles in the app." />
+    <MESSAGE value="SecurityFilter, this class does the authorization with the JWT." />
+    <MESSAGE value="This class generate the JWT and also get the subject to verify the JWT." />
+    <MESSAGE value="Adding an var enviroment to create the JWT" />
+    <MESSAGE value="Deleting files" />
+    <MESSAGE value="This class has the authentication method for the users." />
+    <MESSAGE value="DTO to send the token when the users Login." />
+    <MESSAGE value="New Controller, this one has the route /login." />
+    <MESSAGE value="Adding Security requirement, an annotation for bearer token" />
+    <MESSAGE value="Nothing new" />
+    <MESSAGE value="Adding new dependecies, Auth0 and SpringSecurity" />
+    <MESSAGE value="User Entity, JPA representation of the table user." />
+    <MESSAGE value="DTO and Repository for the users entity." />
+    <MESSAGE value="New controller, this one has the route /signup. to signup new users in the app." />
+    <MESSAGE value="Adding security Requirement for JWT" />
+    <MESSAGE value=".ideaFiles" />
+    <option name="LAST_COMMIT_MESSAGE" value=".ideaFiles" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

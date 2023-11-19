@@ -4,7 +4,14 @@ import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
 import { InfoP } from "./Countries-info/Infos/InfoP";
 import { TitleP } from "./Countries-info/Infos/TitleP";
 import { DescubreMas } from "./DescubreMas/DescubreMas";
+import { Cities } from "./Destino/Cities";
 import { FoodComponent } from "./FoodComp/FoodComponent";
+import city1 from "../../medio/bahia.jpg";
+import city2 from "../../medio/cacaoSendero.png";
+import city3 from "../../medio/Canoa.png";
+import city4 from "../../medio/Colon.webp";
+import city5 from "../../medio/ItalyImg.jpg";
+
 import "./tripsStyle.css";
 
 //Aquí se mostrarán las informaciones del país.
@@ -29,16 +36,22 @@ export const Trips = () => {
             "
         />
 
-        {/*Gastronomía y página de vuelos*/}
+        {/*Informaciones*/}
         <div className="trips__container">
+          {/*Gatronomía */}
           <TitleP title="Platillos típicos"/>
-          {/*<TitleP title="¡Destinos imperdibles!"/>*/}
-          {/*<ImgDestino />*/}
           <FoodComponent />
           <CustomCard destinyURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className="customCard__container"/>
+          
+          {/*Vuelos */}
           <DescubreMas ImgURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className2="descubreMas__container"/>
+
+          {/*Ciudades */}
+          <TitleP title="¡Destinos imperdibles!"/>
+          <Cities cityImages={[city1, city2, city3, city4, city5]}/>
+
+          {/*Hoteles */}
           <TitleP className='titlePHotel' title="Hoteles"/>
-            
           {/*Carousel con hoteles emblemáticos*/}
           <div className="hotels">
            <HotelCarousel />

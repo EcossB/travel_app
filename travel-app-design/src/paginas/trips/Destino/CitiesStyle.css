@@ -1,0 +1,32 @@
+.cities__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .cityImg{
+    width: 15%;
+    height: 25vh;
+    margin: 25px 0px 0px 15px;
+    box-shadow: 5px 0px 5px black;
+    transition: transform 0.3s ease-out;
+  }
+  
+  .cityImg:hover{
+    transform: scale(1.1);
+  }
+  
+  .modalImg{
+    width: 100%;
+    border-radius: 15px;
+    box-shadow: 0px 5px 5px gray;
+    margin-bottom: 5px;
+  }
+
+  @media screen and (max-width: 750px){
+    .cityImg{
+      width: 80%;
+    }
+  }

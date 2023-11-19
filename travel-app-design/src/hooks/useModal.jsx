@@ -11,6 +11,7 @@ export const useModal = (initialValue, initialValue2, initialValue3, initialValu
   const [modalIsOpen8, setModal8] = useState(initialValue8);
   const [modalIsOpen9, setModal9] = useState(initialValue9);
   const [modalIsOpen10, setModal10] = useState(initialValue10);
+  
   const openModal = () => {
     setModal(!modalIsOpen);
   }

@@ -12,8 +12,8 @@ export const Menu = () => {
 
   return (
     <header id="menu">
-      <div className="menu-logo">
-        <img src={logoImg} alt="logo" />
+      <div className="menu-logo" >
+        <Link to="/home"><img src={logoImg} alt="logo" /></Link>
       </div>
 
       <div className="links-info">

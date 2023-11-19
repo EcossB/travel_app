@@ -38,7 +38,7 @@ export const MobileMenu = ({ closeSideBar }) => {
                     </p>
                 </Link>
 
-                <Link>
+                <Link to="/nosotros">
                     <p>
                         <FaPencilRuler className="menu-icon"/>
                         Nosotros

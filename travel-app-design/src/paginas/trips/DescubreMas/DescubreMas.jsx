@@ -29,8 +29,8 @@ export const DescubreMas = ({className2, ImgURL}) => {
 
 
 DescubreMas.propTypes = {
-  className2: PropTypes.any.isrequired,
-  ImgURL: PropTypes.any.isrequired,
+  className2: PropTypes.any,
+  ImgURL: PropTypes.any,
 }
 
 export default DescubreMas

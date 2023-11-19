@@ -11,5 +11,5 @@ export const TitleP = ({title, className}) => {
 
 TitleP.propTypes = {
     title: PropTypes.any.isRequired,
-    className: PropTypes.any.isRequired,
+    className: PropTypes.any,
 };

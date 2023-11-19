@@ -8,6 +8,7 @@ import { Error404 } from "./componentes/error404/Error404";
 import { MainHome } from "./paginas/home/MainHome";
 import Contact from "./paginas/contactoform/contact";
 import { MainTrip } from "./paginas/trips/MainTrip";
+import { Participants } from "./paginas/developers/Participants";
 function App() {
   return (
     <>
@@ -20,6 +21,7 @@ function App() {
           <Route path='/home' element={<MainHome />}/>
           <Route path='/contacto' element={<Contact />}/>
           <Route path='/trips' element={<MainTrip />}/>
+          <Route path='/nosotros' element={<Participants />}/>
           <Route path='*' element={<Error404 />}/>
         </Routes>
       </BrowserRouter>

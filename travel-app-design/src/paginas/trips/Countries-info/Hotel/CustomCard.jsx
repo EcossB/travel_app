@@ -35,6 +35,6 @@ export const CustomCard = ({destinyURL, className}) => {
 }
 
 CustomCard.propTypes = {
-  destinyURL: PropTypes.any.isrequired,
-  className: PropTypes.any.isrequired,
+  destinyURL: PropTypes.any,
+  className: PropTypes.any,
 }

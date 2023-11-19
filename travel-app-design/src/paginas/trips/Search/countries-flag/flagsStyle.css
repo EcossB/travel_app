@@ -1,8 +1,25 @@
-/* mapStyle.css */
+.flags__container{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
 
-/* Estilo para el contenedor principal del mapa */
-.ff {
-    /* Establece el fondo del mapa a transparente o a cualquier color deseado */
-    background-color: rebeccapurple;
+.flagImg{
+  width: 20%;
+  height: 25vh;
+  margin: 25px 0px 0px 15px;
+  box-shadow: 5px 0px 5px black;
+  transition: transform 0.3s ease-out;
+}
+
+.flagImg:hover{
+  transform: scale(1.1);
+}
+
+@media screen and (max-width: 670px){
+  .flagImg{
+    width: 80%;
   }
-  
+}

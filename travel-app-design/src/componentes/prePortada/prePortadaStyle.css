@@ -55,14 +55,14 @@
 }
 
 
-@media screen and (max-width: 650px){
-    /*.buttons-section{
-        justify-content: left;
-        align-items: left;
-    }*/
+@media screen and (max-width: 672px){
+    .portrait-container{
+        margin: auto;
+    }
     .buttons-section button{
         font-size: 3vmin;
         padding: 8px 10px;
+        justify-content: left;
     }
 }
 

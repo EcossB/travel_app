@@ -14,7 +14,7 @@ const Search = styled('div')(({ theme }) => ({
     backgroundColor: alpha(theme.palette.common.white, 0.25),
   },
   marginLeft: 0,
-  width: '100%',
+  width: '50%', //100%
   [theme.breakpoints.up('sm')]: {
     marginLeft: theme.spacing(1),
     width: 'auto',
@@ -47,9 +47,9 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
   },
 }));
 
-const CustomSelect = ({ label }) => {
+const CustomSelect = () => {
   return (
-    <Search className='ff' sx={{borderRadius: '15px'}} >
+    <Search sx={{borderRadius: '15px'}} >
       <SearchIconWrapper>
         <SearchIcon />
       </SearchIconWrapper>
@@ -75,3 +75,5 @@ export default function SearchAppBar() {
     </Box>
   );
 }
+
+

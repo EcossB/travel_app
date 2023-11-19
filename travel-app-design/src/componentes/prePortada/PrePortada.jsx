@@ -11,11 +11,11 @@ export const PrePortada = () => {
             <Video sourceVideo={BgVideo} />
             <Logo/>
             <div className="portrait-title">
-            <h2>
-                Descubre las diferentes 
-                <br/>
-                maravillas del mundo
-            </h2>
+                <h2>
+                    Descubre las diferentes 
+                    <br/>
+                    maravillas del mundo
+                </h2>
             </div>
             <div className="buttons-section">
                 <Link className="login-link" to="/login"><button>Iniciar sesión</button></Link>

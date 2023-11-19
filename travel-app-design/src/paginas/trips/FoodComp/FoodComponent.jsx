@@ -3,7 +3,7 @@ import ImageListItem from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import { RatingStars } from './RatingStars';
 
-export const HotelCarousel2 = () => {
+export const FoodComponent = () => {
     return (
       <ImageList className='ImageList__container' sx={{
         display: 'flex',
@@ -11,7 +11,6 @@ export const HotelCarousel2 = () => {
         justifyContent: 'center',
         alignItems: 'center',
         width: '100%',
-        
       }}>
         {itemData.map((item) => (
           <ImageListItem key={item.img} sx={{ flex: '1 0 200px'}}>

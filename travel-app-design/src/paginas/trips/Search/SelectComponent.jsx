@@ -34,10 +34,17 @@ export default function SelectComponent() {
       <Button onClick={handleClickOpen} 
       sx={{
         fontSize: '2vmin', 
+        width: '100%',
         color: '#fffaf2',
         '@media (max-width: 650px)': {
           fontSize: '3vmin',
-      },}}>
+        },
+
+        '@media (max-width: 350px)': {
+          fontSize: '4vmin',
+        },
+      
+      }}>
         <FaMapMarkedAlt className='map-icon'/>
         Continente
       </Button>

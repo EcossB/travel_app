@@ -1,10 +1,10 @@
 import Portrait from "../home/Portrait";
 import { CustomCard } from "./Countries-info/Hotel/CustomCard";
 import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
-import { HotelCarousel2 } from "./Countries-info/Hotel/HotelCarousel2";
-import { InfoP } from "./Countries-info/InfoP";
-import { TitleP } from "./Countries-info/titleP";
+import { InfoP } from "./Countries-info/Infos/InfoP";
+import { TitleP } from "./Countries-info/Infos/TitleP";
 import { DescubreMas } from "./DescubreMas/DescubreMas";
+import { FoodComponent } from "./FoodComp/FoodComponent";
 import "./tripsStyle.css";
 
 //Aquí se mostrarán las informaciones del país.
@@ -34,7 +34,7 @@ export const Trips = () => {
           <TitleP title="Platillos típicos"/>
           {/*<TitleP title="¡Destinos imperdibles!"/>*/}
           {/*<ImgDestino />*/}
-          <HotelCarousel2/>
+          <FoodComponent />
           <CustomCard destinyURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className="customCard__container"/>
           <DescubreMas ImgURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className2="descubreMas__container"/>
           <TitleP className='titlePHotel' title="Hoteles"/>

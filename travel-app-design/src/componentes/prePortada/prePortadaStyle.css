@@ -40,13 +40,15 @@
 }
 
 .portrait-title{
+    text-align: center;
     margin-top: 95px;
-    display: flex;
+    /*display: flex;
     align-items: center;
-    justify-content: center;   
+    justify-content: center;   */
 }
 
 .portrait-title h2{
+    margin-top: 100px;
     color: #FFF;
     font-size: 8vmin;
     font-style: normal;
@@ -55,14 +57,25 @@
 }
 
 
-@media screen and (max-width: 672px){
-    .portrait-container{
+@media screen and (max-width: 683px){
+    /*.portrait-container{
         margin: auto;
-    }
+    }*/
     .buttons-section button{
         font-size: 3vmin;
         padding: 8px 10px;
         justify-content: left;
+    }
+
+    .portrait-title h2{
+        font-size: 7vmin;
+    }
+}
+
+
+@media screen and (max-width: 672px){
+    .portrait-title h2{
+        font-size: 7vmin;
     }
 }
 

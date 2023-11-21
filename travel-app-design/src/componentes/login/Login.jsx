@@ -3,9 +3,10 @@ import { FormLogin } from "./FormLogin";
 import { Video } from "../background/Video";
 import loginVideo from "../../medio/bg-login2.mp4";
 import "./loginStyle.css";
+import PropTypes from 'prop-types';
 import { Logo } from "../logo/Logo";
 
-export const Login = () => {
+export const Login = ({ setLoggedInUser }) => {
   return (
     <div className="login-container">
       <Video sourceVideo={loginVideo}/>
@@ -19,7 +20,11 @@ export const Login = () => {
         </div>
 
         {/*Formulario*/}
-          <FormLogin/>
+          <FormLogin setLoggedInUser={setLoggedInUser}/>
     </div>
   );
 }
+
+Login.propTypes = {
+  setLoggedInUser: PropTypes.any,
+};

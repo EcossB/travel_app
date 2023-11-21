@@ -1,5 +1,6 @@
 import "./registroStyle.css";
 import swal from "sweetalert";
+//import axios from"axios";
 import icon from "../../medio/travel-icon.png";
 import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -9,22 +10,64 @@ import { usePasswd } from "../../hooks/usePasswd";
 export const FormRegistro = () => {
   const [showPasswd1, togglePassword1, showPasswd2, togglePassword2] = usePasswd(false);
 
-  const handleSubmit = (values, { resetForm }) => {
-    console.log(values);
-    resetForm();
-    swal({
-        title: "¡Gracias por registrarse!",
-        text: "Usuario creado con éxito",
-        content: {
-            element: "img",
+  const handleSubmit = async (values, { resetForm }) => {
+    try {
+      const response = await fetch('https://springgcp-405619.ue.r.appspot.com/signup', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          // No incluir 'Access-Control-Allow-Origin' aquí, es una cabecera de respuesta y no debe ser establecida en la solicitud
+        },
+        body: JSON.stringify({
+          nombre: values.name,
+          apellido: values.lastname,
+          email: values.email,
+          contrasena: values.passwd,
+        }),
+
+      });
+  
+      if (response.status === 200) {
+        resetForm();
+        swal({
+          title: '¡Gracias por registrarse!',
+          text: 'Usuario creado con éxito',
+          content: {
+            element: 'img',
             attributes: {
               src: icon,
-              style: "width: 100px; height: 100px;"
+              style: 'width: 100px; height: 100px;',
             },
           },
-        button: "Aceptar"
-    });
+          button: 'Aceptar',
+        });
+
+        const data = await response.json()
+        console.log(data)
+
+      } else {
+        const data = await response.json()
+        console.log('error', data)
+        swal({
+          title: '¡Gracias por registrarse!',
+          text: 'Usuario creado con éxito',
+          content: {
+            element: 'img',
+            attributes: {
+              src: icon,
+              style: 'width: 100px; height: 100px;',
+            },
+          },
+          button: 'Aceptar',
+        });
+      }
+      resetForm()
+
+    } catch (error) {
+      console.log(error)
+      resetForm();
   }
+  };
 
   const formValidate = (values) => {
     const error = {};

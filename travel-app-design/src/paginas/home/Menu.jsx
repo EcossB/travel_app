@@ -3,6 +3,7 @@ import { NavLink, Link } from "react-router-dom";
 import { FaUserAlt, FaBars } from "react-icons/fa";
 import { MobileMenu } from "./MobileMenu";
 import { useState } from "react";
+
 export const Menu = () => {
   const [sideBar, setSideBar] = useState(false); 
 
@@ -30,7 +31,7 @@ export const Menu = () => {
         <ul>
           <li>
             <FaUserAlt  className="user-icon"/>
-            Cristal Tavárez
+            ¡Bienvenid@!
           </li>
           <Link to="/login"><button className="logout-btn">Cerrar sesión</button></Link>
         </ul>
@@ -43,3 +44,4 @@ export const Menu = () => {
     </header>
   );
 }
+

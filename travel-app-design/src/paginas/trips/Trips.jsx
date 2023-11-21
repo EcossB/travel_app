@@ -1,6 +1,6 @@
 import Portrait from "../home/Portrait";
 import { CustomCard } from "./Countries-info/Hotel/CustomCard";
-import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
+//import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
 import { InfoP } from "./Countries-info/Infos/InfoP";
 import { TitleP } from "./Countries-info/Infos/TitleP";
 import { DescubreMas } from "./DescubreMas/DescubreMas";
@@ -47,15 +47,16 @@ export const Trips = () => {
           <DescubreMas ImgURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className2="descubreMas__container"/>
 
           {/*Ciudades */}
-          <TitleP title="¡Destinos imperdibles!"/>
-          <Cities cityImages={[city1, city2, city3, city4, city5]}/>
+          <div className="cities">
+            <TitleP title="¡Destinos imperdibles!" className='titlePHotel'/>
+            <Cities cityImages={[city1, city2, city3, city4, city5]}/>
+          </div>
 
           {/*Hoteles */}
-          <TitleP className='titlePHotel' title="Hoteles"/>
-          {/*Carousel con hoteles emblemáticos*/}
+          {/*<TitleP className='titlePHotel' title="Hoteles"/>
           <div className="hotels">
            <HotelCarousel />
-          </div>
+          </div>*/}
         </div>
     </div>
   );

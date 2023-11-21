@@ -62,6 +62,7 @@ const CustomSelect = () => {
 };
 
 export default function SearchAppBar() {
+  
   return (
     <Box sx={{ flexGrow: 1}}>
       <AppBar position="static" sx={{borderRadius: '25px', marginTop: '15px', background: "rgba(87, 105, 117, 0.72)", backdropFilter: blur(10)}}>
@@ -72,6 +73,7 @@ export default function SearchAppBar() {
           />
         </Toolbar>
       </AppBar>
+      {/*Aquí puede ir flags */}
     </Box>
   );
 }

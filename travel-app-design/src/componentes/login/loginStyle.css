@@ -114,7 +114,7 @@ input::placeholder{
 
 .password-input .passwd-icon {
     position: absolute;
-    top: 25%;
+    top: 45%; /*25%*/
     right: 20px;
     transform: translateY(-50%);
     cursor: pointer;

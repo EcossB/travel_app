@@ -25,9 +25,9 @@ export const DescvDiv = () => {
                 </p>
             </div>
             <div className="images-information">
-                <img src={img1} alt="place1" />
-                <img src={img2} alt="place2" />
-                <img src={palmera} alt="icon" className="palm"/>
+                <img loading="lazy" src={img1} alt="place1" />
+                <img loading="lazy" src={img2} alt="place2" />
+                <img loading="lazy" src={palmera} alt="icon" className="palm"/>
             </div>
         </div>
     </div>

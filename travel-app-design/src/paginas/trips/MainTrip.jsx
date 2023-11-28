@@ -6,11 +6,6 @@ import { TripSearch } from "./Search/TripSearch";
 export const MainTrip = () => {
   return (
     <div>
-      {/*<FoodC />*/}
-    {/*Aquí llaman sus componentes para visualizarlos */}
-    {/*< ImgDestino/>
-    <ImgDestino />
-    <DescubreMas/>*/}
     <Menu />
     <TripSearch />
     <FullScreenDialog />

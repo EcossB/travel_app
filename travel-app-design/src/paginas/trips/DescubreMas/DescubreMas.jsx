@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import './DescubreMasStyles.css';
 
 /*Card que dirige al usuario a una página de reserva de vuelos*/
-export const DescubreMas = ({className2, ImgURL}) => {
+export const DescubreMas = ({className2, ImgURL, linkURL}) => {
   return (
     <div className={className2}>
     <div className='main__container'>
@@ -12,7 +12,7 @@ export const DescubreMas = ({className2, ImgURL}) => {
       <div className='white__container'>
         <div className='left__container'>
           <h1 className='h1__discover'>Disfruta de este destino</h1>
-          <button className='discover__button'>¡Reserva un vuelo!</button>
+          <a href={linkURL}><button className='discover__button'>¡Reserva un vuelo!</button></a>
         </div>
 
         <div className='right__container'>
@@ -31,6 +31,7 @@ export const DescubreMas = ({className2, ImgURL}) => {
 DescubreMas.propTypes = {
   className2: PropTypes.any,
   ImgURL: PropTypes.any,
+  linkURL: PropTypes.any,
 }
 
 export default DescubreMas

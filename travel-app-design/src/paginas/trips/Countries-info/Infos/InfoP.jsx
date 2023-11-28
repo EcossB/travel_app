@@ -12,5 +12,5 @@ export const InfoP = ({information}) => {
 }
 
 InfoP.propTypes = {
-    information: PropTypes.any.isRequired,
+    information: PropTypes.any,
 };

@@ -26,6 +26,20 @@
     justify-content: center;
 }
 
+.loading__container{
+    display: flex;
+}
+
+.loading__container p{
+    color: rgb(208, 196, 196);
+    font-size: 1.5vmin;
+}
+
+.loading__container img{
+    width: 1.3vw;
+    margin-left: 5px;
+}
+
 input{
     margin-bottom: 20px;
     padding: 20px;
@@ -149,5 +163,13 @@ input::placeholder{
 
     input{
         padding: 15px;
-    }   
+    }  
+    
+    .loading__container p{
+        font-size: 3vmin;
+    }
+
+    .loading__container img{
+        width: 5vw;
+    }
 }

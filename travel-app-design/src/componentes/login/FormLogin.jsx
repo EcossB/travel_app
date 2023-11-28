@@ -4,18 +4,25 @@ import { Link, useNavigate  } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { usePasswd } from "../../hooks/usePasswd";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { useState } from "react";
+import { Loading } from "./Loading";
+import { useAuth } from "../../hooks/authContext";
 
 export const FormLogin = () => {
   const [showPasswd1, togglePassword1] = usePasswd(false);
   const navigate = useNavigate(); 
+  const [loggedInUser, setLoggedInUser] = useState(null);
+  const [loading, setLoading] = useState(false);
+
+  const { setAuthToken } = useAuth();
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
+      setLoading(true)
       const response = await fetch('https://springgcp-405619.ue.r.appspot.com/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          // No incluir 'Access-Control-Allow-Origin' aquí, es una cabecera de respuesta y no debe ser establecida en la solicitud
         },
         body: JSON.stringify({
           email: values.email,
@@ -24,10 +31,32 @@ export const FormLogin = () => {
       });
   
       if (response.status === 200) {
-        resetForm();
-        navigate('/home');
         const data = await response.json()
-        console.log(data)
+        const { jwtToken, usuario } = data;
+
+        console.log(data);
+        console.log(jwtToken);
+
+        //Verficiar si el usuario es administrador
+        const isAdmin = values.email === 'turisteogroup@gmail.com' && values.clave === 'Turist0AdminG2';
+        setAuthToken(jwtToken);
+        localStorage.setItem('authToken', jwtToken);
+
+        setLoggedInUser({
+          token: jwtToken,
+          isAuthenticated: true,
+          isAdmin: isAdmin,
+        });
+
+        resetForm();
+
+        //Si el usuario es administrador, lo va a dirigir a la interfaz de admin,
+        //en caso contrario será dirigido al Home
+        if (isAdmin) {
+          navigate('/admin-turisteo');
+        } else {
+          navigate('/home');
+        }
 
       } else if (response.status === 403){
         resetForm()
@@ -39,14 +68,13 @@ export const FormLogin = () => {
         console.log('error', data)
       }
 
-      
+      setLoading(false)
 
     } catch (error) {
       console.error('Error en la solicitud de registro:', error);
     }
   };
 
-  
 
   //Validar los datos del formulario
   const formValidate = (values) => {
@@ -62,6 +90,7 @@ export const FormLogin = () => {
 
     if (!values.clave){
       error.clave = "Contraseña es requerida"
+
     } else if (!passwdRegex.test(values.clave)){
       error.clave = "8+ caracteres, letras y números";
     }
@@ -107,6 +136,7 @@ export const FormLogin = () => {
         <div className="form-section">
           <button type="submit">Iniciar sesión</button>
           <p className="register-message">¿No tienes una cuenta? <Link to="/registro">Regístrate aquí</Link></p>
+          {loading && <Loading />}
         </div>
     </Form>
     </Formik>

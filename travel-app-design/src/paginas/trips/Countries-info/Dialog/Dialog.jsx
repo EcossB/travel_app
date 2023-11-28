@@ -6,51 +6,47 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
-import { Trips } from '../../Trips';
-import { Flags } from '../../Search/countries-flag/Flags';
+//import { Trips } from '../../Trips';
 import { FaTimeIcon } from './FaTimeIcon';
-//import italyflag from '../../../../medio/italyflag.webp';
+import PropTypes from 'prop-types';
+
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
 });
 
-export default function FullScreenDialog() {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
+export default function FullScreenDialog({ info, onClose, onClickIcon, openDialog, tripsComponent }) {
 
   return (
     <React.Fragment>
-      <Flags 
-      className='imgg'
-      onClick={handleClickOpen} 
-      />
+      {info}
       <Dialog
         fullScreen
-        open={open}
-        onClose={handleClose}
+        open={openDialog}
+        onClose={onClose}
         TransitionComponent={Transition}
       >
         <AppBar sx={{ position: 'relative', backgroundColor: '#e2e2e2'}}>
           <Toolbar sx={{boxShadow: '5px 0px 5px black'}}>
             <FaTimeIcon
-              onClick={handleClose}
+              onClick={onClickIcon}
             >
               <CloseIcon />
             </FaTimeIcon>
           </Toolbar>
         </AppBar>
         <List sx={{padding: '15px', backgroundColor:'#091F31',  height: '100vh', overflowY: 'auto'}} >
-          <Trips />
+          {tripsComponent}
         </List>
       </Dialog>
     </React.Fragment>
   );
 }
+
+FullScreenDialog.propTypes = {
+  info: PropTypes.any,
+  onClickIcon: PropTypes.any,
+  onClose: PropTypes.any,
+  openDialog: PropTypes.any,
+  tripsComponent: PropTypes.any,
+};

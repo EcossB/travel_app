@@ -1,63 +1,125 @@
-import Portrait from "../home/Portrait";
+//import Portrait from "../home/Portrait";
 import { CustomCard } from "./Countries-info/Hotel/CustomCard";
-//import { HotelCarousel } from "./Countries-info/Hotel/HotelCarousel";
 import { InfoP } from "./Countries-info/Infos/InfoP";
 import { TitleP } from "./Countries-info/Infos/TitleP";
 import { DescubreMas } from "./DescubreMas/DescubreMas";
 import { Cities } from "./Destino/Cities";
 import { FoodComponent } from "./FoodComp/FoodComponent";
-import city1 from "../../medio/bahia.jpg";
-import city2 from "../../medio/cacaoSendero.png";
-import city3 from "../../medio/Canoa.png";
-import city4 from "../../medio/Colon.webp";
-import city5 from "../../medio/ItalyImg.jpg";
-
+import PropTypes from 'prop-types';
 import "./tripsStyle.css";
+import { CountryPortrait } from "./Countries-info/Banner/CountryPortrait";
 
-//Aquí se mostrarán las informaciones del país.
-export const Trips = () => {
+export const Trips = ({ countryDetails }) => {
+  if (!countryDetails || !countryDetails.lugaresFamosos || !countryDetails.gastronomia ) {
+    return <div>No hay detalles del país</div>;
+  }
+
+  const {
+    nombre,
+    descripcion,
+    gastronomia,
+    lugaresFamosos,
+    imagen1,
+    imagen2,
+    vuelos
+  } = countryDetails;
+
+  const linkURL = vuelos && vuelos.length ? vuelos[0].link_vuelos : "";
+
+  const famousPlaces = lugaresFamosos && Array.isArray(lugaresFamosos)
+  ? lugaresFamosos.map((place, index) => ({
+      nombre: place.nombre,
+      descripcion: place.descripcion,
+      imagen: place.imagen,
+    }))
+  : [];
+
+
+  const citiesInfo = famousPlaces && famousPlaces.map((city, index) => ({
+    name: city.nombre,
+    info: city.descripcion,
+    images: [city.imagen],
+  }));
+  
+
+  const foods = gastronomia?.map((food, index) => ({
+    name: food.nombre_plato,
+    image: food.imagen,
+  })) || [];  
+
+
+  const portraitsStyle = {
+    background: `linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), lightgray 50% / cover no-repeat, url(${imagen1})`,
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+    height: '15vh',
+    display: 'flex',
+    alignItems: 'center',
+    justifyContent: 'center',
+    borderRadius: '25px',
+    color: '#fff',
+    padding: '50px',
+    backdropFilter: 'blur(10px)', // Aplica el desenfoque solo al fondo
+  };
+  
+  
   return (
-    <div>
-        {/*Banner y breve información del país*/}
-        <Portrait 
-            bannerClass="portrait-container2 CountryBannerBg"
-            title="Italia"
-            className="content banner"
-        />
-        <InfoP 
-            information="
-            Italia es reconocida por su arte, su cultura 
-            y sus numerosísimos monumentos, entre ellos 
-            la torre de Pisa y el Coliseo romano; 
-            así como por su gastronomía (platos italianos famosos 
-            son la pizza y la pasta), 
-            su vino, su estilo de vida, su pintura, su diseño, cine, 
-            teatro, literatura y música, en particular, la ópera.
-            "
-        />
+    <div className="infoo">
+      <CountryPortrait
+        bannerClass="portrait-container2 CountryBannerBg"
+        imageBanner={imagen1}
+        title={nombre}
+      />
 
-        {/*Informaciones*/}
-        <div className="trips__container">
-          {/*Gatronomía */}
-          <TitleP title="Platillos típicos"/>
-          <FoodComponent />
-          <CustomCard destinyURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className="customCard__container"/>
-          
-          {/*Vuelos */}
-          <DescubreMas ImgURL="https://s1.1zoom.me/big0/729/421145-svetik.jpg" className2="descubreMas__container"/>
+      <InfoP information={descripcion} />
 
-          {/*Ciudades */}
-          <div className="cities">
-            <TitleP title="¡Destinos imperdibles!" className='titlePHotel'/>
-            <Cities cityImages={[city1, city2, city3, city4, city5]}/>
-          </div>
+      <div className="trips__container">
+        <TitleP title="Platillos típicos" />
+        <FoodComponent
+        food1={gastronomia[0].nombre_plato}
+        food2={gastronomia[1].nombre_plato}
+        food3={gastronomia[2].nombre_plato}
+        food4={gastronomia[3].nombre_plato}
+        food1Img={gastronomia[0].imagen}
+        food2Img={gastronomia[1].imagen}
+        food3Img={gastronomia[2].imagen}
+        food4Img={gastronomia[3].imagen}
+      />
 
-          {/*Hoteles */}
-          {/*<TitleP className='titlePHotel' title="Hoteles"/>
-          <div className="hotels">
-           <HotelCarousel />
-          </div>*/}
+        <CustomCard destinyURL={imagen2} className="customCard__container" />
+        <DescubreMas ImgURL={imagen2}  className2="descubreMas__container" linkURL={linkURL}/>
+
+        <div className="cities">
+          <TitleP title="¡Destinos imperdibles!" className='titlePHotel'/>
+          <Cities lugaresFamosos={lugaresFamosos} />
         </div>
+      </div>
     </div>
   );
-}
+};
+
+Trips.propTypes = {
+  countryDetails: PropTypes.shape({
+    nombre: PropTypes.string,
+    descripcion: PropTypes.string,
+    gastronomia: PropTypes.arrayOf(
+      PropTypes.shape({
+        nombre_plato: PropTypes.string,
+        imagen: PropTypes.string,
+      })
+    ),
+    
+    lugaresFamosos: PropTypes.arrayOf(
+      PropTypes.shape({
+        nombre: PropTypes.string,
+        descripcion: PropTypes.string,
+        imagen: PropTypes.string,
+      })
+    ),
+
+    imagen1: PropTypes.string,
+    imagen2: PropTypes.string,
+    vuelos: PropTypes.any,
+    
+  }),
+};

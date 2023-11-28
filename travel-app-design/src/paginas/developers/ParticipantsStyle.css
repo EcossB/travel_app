@@ -26,6 +26,7 @@
 
 .profile__img{
     width: 25%;
+    height: 30%;
     border: 5px solid #3F7BFD;
     border-radius: 55px;
     padding: 5px;
@@ -48,6 +49,12 @@
 .linkedin__icon{
     color: gray;
     margin-left: 5px;
+}
+
+.github__icon:hover,
+.email__icon:hover,
+.linkedin__icon:hover{
+    color: #3F7BFD;
 }
 
 

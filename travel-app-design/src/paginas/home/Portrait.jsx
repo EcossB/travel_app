@@ -34,9 +34,9 @@ const Portrait = ({title, className, bannerClass}) => {
 };
 
 Portrait.propTypes = {
-  title: PropTypes.any.isRequired,
-  className: PropTypes.any.isRequired,
-  bannerClass: PropTypes.any.isRequired,
+  title: PropTypes.any,
+  className: PropTypes.any,
+  bannerClass: PropTypes.any,
 };
 
 export default Portrait;

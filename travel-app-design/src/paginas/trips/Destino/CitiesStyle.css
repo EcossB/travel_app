@@ -7,7 +7,7 @@
   }
   
   .cityImg{
-    width: 15%;
+    width: 15vw;
     height: 25vh;
     margin: 25px 0px 0px 15px;
     box-shadow: 5px 0px 5px black;
@@ -27,6 +27,12 @@
 
   @media screen and (max-width: 750px){
     .cityImg{
-      width: 80%;
+      width: 50vw; /*80%*/
     }
   }
+
+  /*@media screen and (max-width: 310px){
+    .cityImg{
+      width: 50%;
+    }
+  }*/

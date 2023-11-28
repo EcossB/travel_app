@@ -1,0 +1,41 @@
+.notfound__container{
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.notfound__img{
+    width: 35%;
+}
+
+.notfound__img2{
+    display: none;
+}
+
+.notfound__container h2{
+    font-size: 5vmin;
+    color: #fff
+}
+
+.invisible{
+    display: none;
+}
+
+@media screen and (max-width: 650px){
+    .notfound__img{
+        display: none;
+    }
+
+    .notfound__img2{
+        display: block;
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 950px){
+    .notfound__img{
+        width: 50%;
+    }
+}
+

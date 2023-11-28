@@ -5,6 +5,7 @@ import loginVideo from "../../medio/bg-login2.mp4";
 import "./loginStyle.css";
 import PropTypes from 'prop-types';
 import { Logo } from "../logo/Logo";
+import { AuthProvider } from "../../hooks/authContext";
 
 export const Login = ({ setLoggedInUser }) => {
   return (
@@ -20,7 +21,10 @@ export const Login = ({ setLoggedInUser }) => {
         </div>
 
         {/*Formulario*/}
+        <AuthProvider>
           <FormLogin setLoggedInUser={setLoggedInUser}/>
+        </AuthProvider>
+          
     </div>
   );
 }

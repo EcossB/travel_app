@@ -1,7 +1,8 @@
+import { AuthProvider } from '../../../hooks/authContext';
 import Portrait from '../../home/Portrait';
 import SearchAppBar from './SearchBar';
-//import SelectComponent from './SelectComponent';
 import './searchStyle.css';
+
 export const TripSearch = () => {
   return (
     <div>
@@ -11,7 +12,9 @@ export const TripSearch = () => {
             className="content banner"
         />
         <div className="search-bar">
-            <SearchAppBar />
+            <AuthProvider>
+              <SearchAppBar />
+            </AuthProvider>
         </div>
     </div>
   );

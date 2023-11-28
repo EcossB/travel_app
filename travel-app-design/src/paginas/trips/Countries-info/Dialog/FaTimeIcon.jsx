@@ -9,5 +9,5 @@ export const FaTimeIcon = ({onClick}) => {
 }
 
 FaTimeIcon.propTypes = {
-  onClick: PropTypes.any.isRequired,
+  onClick: PropTypes.any,
 };

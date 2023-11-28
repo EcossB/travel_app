@@ -6,12 +6,16 @@ import { Link } from "react-router-dom";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import { usePasswd } from "../../hooks/usePasswd";
+import { useState } from "react";
+import { Loading } from "../login/Loading";
 
 export const FormRegistro = () => {
   const [showPasswd1, togglePassword1, showPasswd2, togglePassword2] = usePasswd(false);
+  const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (values, { resetForm }) => {
     try {
+      setLoading(true);
       const response = await fetch('https://springgcp-405619.ue.r.appspot.com/signup', {
         method: 'POST',
         headers: {
@@ -61,6 +65,8 @@ export const FormRegistro = () => {
           button: 'Aceptar',
         });
       }
+
+      setLoading(false)
       resetForm()
 
     } catch (error) {
@@ -173,6 +179,7 @@ export const FormRegistro = () => {
         </div>
         <button type="submit">Guardar</button>
         <p className="register-message">¿Ya tienes una cuenta? <Link to="/login">Inicia sesión aquí</Link></p>
+        {loading && <Loading />}
     </Form>
     </Formik>
   );

@@ -38,7 +38,7 @@ export const Cities = ({ lugaresFamosos }) => {
         onClose={handleCloseModal}
         aria-labelledby="modal-modal-title"
         aria-describedby="modal-modal-description"
-        sx={{ backdropFilter: "blur(8px)" }}
+        sx={{ backdropFilter: "blur(8px)"}}
       >
         <Box sx={style}>
           <Typography id="modal-modal-title" variant="h6" component="h2">
@@ -78,9 +78,12 @@ const style = {
   top: "50%",
   left: "50%",
   transform: "translate(-50%, -50%)",
-  width: 400,
+  Width: '35%',
   bgcolor: "background.paper",
   borderLeft: "5px solid #3F7BFD",
   boxShadow: 21,
   p: 4,
+  '@media (max-width: 525px)': {
+    width: '80%',
+  },
 };

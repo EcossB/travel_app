@@ -65,7 +65,8 @@ export const FormLogin = () => {
 
       else {
         const data = await response.json();
-        console.log('error', data)
+        console.log('error', data);
+        swal('Error', 'Contraseña o email incorrectos', 'error');
       }
 
       setLoading(false)
@@ -90,10 +91,7 @@ export const FormLogin = () => {
 
     if (!values.clave){
       error.clave = "Contraseña es requerida"
-
-    } else if (!passwdRegex.test(values.clave)){
-      error.clave = "8+ caracteres, letras y números";
-    }
+    } 
 
     return error;
   };

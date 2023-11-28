@@ -24,7 +24,7 @@ export const PutVuelos = () => {
   const initialValues = {
     id: paisId.vuelos[0].id,
     linkVuelo: '',
-    paisId: { pais_id: countryId }, 
+    PaisId: { pais_id: countryId }, 
   };
 
   const handleClickNext = () => {

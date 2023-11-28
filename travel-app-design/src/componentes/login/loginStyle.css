@@ -152,6 +152,10 @@ input::placeholder{
         font-size: .75rem;
     }
 
+    input{
+        font-size: 3vmin;
+    }
+
     input::placeholder{
         font-size: .65rem;
     }

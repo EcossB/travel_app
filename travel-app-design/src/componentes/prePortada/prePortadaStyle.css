@@ -58,9 +58,10 @@
 
 
 @media screen and (max-width: 683px){
-    /*.portrait-container{
-        margin: auto;
-    }*/
+    .portrait-title{
+        margin-top: 120px;
+    }
+
     .buttons-section button{
         font-size: 3vmin;
         padding: 8px 10px;
@@ -72,8 +73,17 @@
     }
 }
 
-
 @media screen and (max-width: 672px){
+    .portrait-title h2{
+        font-size: 7vmin;
+    }
+}
+
+@media screen and (max-width: 550px){
+    .portrait-title{
+        margin-top: 150px;
+    }
+
     .portrait-title h2{
         font-size: 7vmin;
     }

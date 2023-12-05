@@ -4,6 +4,7 @@
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
+    
 }
 
 .message__title{
@@ -71,5 +72,11 @@
 .message__title h1{
   font-size: 6vmin;
 }
+}
+
+@media screen and (min-width: 1220px){
+  .flags__container{
+    margin-bottom: 20px;
+  }
 }
 

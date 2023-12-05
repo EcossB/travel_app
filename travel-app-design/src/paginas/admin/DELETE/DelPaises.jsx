@@ -66,7 +66,7 @@ export const DelPaises = () => {
           title: 'Error',
           text: 'No se pudo eliminar el país',
         });
-        console.log('Error al eliminar el país. Status: ', responseDelete.status);
+        console.log('Error al eliminar el país. Status: ', responseDelete.status, 'detalles: ', await responseDelete.text());
       }
     } catch (error) {
       swal({

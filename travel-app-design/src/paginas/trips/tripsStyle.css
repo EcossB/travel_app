@@ -18,6 +18,10 @@
     display: none;
 }
 
+.cities_container2{
+    margin-bottom: 20px;
+}
+
 @media screen and (max-width: 750px){
     .descubreMas__container{
         display: none;

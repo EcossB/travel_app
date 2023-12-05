@@ -9,9 +9,8 @@ export const CountryPortrait = ({ bannerClass, imageBanner, title, style }) => {
   
     const imageStyle = {
       backgroundImage: `url(${imageBanner})`,
-      
-      /*backgroundSize: 'cover',
-      backgroundPosition: 'center',*/
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
       height: '100%',
       width: '100%',
       position: 'absolute',

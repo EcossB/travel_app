@@ -5,7 +5,7 @@ import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
 import "./CitiesStyle.css";
 
-export const Cities = ({ lugaresFamosos }) => {
+export const Cities = ({ lugaresFamosos, cityClass }) => {
   // State para gestionar el estado del modal
   const [openModal, setOpenModal] = useState(false);
 
@@ -27,7 +27,7 @@ export const Cities = ({ lugaresFamosos }) => {
   return (
     <div className="cities__container">
       {lugaresFamosos.map((city, index) => (
-        <div key={index} className="city" onClick={() => handleOpenModal(city)}>
+        <div key={index} className={`city ${cityClass}`} onClick={() => handleOpenModal(city)}>
           <img className="cityImg" src={city.imagen} alt={city.nombre} />
         </div>
       ))}
@@ -71,6 +71,7 @@ Cities.propTypes = {
       imagen: PropTypes.string,
     })
   ).isRequired,
+  cityClass: PropTypes.any,
 };
 
 const style = {

@@ -47,20 +47,6 @@ export const Trips = ({ countryDetails }) => {
     image: food.imagen,
   })) || [];  
 
-
-  const portraitsStyle = {
-    background: `linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), lightgray 50% / cover no-repeat, url(${imagen1})`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '15vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '25px',
-    color: '#fff',
-    padding: '50px',
-    backdropFilter: 'blur(10px)', // Aplica el desenfoque solo al fondo
-  };
   
   
   return (
@@ -91,7 +77,7 @@ export const Trips = ({ countryDetails }) => {
 
         <div className="cities">
           <TitleP title="¡Destinos imperdibles!" className='titlePHotel'/>
-          <Cities lugaresFamosos={lugaresFamosos} />
+          <Cities lugaresFamosos={lugaresFamosos} cityClass="cities_container2"/>
         </div>
       </div>
     </div>
@@ -120,6 +106,5 @@ Trips.propTypes = {
     imagen1: PropTypes.string,
     imagen2: PropTypes.string,
     vuelos: PropTypes.any,
-    
   }),
 };

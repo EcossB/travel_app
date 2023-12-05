@@ -16,7 +16,6 @@ export const PutLugares = () => {
   const { paisId } = usePaisId();
   const [count, setCount] = useState(1);
   const [countId, setCountId] = useState(0);
-
   
   const validationSchema = Yup.object().shape({
     lugaresFamosos: Yup.array().of(
@@ -31,12 +30,19 @@ export const PutLugares = () => {
   const countryId = paisId.pais_id;
 
   const initialValues = {
-    id: paisId.lugaresFamosos[countId].id,
+    id: paisId.lugaresFamosos[countId] ? paisId.lugaresFamosos[countId].id : 0,
     nombre: '',
     descripcion: '',
     imagen: '',
     paisId: { pais_id: countryId }, 
   };
+
+  /*if (initialValues.id !== undefined && initialValues.id <= 0) {
+    console.log('fef');
+  } else {
+    console.log('ups - initialValues.id is not undefined or not less than or equal to 0');
+    console.log('initialValues.id:', initialValues.id);
+  }*/
 
   const handleClickNext = (formikProps) => {
     setCount(count + 1);
@@ -47,9 +53,9 @@ export const PutLugares = () => {
       return;
     }
 
-    const nextId = paisId.lugaresFamosos[countId + 1].id;
+    const nextId = paisId.lugaresFamosos[countId + 1] ? paisId.lugaresFamosos[countId + 1].id : 0;
     formikProps.setFieldValue('id', nextId);
-
+    console.log('next: ', nextId)
   }
 
   const handleClickSkip = () => {
@@ -71,10 +77,13 @@ export const PutLugares = () => {
         body: JSON.stringify(values),
       });
 
-      
+      if (values.id === undefined){
+        console.log('umm')
+      }
+
       console.log('Cuerpo de la solicitud para actualizar lugares:', JSON.stringify(values));
       console.log('lugares ID:' , values.id, 'pais ID:', values.paisId);
-      console.log(paisId.lugaresFamosos)
+      console.log(paisId.lugaresFamosos);
 
       if (response.ok) {
         const responseData = await response.json();
@@ -103,6 +112,7 @@ export const PutLugares = () => {
       });
 
       console.error('Error al actualizar datos', error);
+
     } finally {
       setLoading(false);
       setSubmitting(false);

@@ -1,6 +1,0 @@
-{
-  "dependencies": {
-    "vite": "^4.4.11",
-    "styled-components": "^6.0.8"
-  }
-}

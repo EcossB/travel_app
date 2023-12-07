@@ -65,7 +65,7 @@ export const PostForm = () => {
         swal({
           icon: 'error',
           title: 'Error',
-          text: 'El país ya existe',
+          text: 'No se pudo agregar el país. Revise sus datos',
         });
         console.log('error al enviar los datos. Status: ', response.status)
       }

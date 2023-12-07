@@ -30,7 +30,7 @@ export const PutGastronomia = () => {
   const countryId = paisId.pais_id;
 
   const initialValues = {
-    id: paisId.gastronomia[countId].id,
+    id: paisId.gastronomia[countId] ? paisId.gastronomia[countId].id : 0,
     nombrePlato: '',
     linkImagen: '',
     paisId: { pais_id: countryId }, 
@@ -44,7 +44,7 @@ export const PutGastronomia = () => {
       navigate('/admin-turisteo/Putpaises/vuelos');
     }
 
-    const nextId = paisId.gastronomia[countId + 1].id;
+    const nextId = paisId.gastronomia[countId + 1] ? paisId.gastronomia[countId + 1].id : 0;
     formikProps.setFieldValue('id', nextId);
   }
 

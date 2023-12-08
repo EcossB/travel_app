@@ -28,7 +28,7 @@ export const Cities = ({ lugaresFamosos, cityClass }) => {
     <div className="cities__container">
       {lugaresFamosos.map((city, index) => (
         <div key={index} className={`city ${cityClass}`} onClick={() => handleOpenModal(city)}>
-          <img className="cityImg" src={city.imagen} alt={city.nombre} />
+          <img className="cityImg" src={city.imagen} alt={city.nombre} loading="lazy"/>
         </div>
       ))}
 

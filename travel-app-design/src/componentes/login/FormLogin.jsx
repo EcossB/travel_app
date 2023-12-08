@@ -34,9 +34,6 @@ export const FormLogin = () => {
         const data = await response.json()
         const { jwtToken, usuario } = data;
 
-        console.log(data);
-        console.log(jwtToken);
-
         //Verficiar si el usuario es administrador
         const isAdmin = values.email === 'turisteogroup@gmail.com' && values.clave === 'Turist0AdminG2';
         setAuthToken(jwtToken);

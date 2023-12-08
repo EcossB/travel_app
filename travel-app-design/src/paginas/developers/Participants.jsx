@@ -8,7 +8,8 @@ import estefDev from "../../medio/estefDev.jpg";
 import yuliDev from "../../medio/YulianaDev.jpg";
 import erwingDev from "../../medio/erwingDev.jpg";
 import arielDev from "../../medio/arielDev.jpg";
-import crisDev from "../../medio/crisDev.jpg";
+import crisDev from "../../medio/foto-cv-opcion1.png";
+import chamylDev from "../../medio/chamylDev.jpg";
 import 'animate.css';
 
 
@@ -38,8 +39,8 @@ export const Participants = () => {
                 </div>
                 <div className="participants__social">
                     <a href="https://github.com/EcossB"><GitHubIcon className="github__icon"/></a>
-                    <a href=""><EmailIcon className="email__icon"/></a>
-                    <a href=""><LinkedInIcon className="linkedin__icon"/></a>
+                    <a href="mailto: "><EmailIcon className="email__icon"/></a>
+                    <a href="https://do.linkedin.com/in/erwingcossb"><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
 
@@ -52,22 +53,22 @@ export const Participants = () => {
                 </div>
                 <div className="participants__social">
                     <a href="https://github.com/sammadr"><GitHubIcon className="github__icon"/></a>
-                    <a href=""><EmailIcon className="email__icon"/></a>
+                    <a href="mailto:"><EmailIcon className="email__icon"/></a>
                     <a href=""><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
 
 
             <div className="participant__card">
-                <img className="profile__img" src="https://cdn.sanity.io/images/tlr8oxjg/production/9f15109746df254c5a030a7ba9239f8a4bb5dadb-1456x816.png?w=3840&q=100&fit=clip&auto=format" alt="" />
+                <img className="profile__img" src={chamylDev} alt="" />
                 <div className="participants__info">
                     <h2>Chamyl Nova Ciprián</h2>
                     <p>Gerente de documentación</p>
                 </div>
                 <div className="participants__social">
-                    <a href=""><GitHubIcon className="github__icon"/></a>
-                    <a href=""><EmailIcon className="email__icon"/></a>
-                    <a href=""><LinkedInIcon className="linkedin__icon"/></a>
+                    <a href="https://github.com/Vantaelisk"><GitHubIcon className="github__icon"/></a>
+                    <a href="mailto:chamylnova18@gmail.com"><EmailIcon className="email__icon"/></a>
+                    <a href="https://www.linkedin.com/in/chamyl-nova?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
 
@@ -120,8 +121,8 @@ export const Participants = () => {
                 </div>
                 <div className="participants__social">
                     <a href="https://github.com/Yuls0799"><GitHubIcon className="github__icon"/></a>
-                    <a href=""><EmailIcon className="email__icon"/></a>
-                    <a href=""><LinkedInIcon className="linkedin__icon"/></a>
+                    <a href="mailto:yzam0203@gmail.com"><EmailIcon className="email__icon"/></a>
+                    <a href="http://linkedin.com/in/yuliana-zorrilla-5ba1aa277"><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
             

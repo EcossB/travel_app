@@ -3,10 +3,18 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import useAuthToken from '../../../../hooks/useAuthToken';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Loading } from '../../../../componentes/login/Loading';
+import PropTypes from 'prop-types';
 
-export const PutAddForm = () => {
+export const PutAddForm = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
   const { paisId } = usePaisId();
   const navigate = useNavigate();
   const [loading, setLoading] = useState(false);
@@ -140,3 +148,7 @@ export const PutAddForm = () => {
     </div>
   )
 }
+
+PutAddForm.propTypes = {
+  pageTitle: PropTypes.any,
+};

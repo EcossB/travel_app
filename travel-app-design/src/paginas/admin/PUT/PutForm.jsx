@@ -4,8 +4,16 @@ import "./putFormStyle.css";
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 import usePaisId from '../../../hooks/usePais';
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-export const PutForm = () => {
+export const PutForm = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
   const { savePaisId } = usePaisId();
   const navigate = useNavigate();
 
@@ -87,5 +95,9 @@ export const PutForm = () => {
       </Form>
     </Formik>
   );
+};
+
+PutForm.propTypes = {
+  pageTitle: PropTypes.any,
 };
 

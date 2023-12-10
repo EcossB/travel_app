@@ -1,13 +1,21 @@
 import { Formik, Field, ErrorMessage, Form } from 'formik';
 import * as Yup from 'yup';
 import useAuthToken from '../../../../hooks/useAuthToken';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Loading } from '../../../../componentes/login/Loading';
 import { useNavigate } from 'react-router-dom';
 import usePaisId from '../../../../hooks/usePais';
 import swal from 'sweetalert';
+import PropTypes from 'prop-types';
 
-export const PostLugares = () => {
+export const PostLugares = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+  
   const [loading, setLoading] = useState(false);
   const token = useAuthToken();
   const navigate = useNavigate();
@@ -122,4 +130,6 @@ export const PostLugares = () => {
     )
   }
 
-  
+PostLugares.propTypes = {
+    pageTitle: PropTypes.any,
+};

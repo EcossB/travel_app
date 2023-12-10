@@ -5,8 +5,17 @@ import img404 from "../../medio/error404-bg.png";
 import Bg404 from "../../medio/404Bbglandscape.mp4";
 import mobileIcon from "../../medio/error404-mobileIcon.png";
 import { Logo } from "../logo/Logo";
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-export const Error404 = () => {
+export const Error404 = ({ pageTitle }) => {
+    useEffect(() => {
+      document.title = pageTitle;
+      return () => {
+        document.title = 'Turisteo';
+      };
+    }, [pageTitle]);
+
     return (
       <div className="error-container">
         <Video sourceVideo={Bg404}/>
@@ -21,4 +30,9 @@ export const Error404 = () => {
       </div>
     );
   }
+
+Error404.propTypes = {
+    pageTitle: PropTypes.any,
+};
+
   

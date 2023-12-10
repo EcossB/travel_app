@@ -1,14 +1,21 @@
 import { Formik, Field, ErrorMessage, Form } from 'formik';
 import * as Yup from 'yup';
 import useAuthToken from '../../../../hooks/useAuthToken';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Loading } from '../../../../componentes/login/Loading';
 import { useNavigate } from 'react-router-dom';
 import usePaisId from '../../../../hooks/usePais';
 import swal from 'sweetalert';
 import '../../POST/postFormStyle.css';
+import PropTypes from 'prop-types';
 
-export const PutVuelos = () => {
+export const PutVuelos = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
     
   const [loading, setLoading] = useState(false);
   const token = useAuthToken();
@@ -106,5 +113,9 @@ export const PutVuelos = () => {
       </Formik>
     )
   }
+
+PutVuelos.propTypes = {
+    pageTitle: PropTypes.any,
+};
 
   

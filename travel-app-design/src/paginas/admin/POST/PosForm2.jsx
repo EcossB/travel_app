@@ -6,6 +6,8 @@ import "./postFormStyle.css";
 import usePaisId from '../../../hooks/usePais';
 import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
 const validationSchema = Yup.object().shape({
   nombre: Yup.string().required('Este campo es obligatorio'),
@@ -16,9 +18,16 @@ const validationSchema = Yup.object().shape({
   imagen2: Yup.string().required('Este campo es obligatorio'),
 });
 
-export const PostForm = () => {
+export const PostForm = ({ pageTitle }) => {
   const { savePaisId } = usePaisId();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
 
 
   const initialValues = {
@@ -85,16 +94,6 @@ export const PostForm = () => {
 
   const handleClickNext = () => {
     navigate('/admin-turisteo/Postpaises/lugares');
-    /*if (!initialValues.nombre || !initialValues.descripcion || !initialValues.imagen){
-      swal({
-        icon: 'error',
-        title: 'Error',
-        text: 'Datos incompletos',
-      });
-
-    } else {
-      navigate('/admin-turisteo/Postpaises/lugares');
-    }*/
   }
 
   return (
@@ -154,5 +153,9 @@ export const PostForm = () => {
       </Form>
     </Formik>
   );
+};
+
+PostForm.propTypes = {
+  pageTitle: PropTypes.any,
 };
 

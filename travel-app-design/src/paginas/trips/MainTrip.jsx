@@ -1,9 +1,17 @@
 import { Menu } from "../home/Menu";
 import FullScreenDialog from "./Countries-info/Dialog/Dialog";
 import { TripSearch } from "./Search/TripSearch";
-//import { Trips } from "./Trips";
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-export const MainTrip = () => {
+export const MainTrip = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+  
   return (
     <div>
     <Menu />
@@ -12,3 +20,7 @@ export const MainTrip = () => {
     </div>
   );
 }
+
+MainTrip.propTypes = {
+  pageTitle: PropTypes.any,
+};

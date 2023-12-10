@@ -5,8 +5,17 @@ import { useNavigate } from 'react-router-dom';
 import swal from 'sweetalert';
 //import './delPaisesStyle.css';
 import '../POST/postFormStyle.css';
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-export const DelPaises = () => {
+export const DelPaises = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+  
   const navigate = useNavigate();
 
   const initialValues = {
@@ -103,5 +112,9 @@ export const DelPaises = () => {
       </Form>
     </Formik>
   );
+};
+
+DelPaises.propTypes = {
+  pageTitle: PropTypes.any,
 };
 

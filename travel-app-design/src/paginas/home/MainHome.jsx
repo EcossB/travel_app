@@ -1,14 +1,19 @@
 import { Carousel } from "./Carousel";
 import { DescvDiv } from "./DescvDiv";
-//import { MapDiv } from "./MapDiv";
 import { Menu } from "./Menu";
-//import { Video } from "../background/Video";
-//import videoPasswd from "../../medio/bg-login2.mp4";
 import Portrait from "./Portrait";
-//import { Carousel } from "./Carousel"; // Solo importa Carousel una vez
 import "./homeStyle.css";
+import PropTypes from 'prop-types';
+import { useEffect } from "react";
 
-export const MainHome = () => {
+export const MainHome = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
   return (
     <div>
       <Menu />
@@ -28,3 +33,9 @@ export const MainHome = () => {
     </div>
   );
 }
+
+
+MainHome.propTypes = {
+  pageTitle: PropTypes.any,
+};
+

@@ -32,6 +32,7 @@ export default function SelectComponent({ onFilter  }) {
   const handleSearch = () => {
     onFilter(country);
     setOpen(false);
+  
   };
 
   return (

@@ -3,8 +3,17 @@ import { FormRegistro } from "./FormRegistro";
 import { Video } from "../background/Video";
 import videoRegistro from "../../medio/bg-registro.mp4";
 import { Logo } from "../logo/Logo";
+import PropTypes from 'prop-types';
+import { useEffect } from "react";
 
-export const Registro = () => {
+export const Registro = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
   return (
     <div className="registro-container">
       <Video sourceVideo={videoRegistro}/>
@@ -21,3 +30,7 @@ export const Registro = () => {
     </div>
   );
 }
+
+Registro.propTypes = {
+  pageTitle: PropTypes.any,
+};

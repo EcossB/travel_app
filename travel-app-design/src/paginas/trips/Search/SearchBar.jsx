@@ -11,6 +11,7 @@ import ImageGallery from '../Search/Flags/ImageGallery';
 import { NotFound } from './NotFound/NotFound';
 import { Trips } from '../Trips';
 import useAuthToken from '../../../hooks/useAuthToken';
+import SelectComponent from './SelectComponent';
 
 
 
@@ -99,11 +100,13 @@ export default function SearchAppBar() {
   const [openDialog, setOpenDialog] = useState(false);
   const [selectedCountry, setSelectedCountry] = useState('');
   const token = useAuthToken();
-  
   const [found, setFound] = useState(true);
   const [selectedCountryDetails, setSelectedCountryDetails] = useState(null);
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
+  const [flagsInfo, setFlagsInfo] = useState(null);
+  const [selectedContinent, setSelectedContinent] = useState('all');
+
   
   useEffect(() => {
     // Llamada a la API para obtener todos los países al montar el componente
@@ -118,8 +121,10 @@ export default function SearchAppBar() {
         const data = await response.json();
 
         if (response.status === 200) {
+          const flagsData = data;
           const flagLinks = data.content.map((country) => country.bandera);
           setSelectedCountry(flagLinks);
+          setFlagsInfo(flagsData);
           
         } else {
           console.log('Error fetching all countries:', data);
@@ -132,7 +137,6 @@ export default function SearchAppBar() {
     fetchAllCountries();
   }, [token]);
 
-  
 
   const handleSearch = async (searchTerm) => {
     try {
@@ -146,6 +150,7 @@ export default function SearchAppBar() {
       
       if (response.status === 200) {
         setSelectedCountryDetails(data);
+        console.log(selectedCountry)
        
         if (Array.isArray(data)) {
           setSelectedCountry(data.map((country) => country.bandera));
@@ -161,7 +166,7 @@ export default function SearchAppBar() {
         setShowWelcomeMessage(true);
         setShowTitle(true); 
 
-        console.log('Selected Country:', data);
+        console.log('País:', data);
 
       } else {
         console.log('País no encontrado');
@@ -169,9 +174,40 @@ export default function SearchAppBar() {
       }
 
     } catch (error) {
-      //console.log('Context in SearchAppBar:', authToken);
       console.error('Error al realizar la búsqueda:', error, 'Renderizando SearchAppBar, token: ', token);
       setFound(false);
+    }
+  };
+
+  const handleFilter = async (continent) => {
+    try {
+      let url;
+      if (continent === 'all') {
+        // Si se selecciona 'all', obtén todos los países sin filtrar por continente
+        url = 'https://springgcp-405619.ue.r.appspot.com/paises';
+      } else {
+        // Si se selecciona un continente específico, filtra por ese continente
+        url = `https://springgcp-405619.ue.r.appspot.com/paises/continentes/${continent}`;
+      }
+  
+      const response = await fetch(url, {
+        headers: {
+          Authorization: token,
+        },
+      });
+      const data = await response.json();
+  
+      if (response.status === 200 && data.length > 0) {
+        const banderasEnlaces = data.map((pais) => pais.bandera);
+        setSelectedCountry(banderasEnlaces);
+        console.log(`Países del continente ${continent}:`, data);
+
+      } else {
+        console.log(`Error al obtener países para el continente ${continent}`);
+      }
+
+    } catch (error) {
+      console.error('Error al realizar el filtrado por continente:', error);
     }
   };
   
@@ -180,6 +216,47 @@ export default function SearchAppBar() {
     setOpenDialog(true);
   };
 
+  const handleFlagClick = async (flagUrl) => {
+    handleClickOpenDialog()
+    try {
+      // Verificar si flagsInfo o flagsInfo.content es null antes de continuar
+      if (!flagsInfo || !flagsInfo.content) {
+        console.log('La información de las banderas no está disponible.');
+        return;
+      }
+  
+      const selectedCountryData = flagsInfo.content.find((country) =>
+        decodeURIComponent(country.bandera) === decodeURIComponent(flagUrl)
+      );
+
+  
+      if (!selectedCountryData) {
+        console.log('No se encontró el país correspondiente a la URL de la bandera:', flagUrl);
+        return;
+      }
+  
+      // Hacer la llamada a la nueva API para obtener detalles adicionales del país
+      const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises/pais/${encodeURIComponent(selectedCountryData.nombre)}`, {
+        headers: {
+          Authorization: token,
+        },
+      });
+  
+      const data = await response.json();
+      //handleClickOpenDialog()
+      if (response.status === 200) {
+        console.log('Detalles adicionales del país:', data);
+        setSelectedCountryDetails(data)
+
+      } else {
+        console.log('No se pudieron obtener detalles adicionales del país:', flagUrl);
+      }
+      
+    } catch (error) {
+      console.error('Error al obtener detalles del país:', error);
+    }
+  };
+  
   const handleCloseDialog = () => {
     setOpenDialog(false);
   };
@@ -189,13 +266,14 @@ export default function SearchAppBar() {
       <AppBar position="static" sx={{ borderRadius: '25px', marginTop: '15px', background: 'rgba(87, 105, 117, 0.72)', backdropFilter: 'blur(10px)' }}>
         <Toolbar sx={{ justifyContent: 'space-between' }}>
           <CustomSelect label="Buscar país..." onSearch={handleSearch} />
+          <SelectComponent onFilter={handleFilter}/>
         </Toolbar>
       </AppBar>
       {!found ? (
         <NotFound found={found} />
       ) : (
         // Si se encontraron países, mostrar las imágenes
-        <ImageGallery images={selectedCountry} onClick={handleClickOpenDialog} showWelcomeMessage={showWelcomeMessage} showTitle={showTitle} />
+        <ImageGallery images={selectedCountry} onFlagClick={handleFlagClick}  showWelcomeMessage={true} showTitle={true} />
       )}
       <FullScreenDialog 
         openDialog={openDialog} 
@@ -203,7 +281,6 @@ export default function SearchAppBar() {
         tripsComponent={
           <Trips countryDetails={selectedCountryDetails} />
         }
-        
       />
     </Box>
   );

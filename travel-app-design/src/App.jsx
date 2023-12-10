@@ -27,24 +27,24 @@ function App() {
       <AuthProvider>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<PrePortada />}/>
-            <Route path='/login' element={<Login />}/>
-            <Route path='/registro' element={<Registro />}/>
-            <Route path='/home' element={<MainHome />}/>
-            <Route path='/contacto' element={<Contact />}/>
-            <Route path='/trips' element={<MainTrip />}/>
-            <Route path='/nosotros' element={<Participants />}/>
-            <Route path='/admin-turisteo' element={<AdminPage />}/>
-            <Route path='/admin-turisteo/Postpaises' element={<PostForm />}/>
-            <Route path='/admin-turisteo/Postpaises/lugares' element={<PostLugares />}/>
-            <Route path='/admin-turisteo/Postpaises/gastronomia' element={<PostGastronomia />}/>
-            <Route path='/admin-turisteo/Postpaises/vuelos' element={<PostVuelos />}/>
-            <Route path='/admin-turisteo/DelPaises' element={<DelPaises />}/>
-            <Route path='/admin-turisteo/PutPaises' element={<PutForm />}/>
-            <Route path='/admin-turisteo/Putpaises/pais' element={<PutAddForm />}/>
-            <Route path='/admin-turisteo/Putpaises/lugares' element={<PutLugares />}/>
-            <Route path='/admin-turisteo/Putpaises/gastronomia' element={<PutGastronomia />}/>
-            <Route path='/admin-turisteo/Putpaises/vuelos' element={<PutVuelos />}/>
+            <Route path='/' element={<PrePortada pageTitle="Turisteo"/>}/>
+            <Route path='/login' element={<Login pageTitle="Turisteo - Login"/>} />
+            <Route path='/registro' element={<Registro pageTitle="Turisteo - Registro"/>}/>
+            <Route path='/home' element={<MainHome pageTitle="Turisteo - Home"/>}/>
+            <Route path='/contacto' element={<Contact pageTitle="Turisteo - Contacto"/>}/>
+            <Route path='/trips' element={<MainTrip pageTitle="Turisteo - Paises"/>}/>
+            <Route path='/nosotros' element={<Participants pageTitle="Turisteo - Desarrolladores"/>}/>
+            <Route path='/admin-turisteo' element={<AdminPage pageTitle="Turisteo - Admin"/>}/>
+            <Route path='/admin-turisteo/Postpaises' element={<PostForm pageTitle="Admin - Paises"/>}/>
+            <Route path='/admin-turisteo/Postpaises/lugares' element={<PostLugares pageTitle="Admin - Lugares"/>}/>
+            <Route path='/admin-turisteo/Postpaises/gastronomia' element={<PostGastronomia pageTitle="Admin - Gastronomia"/>}/>
+            <Route path='/admin-turisteo/Postpaises/vuelos' element={<PostVuelos pageTitle="Admin - Vuelos"/>}/>
+            <Route path='/admin-turisteo/DelPaises' element={<DelPaises pageTitle="Admin - Eliminar país"/>}/>
+            <Route path='/admin-turisteo/PutPaises' element={<PutForm pageTitle="Admin - Búsqueda "/>}/>
+            <Route path='/admin-turisteo/Putpaises/pais' element={<PutAddForm pageTitle="Admin - Edición país"/>}/>
+            <Route path='/admin-turisteo/Putpaises/lugares' element={<PutLugares pageTitle="Admin - Edición lugares"/>}/>
+            <Route path='/admin-turisteo/Putpaises/gastronomia' element={<PutGastronomia pageTitle="Admin - Edición gastronomía"/>}/>
+            <Route path='/admin-turisteo/Putpaises/vuelos' element={<PutVuelos pageTitle="Admin - Edición vuelos"/>}/>
             <Route path='*' element={<Error404 />}/>
           </Routes>
         </BrowserRouter>

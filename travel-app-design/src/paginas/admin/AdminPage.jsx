@@ -4,8 +4,17 @@ import "./adminStyle.css";
 import LockIcon from '@mui/icons-material/Lock';
 import VpnKeyIcon from '@mui/icons-material/VpnKey';
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 
-export const AdminPage = () => {
+export const AdminPage = ({ pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
   const navigate = useNavigate();
 
   const handleLogout = () => {
@@ -51,3 +60,7 @@ export const AdminPage = () => {
     </div>
   )
 }
+
+AdminPage.propTypes = {
+  pageTitle: PropTypes.any,
+};

@@ -1,14 +1,23 @@
 import { Formik, Field, ErrorMessage, Form } from 'formik';
 import * as Yup from 'yup';
 import useAuthToken from '../../../../hooks/useAuthToken';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Loading } from '../../../../componentes/login/Loading';
 import { useNavigate } from 'react-router-dom';
 import usePaisId from '../../../../hooks/usePais';
 import swal from 'sweetalert';
 import '../../POST/postFormStyle.css';
+import PropTypes from 'prop-types';
 
-export const PutLugares = () => {
+export const PutLugares = ({ pageTitle }) => {
+
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
     
   const [loading, setLoading] = useState(false);
   const token = useAuthToken();
@@ -36,13 +45,6 @@ export const PutLugares = () => {
     imagen: '',
     paisId: { pais_id: countryId }, 
   };
-
-  /*if (initialValues.id !== undefined && initialValues.id <= 0) {
-    console.log('fef');
-  } else {
-    console.log('ups - initialValues.id is not undefined or not less than or equal to 0');
-    console.log('initialValues.id:', initialValues.id);
-  }*/
 
   const handleClickNext = (formikProps) => {
     setCount(count + 1);
@@ -159,4 +161,6 @@ export const PutLugares = () => {
     )
   }
 
-  
+PutLugares.propTypes = {
+    pageTitle: PropTypes.any,
+};

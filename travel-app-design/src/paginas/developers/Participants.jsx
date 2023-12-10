@@ -10,10 +10,18 @@ import erwingDev from "../../medio/erwingDev.jpg";
 import arielDev from "../../medio/arielDev.jpg";
 import crisDev from "../../medio/foto-cv-opcion1.png";
 import chamylDev from "../../medio/chamylDev.jpg";
+import { useEffect } from "react";
+import PropTypes from 'prop-types';
 import 'animate.css';
 
+export const Participants = ({ pageTitle }) => {
+    useEffect(() => {
+        document.title = pageTitle;
+        return () => {
+          document.title = 'Turisteo';
+        };
+    }, [pageTitle]);
 
-export const Participants = () => {
   return (
     <>
         <Menu />
@@ -53,8 +61,8 @@ export const Participants = () => {
                 </div>
                 <div className="participants__social">
                     <a href="https://github.com/sammadr"><GitHubIcon className="github__icon"/></a>
-                    <a href="mailto:"><EmailIcon className="email__icon"/></a>
-                    <a href=""><LinkedInIcon className="linkedin__icon"/></a>
+                    <a href="mailto:samm_dr@hotmail.com"><EmailIcon className="email__icon"/></a>
+                    <a href="https://www.linkedin.com/mynetwork/"><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
 
@@ -130,3 +138,8 @@ export const Participants = () => {
     </>
   )
 }
+
+Participants.propTypes = {
+    pageTitle: PropTypes.any,
+};
+

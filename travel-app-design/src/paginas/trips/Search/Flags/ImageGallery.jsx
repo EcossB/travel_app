@@ -1,7 +1,8 @@
 import PropTypes from 'prop-types';
 import './ImageGallery.css';
 
-const ImageGallery = ({ images, onClick, showWelcomeMessage, showTitle }) => {
+const ImageGallery = ({ images, onFlagClick, showWelcomeMessage, showTitle }) => {
+  
   return (
     <>
     <div className={`message__title ${showTitle ? 'invisible' : ''}`}>
@@ -10,7 +11,7 @@ const ImageGallery = ({ images, onClick, showWelcomeMessage, showTitle }) => {
     </div>
     <div className={`flags__container ${showWelcomeMessage ? '' : 'invisible'}`}>
       {Array.isArray(images) && images.map((url, index) => (
-        <img key={index} className='flagImg' onClick={onClick} src={url} alt={`País ${index + 1}`} />
+        <img key={index} className='flagImg' onClick={() => onFlagClick(url)} src={url} alt={`País ${index + 1}`} />
       ))}
     </div>
     </>
@@ -19,7 +20,7 @@ const ImageGallery = ({ images, onClick, showWelcomeMessage, showTitle }) => {
 
 ImageGallery.propTypes = {
   images: PropTypes.any,
-  onClick: PropTypes.any,
+  onFlagClick: PropTypes.any,
   showWelcomeMessage: PropTypes.bool,
   showTitle: PropTypes.bool,
 };

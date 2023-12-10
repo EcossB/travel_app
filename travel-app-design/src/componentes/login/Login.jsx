@@ -6,8 +6,16 @@ import "./loginStyle.css";
 import PropTypes from 'prop-types';
 import { Logo } from "../logo/Logo";
 import { AuthProvider } from "../../hooks/authContext";
+import { useEffect } from "react";
 
-export const Login = ({ setLoggedInUser }) => {
+export const Login = ({ setLoggedInUser, pageTitle }) => {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle])
+
   return (
     <div className="login-container">
       <Video sourceVideo={loginVideo}/>
@@ -31,4 +39,5 @@ export const Login = ({ setLoggedInUser }) => {
 
 Login.propTypes = {
   setLoggedInUser: PropTypes.any,
+  pageTitle: PropTypes.any,
 };

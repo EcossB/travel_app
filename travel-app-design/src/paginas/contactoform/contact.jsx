@@ -3,8 +3,17 @@ import "../home/homeStyle.css";
 import './FormStyles.css';
 import Portrait from '../home/Portrait';
 import { ContactForm } from './ContactForm';
+import { useEffect } from 'react';
+import PropTypes from 'prop-types';
 
-function Contact () {
+function Contact ({ pageTitle }) {
+  useEffect(() => {
+    document.title = pageTitle;
+    return () => {
+      document.title = 'Turisteo';
+    };
+  }, [pageTitle]);
+
   return (
     <div>
         <Menu />
@@ -19,4 +28,9 @@ function Contact () {
 }
 
 export default Contact;
+
+
+Contact.propTypes = {
+  pageTitle: PropTypes.any,
+};
 

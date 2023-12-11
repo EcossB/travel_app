@@ -4,8 +4,8 @@ import { useModal } from '../../hooks/useModal';
 import "./homeStyle.css";
 import haitisesSamana from "../../medio/haitises.jpg";
 import samanaHaiteses from "../../medio/samana-haitises.jpg";
-import SanGimignano from "../../medio/san-gimignano.avif";
-import sanGimignano from "../../medio/San-Gimignano.jpg";
+import SanGimignano from "../../medio/tuscanyimg.jpg";
+import sanGimignano2 from "../../medio/San-Gimignano.jpg";
 
 import Monteturquia from"../../medio/monte.jpg";
 import MonteNemrut from"../../medio/monte-nemrut.jpg";
@@ -60,7 +60,7 @@ const information = {
 
     images: {
         img1: haitisesSamana,
-        img2: SanGimignano,
+        img2: sanGimignano2,
         img3: MonteNemrut,
         img4: Kinkakuji,
         img5: TorreEi,
@@ -154,7 +154,7 @@ export const Carousel = () => {
                     <a href="#" className="card" style={{ transform: `translateX(-${scrollLeft}px)` }} onClick={openModal2}>
                         <img src={SanGimignano} alt="" className="poster" />
                         <div className="rest_card">
-                            <img src={sanGimignano} alt="" />
+                            <img src={sanGimignano2} alt="" />
                             <div className="cont">
                                 <h4>San Gimignano</h4>
                                 <div className="sub">

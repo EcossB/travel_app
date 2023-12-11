@@ -6,10 +6,8 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 import CloseIcon from '@mui/icons-material/Close';
 import Slide from '@mui/material/Slide';
-//import { Trips } from '../../Trips';
 import { FaTimeIcon } from './FaTimeIcon';
 import PropTypes from 'prop-types';
-
 
 const Transition = React.forwardRef(function Transition(props, ref) {
   return <Slide direction="up" ref={ref} {...props} />;
@@ -35,7 +33,7 @@ export default function FullScreenDialog({ info, onClose, onClickIcon, openDialo
             </FaTimeIcon>
           </Toolbar>
         </AppBar>
-        <List sx={{padding: '15px', backgroundColor:'#091F31',  height: '100vh', overflowY: 'auto'}} >
+        <List sx={{padding: '15px', backgroundColor:'#091F31',  height: '100vh', overflowY: 'auto'}}>
           {tripsComponent}
         </List>
       </Dialog>

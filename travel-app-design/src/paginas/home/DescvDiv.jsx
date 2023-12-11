@@ -1,6 +1,6 @@
 import "./homeStyle.css";
 import img1 from "../../medio/imgsgif.gif";
-import img2 from "../../medio/bannerinfopic.avif";
+import img2 from "../../medio/homebeach.jpeg";
 import palmera from "../../medio/palmera.png";
 //import travelIcon from "../../medio/travelicon.png";
 

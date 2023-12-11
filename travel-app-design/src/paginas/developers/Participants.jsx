@@ -35,7 +35,7 @@ export const Participants = ({ pageTitle }) => {
                 <div className="participants__social">
                     <a href="https://github.com/CristalpyC"><GitHubIcon className="github__icon"/></a>
                     <a href="mailto:cristaltn03@gmail.com"><EmailIcon className="email__icon"/></a>
-                    <a href=""><LinkedInIcon className="linkedin__icon"/></a>
+                    <a href="https://github.com/CristalpyC"><LinkedInIcon className="linkedin__icon"/></a>
                 </div>
             </div>
 

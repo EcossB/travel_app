@@ -11,7 +11,7 @@ import { CountryPortrait } from "./Countries-info/Banner/CountryPortrait";
 
 export const Trips = ({ countryDetails }) => {
   if (!countryDetails || !countryDetails.lugaresFamosos || !countryDetails.gastronomia ) {
-    return <div>No hay detalles del país</div>;
+    return <div className="error__message">No hay detalles del país</div>;
   }
 
   const {

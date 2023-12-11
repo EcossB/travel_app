@@ -2,10 +2,9 @@ import "./modalStyle.css";
 import PropTypes from 'prop-types';
 import Modal from "react-modal";
 import { FaWindowClose } from "react-icons/fa";
-//import { useModal } from "../../../hooks/useModal";
+import 'animate.css';
 
 export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }) => {
-  //const [openModal] = useModal(false);
   return (
     <div className="modal-container">
         <Modal
@@ -13,7 +12,7 @@ export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }
             onRequestClose={onRequestClose}
             contentLabel="Example Modal"
             overlayClassName="modal-overlay"
-            className="modal-content animate__animated animate__pulse"
+            className="modal-content animate__animated animate__shakeX"
         >
             <div className="modalInfo">
                 <h2>{modalTitle}</h2>

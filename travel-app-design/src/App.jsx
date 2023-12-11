@@ -32,7 +32,7 @@ function App() {
             <Route path='/registro' element={<Registro pageTitle="Turisteo - Registro"/>}/>
             <Route path='/home' element={<MainHome pageTitle="Turisteo - Home"/>}/>
             <Route path='/contacto' element={<Contact pageTitle="Turisteo - Contacto"/>}/>
-            <Route path='/trips' element={<MainTrip pageTitle="Turisteo - Paises"/>}/>
+            <Route path='/trips' element={<MainTrip pageTitle="Turisteo - Explorar destinos"/>}/>
             <Route path='/nosotros' element={<Participants pageTitle="Turisteo - Desarrolladores"/>}/>
             <Route path='/admin-turisteo' element={<AdminPage pageTitle="Turisteo - Admin"/>}/>
             <Route path='/admin-turisteo/Postpaises' element={<PostForm pageTitle="Admin - Paises"/>}/>

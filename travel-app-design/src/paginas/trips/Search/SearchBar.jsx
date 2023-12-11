@@ -14,7 +14,6 @@ import useAuthToken from '../../../hooks/useAuthToken';
 import SelectComponent from './SelectComponent';
 import './searchStyle.css';
 
-
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
   borderRadius: theme.shape.borderRadius,
@@ -106,18 +105,22 @@ export default function SearchAppBar() {
   const [showTitle, setShowTitle] = useState(false);
   const [flagsInfo, setFlagsInfo] = useState(null);
   const [countriesLoad, setCountriesLoad] = useState(10);
-  const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
+  //const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
+  const [titleMessage, setTitleMessage] = useState('¡Busca tu destino!');
+  const [showFlags, setShowFlags] = useState(true);
+  const [showIcon, setShowIcon] = useState(true);
 
-
-  const handleCountriesLoad = () => {
+  /*const handleCountriesLoad = () => {
     setCountriesLoad((prevLoad) => prevLoad + 10);
-  }
+  }*/
   
   useEffect(() => {
     // Llamada a la API para obtener todos los países al montar el componente
     const fetchAllCountries = async () => {
       try {
-        const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises?page=0&size=${countriesLoad}`, {
+        setShowFlags(false)
+        setShowIcon(false)
+        const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises?page=0&size=198`, {
           headers: {
             Authorization: token,
           },
@@ -134,6 +137,10 @@ export default function SearchAppBar() {
         } else {
           console.log('Error fetching all countries:', data);
         }
+
+        setShowFlags(true)
+        setShowIcon(true)
+
       } catch (error) {
         console.error('Error fetching all countries:', error);
       }
@@ -144,7 +151,7 @@ export default function SearchAppBar() {
 
  
   const handleSearch = async (searchTerm) => {
-    setShowLoadMoreButton(false);
+    //setShowLoadMoreButton(false);
 
     try {
       const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises/pais/${searchTerm}`, {
@@ -156,6 +163,7 @@ export default function SearchAppBar() {
       const data = await response.json();
       
       if (response.status === 200) {
+        setTitleMessage(`Resultados de ${searchTerm}`)
         setSelectedCountryDetails(data);
         console.log(selectedCountry)
        
@@ -188,18 +196,22 @@ export default function SearchAppBar() {
 
   const handleFilter = async (continent) => {
     setFound(true);
-    setShowLoadMoreButton(false);
+    //setShowLoadMoreButton(false);
     
     try {
+      setShowIcon(false)
+      setShowFlags(false)
       let url;
       if (continent === 'all') {
         // Si se selecciona 'all', obtén todos los países sin filtrar por continente
         url = `https://springgcp-405619.ue.r.appspot.com/paises?page=0&size=${countriesLoad}`;
-        setShowLoadMoreButton(true);
+        setTitleMessage(`¡Busca tu destino!`)
+        //setShowLoadMoreButton(true);
         
       } else {
         // Si se selecciona un continente específico, filtra por ese continente
         url = `https://springgcp-405619.ue.r.appspot.com/paises/continentes/${continent}`;
+        setTitleMessage(`¡Explora las maravillas de ${continent}!`)
       }
   
       const response = await fetch(url, {
@@ -219,6 +231,9 @@ export default function SearchAppBar() {
         const allCountries = data.content.map((paises) => paises.bandera)
         setSelectedCountry(allCountries)
       }
+
+      setShowFlags(true)
+      setShowIcon(true)
 
     } catch (error) {
       console.error('Error al realizar el filtrado por continente:', error);
@@ -270,6 +285,7 @@ export default function SearchAppBar() {
       
     } catch (error) {
       console.error('Error al obtener detalles del país:', error);
+
     }
   };
   
@@ -290,12 +306,16 @@ export default function SearchAppBar() {
       ) : (
         // Si se encontraron países, mostrar las imágenes
         <>
-        <ImageGallery images={selectedCountry} onFlagClick={handleFlagClick}  showWelcomeMessage={true} showTitle={true} />
+        <ImageGallery images={selectedCountry} onFlagClick={handleFlagClick}  showWelcomeMessage={showFlags} showTitle={false} message={titleMessage} showIcon={showIcon}/>
+        {/*
+        
         <div className="btnLoad__container">
             {showLoadMoreButton && (
               <button className="loadbtn" onClick={handleCountriesLoad}>Cargar más ↓</button>
             )}
         </div>
+        
+        */}
         </>
       )}
       <FullScreenDialog 

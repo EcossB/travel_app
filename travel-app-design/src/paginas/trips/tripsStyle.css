@@ -22,6 +22,10 @@
     margin-bottom: 20px;
 }
 
+.error__message{
+    color: white;
+}
+
 @media screen and (max-width: 750px){
     .descubreMas__container{
         display: none;

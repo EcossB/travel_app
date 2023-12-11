@@ -1,13 +1,13 @@
 import PropTypes from 'prop-types';
 import './ImageGallery.css';
 
-const ImageGallery = ({ images, onFlagClick, showWelcomeMessage, showTitle }) => {
+const ImageGallery = ({ images, onFlagClick, showWelcomeMessage, showTitle, message, showIcon }) => {
   
   return (
     <>
     <div className={`message__title ${showTitle ? 'invisible' : ''}`}>
-      <h1 ><span>¡Explora ahora!</span> <br /> Busca tu destino</h1>
-      <img src='https://media.baamboozle.com/uploads/images/1028221/a39c2c16-76d8-4e2a-9438-4063ef158b38.gif' />
+      <h1>{message}</h1>
+      <img className={`load__icon ${showIcon ? 'invisible' : ''}`} src="https://mir-s3-cdn-cf.behance.net/project_modules/disp/04de2e31234507.564a1d23645bf.gif" alt="" />
     </div>
     <div className={`flags__container ${showWelcomeMessage ? '' : 'invisible'}`}>
       {Array.isArray(images) && images.map((url, index) => (
@@ -23,6 +23,8 @@ ImageGallery.propTypes = {
   onFlagClick: PropTypes.any,
   showWelcomeMessage: PropTypes.bool,
   showTitle: PropTypes.bool,
+  message: PropTypes.any,
+  showIcon: PropTypes.any,
 };
 
 export default ImageGallery;

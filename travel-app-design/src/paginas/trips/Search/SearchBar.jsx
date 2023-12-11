@@ -12,7 +12,7 @@ import { NotFound } from './NotFound/NotFound';
 import { Trips } from '../Trips';
 import useAuthToken from '../../../hooks/useAuthToken';
 import SelectComponent from './SelectComponent';
-
+import './searchStyle.css';
 
 
 const Search = styled('div')(({ theme }) => ({
@@ -105,14 +105,19 @@ export default function SearchAppBar() {
   const [showWelcomeMessage, setShowWelcomeMessage] = useState(false);
   const [showTitle, setShowTitle] = useState(false);
   const [flagsInfo, setFlagsInfo] = useState(null);
-  const [selectedContinent, setSelectedContinent] = useState('all');
+  const [countriesLoad, setCountriesLoad] = useState(10);
+  const [showLoadMoreButton, setShowLoadMoreButton] = useState(true);
 
+
+  const handleCountriesLoad = () => {
+    setCountriesLoad((prevLoad) => prevLoad + 10);
+  }
   
   useEffect(() => {
     // Llamada a la API para obtener todos los países al montar el componente
     const fetchAllCountries = async () => {
       try {
-        const response = await fetch('https://springgcp-405619.ue.r.appspot.com/paises', {
+        const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises?page=0&size=${countriesLoad}`, {
           headers: {
             Authorization: token,
           },
@@ -135,10 +140,12 @@ export default function SearchAppBar() {
     };
 
     fetchAllCountries();
-  }, [token]);
+  }, [token, countriesLoad]);
 
-
+ 
   const handleSearch = async (searchTerm) => {
+    setShowLoadMoreButton(false);
+
     try {
       const response = await fetch(`https://springgcp-405619.ue.r.appspot.com/paises/pais/${searchTerm}`, {
         headers: {
@@ -180,11 +187,16 @@ export default function SearchAppBar() {
   };
 
   const handleFilter = async (continent) => {
+    setFound(true);
+    setShowLoadMoreButton(false);
+    
     try {
       let url;
       if (continent === 'all') {
         // Si se selecciona 'all', obtén todos los países sin filtrar por continente
-        url = 'https://springgcp-405619.ue.r.appspot.com/paises';
+        url = `https://springgcp-405619.ue.r.appspot.com/paises?page=0&size=${countriesLoad}`;
+        setShowLoadMoreButton(true);
+        
       } else {
         // Si se selecciona un continente específico, filtra por ese continente
         url = `https://springgcp-405619.ue.r.appspot.com/paises/continentes/${continent}`;
@@ -195,19 +207,22 @@ export default function SearchAppBar() {
           Authorization: token,
         },
       });
+
       const data = await response.json();
-  
+      
       if (response.status === 200 && data.length > 0) {
-        const banderasEnlaces = data.map((pais) => pais.bandera);
+        const banderasEnlaces = continent === 'all' ? data.content.map((paises) => paises.bandera) : data.map((pais) => pais.bandera);
         setSelectedCountry(banderasEnlaces);
         console.log(`Países del continente ${continent}:`, data);
 
       } else {
-        console.log(`Error al obtener países para el continente ${continent}`);
+        const allCountries = data.content.map((paises) => paises.bandera)
+        setSelectedCountry(allCountries)
       }
 
     } catch (error) {
       console.error('Error al realizar el filtrado por continente:', error);
+      setFound(false);
     }
   };
   
@@ -230,8 +245,9 @@ export default function SearchAppBar() {
       );
 
   
-      if (!selectedCountryData) {
+     if (!selectedCountryData) {
         console.log('No se encontró el país correspondiente a la URL de la bandera:', flagUrl);
+        console.log(selectedCountryData)
         return;
       }
   
@@ -273,7 +289,14 @@ export default function SearchAppBar() {
         <NotFound found={found} />
       ) : (
         // Si se encontraron países, mostrar las imágenes
+        <>
         <ImageGallery images={selectedCountry} onFlagClick={handleFlagClick}  showWelcomeMessage={true} showTitle={true} />
+        <div className="btnLoad__container">
+            {showLoadMoreButton && (
+              <button className="loadbtn" onClick={handleCountriesLoad}>Cargar más ↓</button>
+            )}
+        </div>
+        </>
       )}
       <FullScreenDialog 
         openDialog={openDialog} 

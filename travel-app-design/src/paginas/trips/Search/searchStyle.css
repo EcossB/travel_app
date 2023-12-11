@@ -9,7 +9,21 @@
 .map-icon{
     margin-right: 5px;
 }
+
+.btnLoad__container{
+    /*margin: auto;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loadbtn{
+    margin: 5px 0px 15px 0px;
+    background-color: #3F7BFD;
+    border-radius: 35px;
+}
   
+
+
 @media (max-width: 768px) {
     .custom-select {
       width: 100%; 

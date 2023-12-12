@@ -134,7 +134,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Parque, Samana | Turismo</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>4.5
+                                        <i><AiFillStar className='star'/></i>4.4
                                     </h3>
                                 </div>
                             </div>
@@ -160,7 +160,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Viñera, Italia | Gastronomia</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/> </i>5.5
+                                        <i><AiFillStar className='star'/> </i>4.4
                                     </h3>
                                 </div>
                             </div>
@@ -211,7 +211,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Kioto, Japón| Lugar</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>3.2
+                                        <i><AiFillStar className='star'/></i>4.5
                                     </h3>
                                 </div>
                             </div>
@@ -236,7 +236,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Paris, Francia | Turismo</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>2.5
+                                        <i><AiFillStar className='star'/></i>4.2
                                     </h3>
                                 </div>
                             </div>
@@ -261,7 +261,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Islas Cícladas, Grecia | Playa</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>4.8
+                                        <i><AiFillStar className='star'/></i>4.5
                                     </h3>
                                 </div>
                             </div>
@@ -286,7 +286,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Cartagena, Colombia| Playa</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>3.2
+                                        <i><AiFillStar className='star'/></i>3.5
                                     </h3>
                                 </div>
                             </div>
@@ -311,7 +311,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>San Pedro de Macorís, Rep. Dom.| Lugar</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>3.5
+                                        <i><AiFillStar className='star'/></i>4.8
                                     </h3>
                                 </div>
                             </div>
@@ -336,7 +336,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Pedernales, Rep. Dom.| Playa</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>3.2
+                                        <i><AiFillStar className='star'/></i>4.8
                                     </h3>
                                 </div>
                             </div>
@@ -361,7 +361,7 @@ export const Carousel = () => {
                                 <div className="sub">
                                     <p>Zona Colonil, Rep. Dom.| Lugar</p>
                                     <h3>
-                                        <i><AiFillStar className='star'/></i>3.2
+                                        <i><AiFillStar className='star'/></i>4.7
                                     </h3>
                                 </div>
                             </div>
@@ -375,15 +375,8 @@ export const Carousel = () => {
                             imgUrl={images.img10}
                         />
                     </a>                   
-
                     </div>
             </section>
-            {/*<Modall 
-                modalTitle="efefefeffefe"
-                modalInfo="ffefefefefeef"
-                isOpen={modalIsOpen} 
-                onRequestClose={closeModal}
-            />*/}
         </main>
     );
 };

@@ -20,6 +20,7 @@ import { PutAddForm } from "./paginas/admin/PUT/Pais/PutAddForm";
 import { PutLugares } from "./paginas/admin/PUT/Lugares/PutLugares";
 import { PutVuelos } from "./paginas/admin/PUT/Vuelos/PutVuelos";
 import { PutGastronomia } from "./paginas/admin/PUT/Gastronomia/PutGastronomia";
+import { Guide } from "./paginas/Guia/Guide";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             <Route path='/login' element={<Login pageTitle="Turisteo - Login"/>} />
             <Route path='/registro' element={<Registro pageTitle="Turisteo - Registro"/>}/>
             <Route path='/home' element={<MainHome pageTitle="Turisteo - Home"/>}/>
+            <Route path='/guia' element={<Guide pageTitle="Turisteo - Guía"/>}/>
             <Route path='/contacto' element={<Contact pageTitle="Turisteo - Contacto"/>}/>
             <Route path='/trips' element={<MainTrip pageTitle="Turisteo - Explorar destinos"/>}/>
             <Route path='/nosotros' element={<Participants pageTitle="Turisteo - Desarrolladores"/>}/>

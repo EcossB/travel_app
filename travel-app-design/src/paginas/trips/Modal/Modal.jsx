@@ -12,7 +12,7 @@ export const Modall = ({ modalTitle, modalInfo, isOpen, onRequestClose, imgUrl }
             onRequestClose={onRequestClose}
             contentLabel="Example Modal"
             overlayClassName="modal-overlay"
-            className="modal-content animate__animated animate__shakeX"
+            className="modal-content animate__animated animate__pulse"
         >
             <div className="modalInfo">
                 <h2>{modalTitle}</h2>

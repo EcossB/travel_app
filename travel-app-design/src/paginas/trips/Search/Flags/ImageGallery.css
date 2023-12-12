@@ -2,6 +2,7 @@
     width: 100%;
     display: flex;
     flex-wrap: wrap;
+    /*justify-content: center;*/
     justify-content: center;
     align-items: center;
     transition: filter 0.3s ease-in-out;
@@ -47,7 +48,7 @@
 }
   
 .flagImg:hover{
-    filter: brightness(70%) blur(2px);
+    filter: brightness(70%) blur(1px); /*70 y 2*/
     transform: scale(1.1);
 }
 
@@ -65,19 +66,26 @@
   display: none;
 }
 
-@media screen and (max-width: 670px){
+@media screen and (max-width: 689px){
     .flagImg{
-      width: 80%;
+      width: 50%;
   }
 
   .message__title img{
     width: 50%;
   }
+
+  .load__icon{
+    width: 18rem;
+    height: 5vh;
+  }
 }
 
-@media screen and (max-width: 465px){
+@media screen and (max-width: 664px){
   .flagImg{
-    width: 80%;
+    margin: auto;
+    margin-bottom: 25px;
+    width: 60%;
 }
 
 .message__title img{

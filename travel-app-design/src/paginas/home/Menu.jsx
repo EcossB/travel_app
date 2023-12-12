@@ -21,6 +21,7 @@ export const Menu = () => {
         <ul>
           <NavLink to="/home" className={({isActive}) => (isActive ? 'active-link' : null) || 'link-menu'}>Inicio</NavLink>
           <NavLink to="/contacto" className={({isActive}) => (isActive ? 'active-link' : null) || 'link-menu'}>Contacto</NavLink>
+          <NavLink to="/guia" className={({isActive}) => (isActive ? 'active-link' : null) || 'link-menu'}>Guía</NavLink>
           <NavLink to="/trips" className={({isActive}) => (isActive ? 'active-link' : null) || 'link-menu'}>Trips</NavLink>
           <NavLink to="/nosotros" className={({isActive}) => (isActive ? 'active-link' : null) || 'link-menu'}>Nosotros</NavLink>
         </ul>

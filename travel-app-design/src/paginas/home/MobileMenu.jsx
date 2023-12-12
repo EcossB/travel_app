@@ -2,7 +2,7 @@
 import "./homeStyle.css";
 import PropTypes from 'prop-types';
 import { Link } from "react-router-dom";
-import { FaTimes, FaUserAlt, FaTools, FaPhone, FaPlane, FaPencilRuler, FaWindowClose   } from "react-icons/fa";
+import { FaTimes, FaUserAlt, FaTools, FaPhone, FaPlane, FaPencilRuler, FaWindowClose, FaBookOpen    } from "react-icons/fa";
 
 export const MobileMenu = ({ closeSideBar }) => {
   return (
@@ -28,6 +28,13 @@ export const MobileMenu = ({ closeSideBar }) => {
                     <p>
                         <FaPhone className="menu-icon"/>
                         Contacto
+                    </p>
+                </Link>
+
+                <Link to="/guia">
+                    <p>
+                        <FaBookOpen className="menu-icon"/>
+                        Guía
                     </p>
                 </Link>
 

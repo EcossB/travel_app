@@ -10,7 +10,9 @@ import umbrella from '../../medio/umbrella.png';
 import gun from '../../medio/arma.png';
 import talcum from '../../medio/talco.png';
 import headphone from '../../medio/audifonos.png';
-
+import tip1 from '../../medio/tip1.webp';
+import tip2 from '../../medio/tip2.webp';
+import tip3 from '../../medio/tip3.png';
 
 export const Guide = ({ pageTitle }) => {
     useEffect(() => {
@@ -34,7 +36,7 @@ export const Guide = ({ pageTitle }) => {
         <div className="guide__container">
             <div className="guide__advice">
                 <div className="guide__tip">
-                    <img src="https://static.vecteezy.com/system/resources/previews/015/693/497/non_2x/travel-and-vacations-free-png.png" alt="" />
+                    <img src={tip1} alt="" />
                     <p>
                         Planifica con anticipación, haciendo una lista de artículos 
                         esenciales y optando por prendas versátiles. 
@@ -46,7 +48,7 @@ export const Guide = ({ pageTitle }) => {
 
             <div className="guide__advice">
                 <div className="guide__tip">
-                    <img src="https://static.vecteezy.com/system/resources/previews/009/394/201/non_2x/plane-flying-around-the-world-clipart-design-illustration-free-png.png" alt="" />
+                    <img src={tip2} alt="" />
                     <p>
                         Sumérgete en la cultura local investigando costumbres y normas. 
                         Aprende algunas frases básicas del idioma local para facilitar la comunicación. 
@@ -57,7 +59,7 @@ export const Guide = ({ pageTitle }) => {
 
             <div className="guide__advice">
                 <div className="guide__tip">
-                    <img src="https://images.vexels.com/media/users/3/200042/isolated/preview/4a7e2a951e03b5f520681257bb3e495a-pasaporte-texturizado.png" alt="" />
+                    <img src={tip3} alt="" />
                     <p>
                         Nunca olvides tu pasaporte, copias de documentos y 
                         siguiendo las normas locales. 

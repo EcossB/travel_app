@@ -60,9 +60,11 @@
 }
 
 .maleta{
+    background-color:#142950;
     margin-top: 5px;
     display: flex;
     justify-content: center;
+    padding-bottom: 15px;
 }
 
 .maleta img{

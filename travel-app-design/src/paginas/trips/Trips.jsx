@@ -8,10 +8,11 @@ import { FoodComponent } from "./FoodComp/FoodComponent";
 import PropTypes from 'prop-types';
 import "./tripsStyle.css";
 import { CountryPortrait } from "./Countries-info/Banner/CountryPortrait";
+import { Loading } from "../../componentes/login/Loading";
 
 export const Trips = ({ countryDetails }) => {
   if (!countryDetails || !countryDetails.lugaresFamosos || !countryDetails.gastronomia ) {
-    return <div className="error__message">No hay detalles del país</div>;
+    return <div className="error__message"><Loading /></div>;
   }
 
   const {

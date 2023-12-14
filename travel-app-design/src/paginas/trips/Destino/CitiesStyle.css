@@ -20,7 +20,7 @@
   
   .modalImg{
     width: 100%;
-    height: auto;
+    height: 35vh;
     border-radius: 15px;
     box-shadow: 0px 5px 5px gray;
     margin-bottom: 5px;

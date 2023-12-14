@@ -18,7 +18,7 @@ export const ContactForm = () => {
 
     setTimeout(() => {
         setMessage(false)
-    },2000);
+    },3000);
 
     emailjs.sendForm('service_3xedm7q', 'template_3u6ivy7', form.current, 'lbG2--i5BFw66Hs5T')
       .then((result) => {

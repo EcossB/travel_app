@@ -85,7 +85,7 @@ export const FormRegistro = () => {
     if (!values.name){
       error.name = "Nombre es requerido";
     } else if (!nameRegex.test(values.name)){
-        error.name = "Nombre inválido"
+        error.name = "Nombre inválido. Escriba correctamente"
     }
 
     if (!values.lastname){

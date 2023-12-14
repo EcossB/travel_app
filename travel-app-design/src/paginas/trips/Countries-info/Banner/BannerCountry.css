@@ -1,0 +1,28 @@
+/*.portrait-container2 {
+    background-image: url('../../medio/PortraitPhoto.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; 
+    color: #fff; 
+    padding: 50px;
+}*/
+
+/*.CountryBannerBg{
+    background-image: url('https://images7.alphacoders.com/458/458518.jpg');
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url('../../medio/ItalyImg.jpg'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+}*/
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}

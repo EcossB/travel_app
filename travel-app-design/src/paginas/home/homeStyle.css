@@ -1,0 +1,602 @@
+/*Menu*/
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#menu{
+    position: sticky;
+    font-weight: 400;
+    top: 0;
+    margin: 18px;
+    background-color:#091F31;
+    border-radius: 15px;
+    padding: 0px 8px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7vmin;
+    z-index: 1;
+}
+
+.logout-btn{
+    color: #FFF;
+    margin-top: -2px;
+    background-color: #3F7BFD;
+    border-radius: 35px;
+    padding: 10px 20px;
+    width: 10em;
+    text-align: center;
+    font-size: 1.5vmin;
+    white-space: nowrap;
+}
+
+ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+/*.links-info{
+    position: relative;
+    left: 5%;
+}*/
+
+
+.links-info a,
+li{
+    text-decoration: none;
+    color: #FFF;
+    white-space: nowrap;
+}
+
+.link-menu {
+    color: #333; /* Color de texto normal */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    position: relative; /* Permite posicionar el pseudo-elemento */
+  }
+  
+
+.link-menu::before {
+    content: '';
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 0; 
+    height: 2px; 
+    background-color: #386ad5; 
+    transition: width 0.3s; 
+  }
+  
+.link-menu:hover::before {
+    width: 100%; 
+  }
+
+
+.active-link{
+    border-bottom: 2px solid #386ad5;
+}
+
+.logout-btn:hover{
+    background-color: #386ad5;
+}
+
+.user-icon{
+    margin-right: 10px;
+}
+
+.burger-menu{
+    display: none;
+    color: #FFF;
+    font-size: 4vmin;
+    margin-top: 15px;
+    animation: openMenu 0.3s;
+}
+
+.menu-logo img{
+    width: 152px;
+}
+
+.mobile-user{
+    margin-top: 25px;
+    color: #FFF;
+    margin-bottom: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.user-responsive{
+    margin-bottom: 12px;
+}
+
+.responsive-menu{
+    display: none;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    white-space: nowrap;
+    background: rgba(9, 30, 49, 0.85);
+    padding: 20px;
+    width: 35vw;
+    height: 932px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-weight: bold;
+}
+
+.menu-reponsive-ul{
+    display: flex;
+    flex-direction: column;
+}
+
+.close-icon{
+    color: #FFF;
+    text-align: right;
+    font-size: 4vmin;
+    animation: closeMenu 0.3s;
+}
+
+.close:hover{
+    text-shadow: 0px 2px 25px rgb(146, 31, 31);
+}
+
+/* Animación para abrir el menú */
+@keyframes openMenu {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(90deg);
+    }
+  }
+  
+/* Animación para cerrar el menú */
+@keyframes closeMenu {
+    from {
+      transform: rotate(10deg);
+    }
+    to {
+      transform: rotate(0deg);
+    }
+  }
+
+.menus-info{
+    margin-top: 15px;
+}
+
+.menu-reponsive-ul p{
+    color: #FFF;
+    border-bottom: solid 2px #FFF;
+    padding-bottom: 10px;
+    margin-bottom: 22px;
+}
+
+.menu-reponsive-ul a{
+    text-decoration: none;
+}
+
+.menu-reponsive-ul p:hover{
+    text-shadow: 0px 2px 12px rgb(181, 203, 212);
+}
+
+.menu-icon{
+    margin-right: 7px;
+}
+
+.inactive{
+    display: none;
+}
+
+ /*Banner*/
+.portrait-container2 {
+    background-image: url('../../medio/PortraitPhoto.jpg'); 
+    
+    background-size: cover;
+    background-position: center;
+    height: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; 
+    color: #fff; 
+    padding: 50px;
+}
+
+/*.banner-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}*/
+
+.portrait-container2 h1{
+    font-size: 8vmin; 
+    text-align: center;
+}
+
+.content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.content button{
+    font-size: 2vmin;
+    white-space: nowrap;
+    background-color: #3F7BFD;
+    padding: 2px;
+}
+
+.travelTitle-container p{
+    text-align: center;
+}
+
+.globe-icon{
+    margin-right: 8px;
+    font-size: 2vmin;
+}
+
+@media screen and (max-width: 650px){
+    .portrait-container2{
+        height: 20vh;
+    }
+
+    .portrait-container2 h1{
+        font-size: 5vmin; /*10vmin*/
+    }
+
+}
+
+
+/*Menu responsive*/
+@media screen and (max-width: 850px){
+    .links-info,
+    .user-info ul{
+    display: none;
+    }
+
+    .burger-menu{
+    display: block;
+    }
+
+    .menu-logo img{
+        width: 28vw;
+    }
+
+    .responsive-menu{
+        display: flex;
+        flex-direction: column;
+        }
+    }
+
+h1{
+    color: #fff;
+    font-size: 8vmin;
+}
+
+/*Carousel*/
+/*section{
+    background-image: url('https://clipart-library.com/new_gallery/835_clouds-png.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}*/
+
+main section{
+    position: absolute;
+    width: 90%;
+    height: auto;
+    /*bottom: 20px;*/
+    color: #fff;
+}
+
+main section h1{
+    text-align: center;
+}
+
+
+
+main section .cards{
+    position: relative;
+    width: 100%;
+    height: 260px;
+    margin-top: 10px ;
+    display: flex;
+    align-items: center;
+    overflow-x: auto;
+    scroll-behavior:smooth;
+}
+
+main section .cards::-webkit-scrollbar{
+    display: none;
+}
+
+main section .cards .card{
+    position: relative;
+    min-width: 175px;
+    height: 245px;
+    border-radius: 8px;
+    margin-right: 5px;
+    background: #000;
+    transition: .3s linear;
+}
+
+main section .cards .card .poster{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    position: relative;
+}
+
+main section .cards .card:hover {
+    min-width: 390px;
+    overflow: hidden;
+}
+
+main section .cards .card .rest_card{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    left: 0;
+    top: 0;
+    z-index: 999999;
+    opacity: 0;
+    transition: 1s linear;
+}
+
+main section .cards .card .rest_card img{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+    z-index: -1;
+    
+}
+
+main section .cards .card .rest_card::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #000);
+    left: 0;
+    bottom: 0;
+    z-index:-1;
+}
+
+main section .cards .card .rest_card .cont{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    left: 0;
+    color: #fff;
+    padding: 0px 20px;
+}
+
+main section .cards .card .rest_card .cont .sub{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    width: 90%;
+}
+
+main section .cards .card .rest_card .cont .sub p{
+    font-size: 12px;
+    font-weight: 400;
+    color: rgb(255, 255, 255, .7);
+    text-decoration: none;
+}
+
+main section .cards .card .rest_card .cont .sub h3{
+    color:#fff;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+main section .cards .card .rest_card .cont .sub span{
+    background: yellow;
+    color: #000;
+    padding: 0px 3px;
+    margin: 0px 5px 0px 10px;
+    font-weight: 500;
+    border-radius: 2px ;
+    text-decoration: none;
+    
+}
+
+main section .cards .card .rest_card .cont .sub h3 i{
+    margin-right: 3px ;
+}
+
+main section .cards .card:hover .rest_card {
+    opacity: 1 ;
+}
+
+main section .arrow-icon-left,
+.arrow-icon-right{
+    position: absolute;
+    top: 50%;
+    left: -1.5%;
+    width: 50px;
+    height: 50px;
+    background:rgb(255, 255, 255, .3);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    font-size: 5vmin;/*20px*/
+    cursor: pointer;
+    transition: .3s linear ;
+    z-index: 999999999;
+
+}
+
+main section .arrow-icon-right{
+    left: unset;
+    right: -1.5%;
+}
+
+main .arrow-icon {
+    font-size: 14vmin;
+    cursor: pointer; 
+    margin-top: 8vmin;
+}
+
+.carouse-container{
+    margin-top: 190px;
+}
+
+.arrow-icon:hover{
+    /*background-color: rgba(169, 105, 71, 0.75);*/
+    background-color: rgba(114, 109, 107, 0.75);
+}
+
+.star{
+    color:yellow;
+    font-size: 2vmin;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px 5%;
+    height: 45px;}
+
+/*Estilos para información del home*/
+.home-info{
+    text-align: center;
+}
+
+.home-info h2{
+    font-size: 7vmin;
+    margin-bottom: 2px;
+}
+
+.home-info p{
+    font-size: 2.3vmin;
+}
+
+.homeinfo-container{
+    margin-top: 100px;
+}
+
+.turisteo-info-container{
+    color: #f8efec;
+    margin: 4rem 6rem;
+}
+
+/*.d{
+    background-image: url('https://clipart-library.com/new_gallery/835_clouds-png.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+}*/
+.turisteo-info-container h2,
+main section h2{
+    color: #f8efec;
+    text-align: center;
+    font-size: 5.5vmin;
+}
+
+.title-img-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    margin-top: 4.5rem;
+}
+
+.information{
+    width: 45%;
+    text-align: start;
+    font-size: 1.1rem;
+}
+
+.information h3{
+    padding-bottom: 1rem;
+    font-size: 3.4vmin;
+    /*text-shadow: 2px 5px 15px #1dc1c8;*/
+}
+
+.images-information{
+    position: relative;
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    z-index: -99;
+}
+
+.images-information img{
+    width: 49%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 6px;
+    box-shadow: -1px 1px 62px -18px rgb(0,0,0,0.19);
+}
+
+.palm{
+    position: relative;
+    width: 2vmin;
+}
+
+.images-information img:nth-child(2){
+    position: absolute;
+    top: -10%;
+    right: 0;
+}
+
+.map-container{
+    color: #FFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.map-container img{
+    width: 60vw;
+}
+
+.mapinfo{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mapinfo h3{
+    font-size: 4vmin;
+}
+
+
+@media screen and (max-width: 850px){
+    .turisteo-info-container{
+        margin: 4rem 2rem;
+    }
+
+    .title-img-container{
+        display: flex;
+        flex-direction: column-reverse;
+        margin-top: 2.5rem;
+    }
+
+    .information{
+        width: 100%;
+    }
+
+    .images-information{
+        width: 100%;
+        margin: 1.8rem 0;
+    }
+
+    .images-information img{
+        height: 250px;
+    }
+
+
+}

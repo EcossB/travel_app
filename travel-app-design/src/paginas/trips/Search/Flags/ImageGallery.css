@@ -1,0 +1,105 @@
+.flags__container{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    /*justify-content: center;*/
+    justify-content: center;
+    align-items: center;
+    transition: filter 0.3s ease-in-out;
+}
+
+
+.custom-pagination .MuiPaginationItem-page {
+  color: white; /* Color blanco para los números */
+  border-radius: 50%; /* Hace que los números sean redondos */
+}
+
+.custom-pagination .Mui-selected {
+  background-color: #2196f3; /* Cambia el color de fondo del número seleccionado */
+  color: white; /* Cambia el color del número seleccionado */
+}
+
+.message__title{
+  margin-top: 10px;
+  font-weight: 700;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.message__title h1{
+  text-align: center;
+  font-size: 4vmin;
+  font-weight: 500;
+}
+
+.load__icon{
+  width: 3rem;
+  height: 4rem;
+  margin-left: 15px;
+}
+  
+.flagImg{
+    width: 20%;
+    height: 25vh;
+    margin: 25px 0px 5px 55px;
+    box-shadow: 5px 0px 5px black;
+    transition: transform 0.3s ease-out;
+}
+  
+.flagImg:hover{
+    filter: brightness(70%) blur(1px); /*70 y 2*/
+    transform: scale(1.1);
+}
+
+.flagImg:hover:after {
+  content: '\1F50E'; 
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 10em; 
+  color: white; 
+}
+
+.invisible{
+  display: none;
+}
+
+@media screen and (max-width: 689px){
+    .flagImg{
+      width: 50%;
+  }
+
+  .message__title img{
+    width: 50%;
+  }
+
+  .load__icon{
+    width: 18rem;
+    height: 5vh;
+  }
+}
+
+@media screen and (max-width: 664px){
+  .flagImg{
+    margin: auto;
+    margin-bottom: 25px;
+    width: 60%;
+}
+
+.message__title img{
+  display: none;
+}
+
+.message__title h1{
+  font-size: 6vmin;
+}
+}
+
+@media screen and (min-width: 1220px){
+  .flags__container{
+    margin-bottom: 20px;
+  }
+}
+

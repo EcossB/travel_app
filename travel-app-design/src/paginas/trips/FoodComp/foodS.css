@@ -1,0 +1,86 @@
+.food-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-between;  
+  }
+  
+  .food-item {
+    /*width: 18%;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*margin-bottom: 2vmin;*/
+    /*padding: 2vmin;*/
+    /*background-size: contain;*/
+    /*background-position: center;*/
+    color: #fff;
+    /*height: 30vmin;*/
+    /*text-align: center;*/ /* Centra el texto */
+  }
+  
+  /*.food-image {
+    width: 100%; 
+    height: 60%; 
+  }*/
+  
+  .food-item img {
+    /*background-image: url('../../../medio/lines.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;*/
+    width: 15vw;
+    height: auto;
+  }
+  
+  .food-name {
+    font-weight: 00;
+    /*margin-top: 4vmin;*/
+    font-size: 2vmin; 
+    text-shadow: 4px -5px 2px rgba(24,4,4,0.6);
+
+  }
+  
+  @media screen and (max-width: 650px) {
+    /*.food-container{
+      background-image: url('../../../medio/wallpaperfood.png');
+      background-repeat: no-repeat;
+      background-size: cover;
+    }*/
+    
+
+    .food-icon{
+      display: flex;
+    }
+
+    .food-item {
+      width: 100%;
+      /*align-items: center;*/
+      /*flex-direction: row;*/
+      /*display: flex;*/
+      /*align-items: center;*/
+      /*margin-top: 10px;*/
+    }
+
+    .food-image img{
+        width: 25vw;
+    }
+  
+    /*.food-image {
+      width: 50%;
+      height: auto;
+    }*/
+
+    /*.food-image{
+        height: auto;
+    }*/
+  
+    .food-name {
+       /* text-align: left;*/
+        /*background-color: transparent;*/
+        /*margin-left: 0;*/ /* Elimina el margen izquierdo */
+        /*margin-top: 0;*/ /* Elimina el margen superior */
+        font-size: 3vmin; /* Tamaño de fuente ajustado */
+        margin-left: 15px;
+      }
+  }
+  

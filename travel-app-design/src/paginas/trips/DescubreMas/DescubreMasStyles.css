@@ -1,0 +1,189 @@
+
+.main__container{
+  margin-top: 5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.passport__icon,
+.map__icon{
+  width: 15vw;
+}
+
+.white__container {
+  display: flex;
+  height: 35vh;
+  border-radius: 25px;
+  background: #FFF;
+  /*justify-content: space-between; */
+  /*max-width: calc(70vw - 10vh);*/
+}
+
+.left__container {
+  display: flex;
+  flex-direction: column;
+  padding: 4vh;
+  /*padding-left: 8vh;*/
+}
+  
+.h1__discover {
+  font-family: 'Roboto', sans-serif;
+  font-size: 6vmin;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  color: #000;
+  margin-bottom: 1rem;
+}
+
+.discover__button {
+  font-size: 2vmin;
+  white-space: nowrap;
+  background-color: #3F7BFD;
+  padding: 15px;
+  border-radius: 450px;
+  filter: drop-shadow(0px 2px 2px rgba(0, 0, 0, 0.20));
+  width: 12em;
+  transition: 1s;
+  font-weight: bold;
+  font-family: 'Roboto', sans-serif;
+  margin-bottom: 3rem;
+}
+
+.discover__button:hover {
+  background-color: #2d56b0;
+}
+
+.right__container {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image__container {
+  width: 100%; 
+  height: 100%; 
+}
+
+.image__it {
+  width: 100%; 
+  height: 100%; 
+  /*object-fit: cover; */
+  border-radius: 25px;
+
+}
+
+
+
+/* Media query para tabletas (máximo 992px) */
+@media screen and (max-width: 992px) {
+.white__container {
+  flex-direction: column;
+  max-width: calc(45vw - -18vh);
+
+}
+
+.main__container {
+  margin-top: 2rem;
+}
+
+.right__container {
+  display: flex;
+  order: -1;
+}
+
+.left__container {
+  display: flex;
+  flex-direction: column;
+  padding: 0.2vh;
+  padding-left: 4vh;
+  padding-right: 4vh;
+}
+
+.h1__discover {
+  font-size: 3vmin;
+  font-weight: bold;
+  text-align: left;
+}
+
+.discover__button {
+  margin-bottom: 2vh;
+  margin-top: -0.1vh;
+  font-size: 2vmin;
+  width: 10em;
+  font-weight: 400;
+}
+
+.image__it {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+}
+}
+
+
+@media screen and (max-width: 775px) {
+ .white__container {
+   flex-direction: column;
+   max-width: calc(100vw - -8vh);
+ }
+
+ .passport__icon,
+ .map__icon{
+  display: none;
+ }
+
+ .main__container {
+   padding-left: 4vh;
+   padding-right: 4vh;
+   margin-top: 2rem;
+}
+
+.passport__icon,
+.map__icon{
+  display: none;
+}
+
+ 
+.right__container {
+  display: flex;
+  order: -1;
+  margin-left: 0;
+}
+
+ .left__container{
+     display: flex;
+     flex-direction: column;
+     padding: 0.2vh;
+     padding-left: 4vh;
+     padding-right: 4vh;
+     padding-top: 1rem;
+ }
+
+ .h1__discover{
+  font-size: 5vmin;
+  font-weight: bold;
+  text-align: left;
+  
+ }
+
+.discover__button {
+  margin-bottom: 4.2vh;
+  margin-top: -0.1vh;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+}
+
+
+@media screen and (max-width: 1241px) and (min-width: 993px){
+  .h1__discover{
+    font-size: 4vmin;
+  }
+
+  .white__container {
+    flex-direction: column;
+  }
+}

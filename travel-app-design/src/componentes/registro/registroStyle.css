@@ -1,0 +1,21 @@
+.registro-container{
+    margin: 15px;
+}
+
+.register-inputs input{
+    padding: 15px;
+}
+
+.register-inputs p{
+    margin-top: 12px;
+}
+
+.register-title{
+    margin-top: 7px;
+}
+
+@media screen and (max-width: 650px){
+    .register-inputs input{
+        padding: 12px;
+    }   
+}

@@ -1,0 +1,100 @@
+  .contactForm{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 25px;
+    width: 100%;
+    color: #fff;
+  }
+  
+  .banner Button{
+    display: none;
+  }
+
+  .bannerBg{
+    background-image: url('../../medio/contactbg.jpg');
+    height: 15vh;
+  }
+
+  .contactform-container textarea,
+  .contactForm input{
+    color:gray;
+    padding: 15px;
+    border-radius: 15px;
+    width: 30em; 
+    box-sizing: border-box;
+    font-size: 2vmin; 
+    outline: none;
+    border: none;
+  }
+
+  .contactform-container textarea{
+    height: auto;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-weight: bold;
+  }
+
+  .contactform-container button{
+    margin-top: 15px;
+  }
+
+  .contactform-container{
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contactform-img img{
+    width: 30vw;
+  }
+
+  .checkIcon-contact{
+    margin-right: 5px;
+    color: #91ff88;
+  }
+
+  .contactMessage{
+    font-size: 2vmin;
+  }
+
+  .invisible{
+    display: none;
+  }
+
+
+  @media screen and (max-width: 650px){
+    .bannerBg{
+      height: 5vh;
+    }
+
+    .contactForm{
+      flex-wrap: wrap;
+    }
+
+    .contactform-img{
+      margin-top: 35px;
+    }
+
+    .contactform-img img{
+      width: 55vw;
+    }
+
+    .contactForm input,
+    .contactForm textarea{
+      width: 90vw;
+    }
+
+    .contactform-container button{
+      padding: 5px 15px;
+      font-size: 2vmin;
+    }
+
+    .contactform-container input::placeholder,
+    .contactform-container textarea::placeholder,
+    .contactform-container input,
+    .contactform-container textarea,
+    .contactMessage{
+      font-size: 3vmin;
+    }
+  }
+
+  

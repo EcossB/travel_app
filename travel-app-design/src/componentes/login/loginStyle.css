@@ -1,0 +1,179 @@
+.login-container{
+    margin: 15px;
+}
+
+.title{
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title h2{
+    text-align: center;
+    color: #FFF;
+    font-size: 6vmin;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.form-section{
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.loading__container{
+    display: flex;
+}
+
+.loading__container p{
+    color: rgb(208, 196, 196);
+    font-size: 1.5vmin;
+}
+
+.loading__container img{
+    width: 1.3vw;
+    margin-left: 5px;
+}
+
+input{
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 25px;
+    width: 30em; 
+    box-sizing: border-box;
+    font-size: 2vmin; 
+    outline: none;
+    border: none;
+}
+
+.password-input input{
+    margin-bottom: 8px;
+}
+
+input::placeholder{
+    color: rgba(60, 60, 67, 0.50);
+    font-feature-settings: 'clig' off, 'liga' off;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 22px;
+    letter-spacing: -0.408px;
+}
+
+.form-section button{
+    margin-top: 5px;
+    border-radius: 10px;
+    background-color: rgba(169, 105, 71, 0.75);
+    padding: 15px;
+    width: 15em;
+    color: #FFF;
+    font-size: 2vmin;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    border: none;
+}
+
+.form-section button:hover{
+    background-color: rgba(186, 116, 78, 0.75);
+    box-shadow: 0px 2px 15px rgb(33, 33, 43);
+}
+
+.register-message,
+.form-section a{
+    margin-top: 25px;
+    color: #FFF;
+    font-size: 2vmin;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    text-align: center;
+}
+
+.form-section a{
+    color: #FF9F6A;
+}
+
+.form-section a:hover{
+    color: #FF9F6A;
+    text-decoration: none;
+}
+
+.passwd-p .link{
+    font-size: 2vmin;
+    color: #FFF;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.passwd-p .link:hover{
+    text-decoration: none;
+    color: #FFF;
+}
+
+.password-input {
+    position: relative;
+}
+
+  
+.password-input input {
+    padding-right: 40px;
+}
+
+.password-input .passwd-icon {
+    position: absolute;
+    top: 45%; /*25%*/
+    right: 20px;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.passwd-linkk{
+    text-align: right;
+}
+
+.passwd-field{
+    margin-top: 5px;
+}
+
+/* Estilo para dispositivos móviles */
+@media screen and (max-width: 650px){
+    .passwd-p .link,
+    .register-message a,
+    .form-section button,
+    .buttons-section button,
+    .register-message{
+        font-size: .75rem;
+    }
+
+    input{
+        font-size: 3vmin;
+    }
+
+    input::placeholder{
+        font-size: .65rem;
+    }
+
+    .openEye-icon,
+    .closeEye-icon{
+        width: 3vmin;
+    }
+
+    input{
+        padding: 15px;
+    }  
+    
+    .loading__container p{
+        font-size: 3vmin;
+    }
+
+    .loading__container img{
+        width: 5vw;
+    }
+}

@@ -1,0 +1,57 @@
+
+.infoo{
+    width: 100%;
+}
+
+.CountryBannerBg{
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.53) 0%, rgba(0, 0, 0, 0.53) 100%), url('../../medio/ItalyImg.jpg'), lightgray 50% / cover no-repeat;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 15vh;
+}
+
+.trips__container{
+    margin-top: 30px;
+}
+
+.customCard__container{
+    display: none;
+}
+
+.cities_container2{
+    margin-bottom: 20px;
+}
+
+.error__message{
+    color: white;
+}
+
+@media screen and (max-width: 750px){
+    .descubreMas__container{
+        display: none;
+    }
+
+    .customCard__container{
+        display: block;
+    }
+}
+
+@media screen and (max-width: 650px){
+    .CountryBannerBg {
+        height: 10vh; /*5vh*/
+    }
+
+    .CountryBannerBg h1{
+        font-size: 10vmin;
+    }
+}
+
+@media screen and (width: 1080px){
+    .descubreMas__container{
+        display: none;
+    }
+
+    .customCard__container{
+        display: block;
+    }
+}

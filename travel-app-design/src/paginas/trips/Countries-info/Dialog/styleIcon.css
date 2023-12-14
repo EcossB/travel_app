@@ -1,0 +1,8 @@
+.FatimeIcon{
+    color: black;
+    box-shadow: 0px 5px 15px gray;
+}
+
+.FatimeIcon:hover{
+    box-shadow: 0px 5px 85px gray;
+}

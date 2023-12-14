@@ -1,0 +1,72 @@
+#admin{
+    margin: 25px;
+}
+
+.admin__container{
+    background-color: whitesmoke;
+    box-shadow: 0px 2px 15px gray;
+    padding: 15px;
+}
+
+.title__container{
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    font-size: 3vmin;
+}
+
+.admin__p{
+    display: flex;
+}
+
+.admin__icon{
+    margin-top: 10px;
+}
+
+.admin__container h2{
+    font-size: 4.2vmin;
+    margin-bottom: 2px;
+}
+
+.admin__container ul{
+    display: flex;
+    flex-direction: column;
+    margin-left: -35px;
+}
+
+.admin__list{
+    color: black;
+    list-style: none;
+    font-size: 2vmin;
+    margin-top: -35px;
+}
+
+.admin__container a{
+    color: #3F7BFD;
+}
+
+.admin__container a:hover{
+    text-decoration: none;
+}
+
+.admin__form{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.admin__container input::placeholder{
+    font-size: 8rem;
+}
+
+.logout__admin{
+    color: #FFF;
+    background-color: #3F7BFD;
+    border-radius: 35px;
+    padding: 10px 20px;
+    width: 10em;
+    text-align: center;
+    font-size: 1.5vmin;
+    white-space: nowrap;
+}

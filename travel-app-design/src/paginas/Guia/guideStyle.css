@@ -1,0 +1,128 @@
+.bannerBgGuide{
+    background-image: url('https://i1.wp.com/www.revistamercado.do/wp-content/uploads/2023/03/turismo-dominicano.jpg?fit=1280%2C638&ssl=1');
+    height: 15vh;  
+}
+
+.bannerBgGuide h1{
+    text-shadow: 1px 5px 15px black;
+}
+
+.guide__container{
+    width: 100%;
+    margin-top: 65px;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;    
+}
+
+.guide__title{
+    color: whitesmoke;
+    text-align: center;
+    background-color: #3F7BFD;
+    padding: 5px;
+    border-radius: 85px;
+    font-size: 3vmin;
+}
+
+.guide__container h2{
+    font-size: 3vmin;
+    margin-bottom: 35px;
+}
+
+
+.guide__tip{
+    font-size: 2vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.guide__tip img{
+    width: 15vw;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+}
+
+.guide__tip img:hover{
+    transform: scale(1.2);
+}
+
+.guide__tip a{
+    color: whitesmoke;
+}
+
+.guide__tip a:hover{
+    color: #80a0e3;
+    text-decoration: none;
+}
+
+.maleta{
+    background-color:#142950;
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 15px;
+}
+
+.maleta img{
+    width: 55%;
+}
+
+.objects__container{
+    margin-top: 35px;
+}
+
+.objects__imgs{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.objects__imgs img{
+    width: 18vw;
+    height: auto;
+    transition: filter 0.3s ease-in-out;
+}
+
+.objects__imgs img:hover{
+    transform: scale(1.1);
+}
+
+.objects__container h2{
+    color: whitesmoke;
+    text-align: center;
+    font-size: 4vmin;
+}
+
+@media screen and (max-width: 650px){
+    .bannerBg{
+      height: 5vh;
+    }
+
+    .guide__container{
+        margin-top: 25px;
+    }
+
+    .maleta img{
+        width: 75%;
+    }
+
+    .bannerBgGuide h1{
+        font-size: 7vmin;
+    }
+    
+}
+
+@media screen and (max-width: 850px){
+    .guide__container{
+        flex-wrap: wrap;
+    }
+
+    .maleta img{
+        width: 75%;
+    }
+}

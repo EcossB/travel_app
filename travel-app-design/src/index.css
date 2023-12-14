@@ -1,0 +1,10 @@
+body{
+    background-color: #091F31;
+    user-select: none;
+}
+
+:root{
+    --font: font-family: 'Be Vietnam Pro', sans-serif;
+    font-family: 'Belanosima', sans-serif;
+    font-family: 'PT Sans', sans-serif;
+}
